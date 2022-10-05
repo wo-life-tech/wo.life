@@ -1,3 +1,4 @@
+import { Link } from 'gatsby';
 import React from 'react';
 import styled from 'styled-components';
 
@@ -7,24 +8,17 @@ const Footer = () => (
 	<FooterWrapper id="footer">
 		<FooterColumnContainer>
 			<FooterColumn>
-				<span>Features</span>
+				<span>Policy</span>
 				<ul>
-					<li>Automation</li>
-					<li>Rewards</li>
-				</ul>
-			</FooterColumn>
-			<FooterColumn>
-				<span>Resources</span>
-				<ul>
-					<li>Compare</li>
-					<li>Blog</li>
-				</ul>
-			</FooterColumn>
-			<FooterColumn>
-				<span>Company</span>
-				<ul>
-					<li>About Us</li>
-					<li>Careers</li>
+					<li>
+						<FooterLink to="/privacypolicy">Privacy Policy</FooterLink>
+					</li>
+					<li>
+						<FooterLink to="/termsandconditions">Terms & Conditions</FooterLink>
+					</li>
+					<li>
+						<FooterLink to="/faqs">FAQ</FooterLink>
+					</li>
 				</ul>
 			</FooterColumn>
 			<FooterColumn>
@@ -98,6 +92,14 @@ const FooterColumn = styled.div`
 			font-family: ${(props) => props.theme.font.normal};
 			font-size: 15px;
 		}
+	}
+`;
+
+const FooterLink = styled(Link)`
+	color: ${(props) => props.theme.color.black.regular};
+	text-decoration: none;
+	&:hover {
+		color: ${(props) => props.theme.color.primary};
 	}
 `;
 
