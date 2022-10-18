@@ -16,9 +16,6 @@ const Footer = () => (
 					<li>
 						<FooterLink to="/terms-and-conditions">Terms & Conditions</FooterLink>
 					</li>
-					<li>
-						<FooterLink to="/faqs">FAQ</FooterLink>
-					</li>
 				</ul>
 			</FooterColumn>
 			<FooterColumn>
