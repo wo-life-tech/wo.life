@@ -11,10 +11,10 @@ const Footer = () => (
 				<span>Policy</span>
 				<ul>
 					<li>
-						<FooterLink to="/privacypolicy">Privacy Policy</FooterLink>
+						<FooterLink to="/privacy-policy">Privacy Policy</FooterLink>
 					</li>
 					<li>
-						<FooterLink to="/termsandconditions">Terms & Conditions</FooterLink>
+						<FooterLink to="/terms-and-conditions">Terms & Conditions</FooterLink>
 					</li>
 					<li>
 						<FooterLink to="/faqs">FAQ</FooterLink>

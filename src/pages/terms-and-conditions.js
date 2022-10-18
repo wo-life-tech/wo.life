@@ -2,7 +2,7 @@ import React from 'react';
 import Layout from '../components/common/layout/layout';
 import SEO from '../components/common/layout/seo';
 
-const TermsAndConditions = () => {
+const Termsandconditions = () => {
 	return (
 		<Layout>
 			<SEO title="faqs" />
@@ -11,4 +11,4 @@ const TermsAndConditions = () => {
 	);
 };
 
-export default TermsAndConditions;
+export default Termsandconditions;

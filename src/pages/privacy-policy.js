@@ -6,7 +6,7 @@ import styled from 'styled-components';
 import Layout from '../components/common/layout/layout';
 import SEO from '../components/common/layout/seo';
 
-const PrivacyPolicy = () => {
+const Privacypolicy = () => {
 	return (
 		<Layout>
 			<PrivacyPolicyWrapper>
@@ -37,4 +37,4 @@ const PrivacyPolicyWrapper = styled.div`
 	height: 100vh;
 `;
 
-export default PrivacyPolicy;
+export default Privacypolicy;
