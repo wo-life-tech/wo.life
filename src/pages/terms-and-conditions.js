@@ -429,6 +429,12 @@ const CenterDiv = styled.div`
 	flex-direction: column;
 	justify-content: center;
 	align-items: flex-start;
+	@media (max-width: ${(props) => props.theme.screen.md}) {
+		margin: 5rem 5rem;
+	}
+	@media (max-width: ${(props) => props.theme.screen.xs}) {
+		margin: 3rem 2rem;
+	}
 `;
 
 const SubCenterDiv = styled.div`
@@ -456,6 +462,9 @@ const PrimaryHeading = styled.h4`
 	font-weight: 600;
 	margin-bottom: 1rem;
 	text-transform: uppercase;
+	@media (max-width: ${(props) => props.theme.screen.xs}) {
+		margin-bottom: 0.3rem;
+	}
 `;
 
 const SecondaryHeading = styled.h5`
@@ -463,7 +472,7 @@ const SecondaryHeading = styled.h5`
 	font-weight: 600;
 	text-transform: uppercase;
 	letter-spacing: 0.1px;
-	color: #b2b2b2;
+	color: ${(props) => props.theme.color.secondary};
 	margin: 1rem 0 0.5rem 0;
 `;
 

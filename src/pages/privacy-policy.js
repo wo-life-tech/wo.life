@@ -184,6 +184,12 @@ const CenterDiv = styled.div`
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
+	@media (max-width: ${(props) => props.theme.screen.md}) {
+		margin: 5rem 5rem;
+	}
+	@media (max-width: ${(props) => props.theme.screen.xs}) {
+		margin: 3rem 2rem;
+	}
 `;
 
 const SubCenterDiv = styled.div`
@@ -192,6 +198,12 @@ const SubCenterDiv = styled.div`
 	flex-direction: column;
 	justify-content: flex-start;
 	align-items: flex-start;
+	@media (max-width: ${(props) => props.theme.screen.md}) {
+		margin: 0 3rem;
+	}
+	@media (max-width: ${(props) => props.theme.screen.xs}) {
+		margin: 0 2rem;
+	}
 `;
 
 const ContainerDiv = styled.div`
@@ -207,13 +219,16 @@ const PrimaryHeading = styled.h4`
 	font-weight: 600;
 	margin-bottom: 2rem;
 	text-transform: uppercase;
+	@media (max-width: ${(props) => props.theme.screen.md}) {
+		margin-bottom: 1rem;
+	}
 `;
 
 const SecondaryHeading = styled.h5`
 	text-align: center;
 	font-weight: 600;
 	text-transform: uppercase;
-	color: #b2b2b2;
+	color: ${(props) => props.theme.color.secondary};
 `;
 
 const SubHeading = styled.h5`
