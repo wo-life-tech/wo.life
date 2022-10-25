@@ -1,0 +1,12 @@
+[
+	{
+		"relation": ["delegate_permission/common.handle_all_urls"],
+		"target": {
+			"namespace": "android_app",
+			"package_name": "com.app.wolife",
+			"sha256_cert_fingerprints": [
+				"B3:ED:58:0F:F2:11:BC:38:31:C1:7D:2A:25:FA:D9:0E:91:3C:81:1E:60:58:D9:0B:06:16:35:D9:60:99:B0:3D"
+			]
+		}
+	}
+]
