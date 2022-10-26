@@ -21,8 +21,12 @@ const Footer = () => (
 			<FooterColumn>
 				<span>Social</span>
 				<ul>
-					<li>LinkedIn</li>
-					<li>Instagram</li>
+					<li>
+						<FooterLink to="https://in.linkedin.com/company/wolife">LinkedIn</FooterLink>
+					</li>
+					<li>
+						<FooterLink to="https://www.instagram.com/wolifeofficial">Instagram</FooterLink>
+					</li>
 				</ul>
 			</FooterColumn>
 		</FooterColumnContainer>
