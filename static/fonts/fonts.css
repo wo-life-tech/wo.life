@@ -1,49 +1,96 @@
+/* nunito-300 - latin */
 @font-face {
-	font-family: 'HK Grotesk Extra Bold';
-	src: url('../fonts/HKGrotesk-ExtraBold.woff2') format('woff2'),
-		url('../fonts/HKGrotesk-ExtraBold.woff') format('woff');
-	/* font-weight: 800; */
+	font-family: 'Nunito Light';
 	font-style: normal;
+	font-weight: 300;
+	src: url('../fonts/nunito-v25-latin-300.woff') format('woff'),
+		url('../fonts/nunito-v25-latin-300.woff2') format('woff2');
 }
-
+/* nunito-regular - latin */
 @font-face {
-	font-family: 'HK Grotesk Medium';
-	src: url('../fonts/HKGrotesk-Medium.woff2') format('woff2'), url('../fonts/HKGrotesk-Medium.woff') format('woff');
+	font-family: 'Nunito Regular';
 	font-style: normal;
+	font-weight: 400;
+	src: url('../fonts/nunito-v25-latin-regular.woff') format('woff'),
+		url('../fonts/nunito-v25-latin-regular.woff2') format('woff2');
 }
-
+/* nunito-600 - latin */
 @font-face {
-	font-family: 'HK Grotesk Normal';
-	src: url('../fonts/HKGrotesk-Regular.woff2') format('woff2'), url('../fonts/HKGrotesk-Regular.woff') format('woff');
-	font-weight: normal;
+	font-family: 'Nunito Medium';
 	font-style: normal;
+	font-weight: 600;
+	src: url('../fonts/nunito-v25-latin-600.woff') format('woff'),
+		url('../fonts/nunito-v25-latin-600.woff2') format('woff2');
 }
-
+/* nunito-700 - latin */
 @font-face {
-	font-family: 'HK Grotesk Light';
-	src: url('../fonts/HKGrotesk-Light.woff2') format('woff2'), url('../fonts/HKGrotesk-Light.woff') format('woff');
-	/* font-weight: 300; */
+	font-family: 'Nunito Semi Bold';
 	font-style: normal;
+	font-weight: 800;
+	src: url('../fonts/nunito-v25-latin-700.woff') format('woff'),
+		url('../fonts/nunito-v25-latin-700.woff2') format('woff2');
 }
-
+/* nunito-800 - latin */
 @font-face {
-	font-family: 'HK Grotesk Black';
-	src: url('../fonts/HKGrotesk-Black.woff2') format('woff2'), url('../fonts/HKGrotesk-Black.woff') format('woff');
-	/* font-weight: 900; */
+	font-family: 'Nunito Bold';
 	font-style: normal;
+	font-weight: 800;
+	src: url('../fonts/nunito-v25-latin-800.woff') format('woff'),
+		url('../fonts/nunito-v25-latin-800.woff2') format('woff2');
 }
-
+/* nunito-900 - latin */
 @font-face {
-	font-family: 'HK Grotesk Bold';
-	src: url('../fonts/HKGrotesk-Bold.woff2') format('woff2'), url('../fonts/HKGrotesk-Bold.woff') format('woff');
-	/* font-weight: bold; */
+	font-family: 'Nunito Black';
 	font-style: normal;
+	font-weight: 900;
+	src: url('../fonts/nunito-v25-latin-900.woff') format('woff'),
+		url('../fonts/nunito-v25-latin-900.woff2') format('woff2');
 }
-
+/* nunito-300italic - latin */
 @font-face {
-	font-family: 'HK Grotesk Semibold';
-	src: url('../fonts/HKGrotesk-SemiBold.woff2') format('woff2'),
-		url('../fonts/HKGrotesk-SemiBold.woff') format('woff');
-	/* font-weight: 600; */
-	font-style: normal;
+	font-family: 'Nunito Light';
+	font-style: italic;
+	font-weight: 300;
+	src: url('../fonts/nunito-v25-latin-300italic.woff') format('woff'),
+		url('../fonts/nunito-v25-latin-300italic.woff2') format('woff2');
+}
+/* nunito-italic - latin */
+@font-face {
+	font-family: 'Nunito Regular';
+	font-style: italic;
+	font-weight: 400;
+	src: url('../fonts/nunito-v25-latin-italic.woff') format('woff'),
+		url('../fonts/nunito-v25-latin-italic.woff2') format('woff2');
+}
+/* nunito-600italic - latin */
+@font-face {
+	font-family: 'Nunito Medium';
+	font-style: italic;
+	font-weight: 600;
+	src: url('../fonts/nunito-v25-latin-600italic.woff') format('woff'),
+		url('../fonts/nunito-v25-latin-600italic.woff2') format('woff2');
+}
+/* nunito-700italic - latin */
+@font-face {
+	font-family: 'Nunito Semi Bold';
+	font-style: italic;
+	font-weight: 700;
+	src: url('../fonts/nunito-v25-latin-700italic.woff') format('woff'),
+		url('../fonts/nunito-v25-latin-700italic.woff2') format('woff2');
+}
+/* nunito-800italic - latin */
+@font-face {
+	font-family: 'Nunito Bold';
+	font-style: italic;
+	font-weight: 800;
+	src: url('../fonts/nunito-v25-latin-800italic.woff') format('woff'),
+		url('../fonts/nunito-v25-latin-800italic.woff2') format('woff2');
+}
+/* nunito-900italic - latin */
+@font-face {
+	font-family: 'Nunito Black';
+	font-style: italic;
+	font-weight: 900;
+	src: url('../fonts/nunito-v25-latin-900italic.woff') format('woff'),
+		url('../fonts/nunito-v25-latin-900italic.woff2') format('woff2');
 }

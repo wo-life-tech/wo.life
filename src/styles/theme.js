@@ -1,13 +1,13 @@
 const theme = {
 	font: {
-		primary: `'HK Grotesk Normal'`,
-		secondary: `'HK Grotesk Medium'`,
-		light: `'HK Grotesk Light'`,
-		normal: `'HK Grotesk Normal'`,
-		medium: `'HK Grotesk Medium'`,
-		semibold: `'HK Grotesk Semibold'`,
-		bold: `'HK Grotesk Bold'`,
-		extrabold: `'HK Grotesk Extra Bold'`,
+		primary: `'Nunito Regular'`,
+		secondary: `'Nunito Medium'`,
+		light: `'Nunito Light'`,
+		normal: `'Nunito Regular'`,
+		medium: `'Nunito Medium'`,
+		semibold: `'Nunito Semi Bold'`,
+		bold: `'Nunito Bold'`,
+		extrabold: `'Nunito Black'`,
 	},
 	font_size: {
 		xxxsmall: 'font-size: 12px;',
