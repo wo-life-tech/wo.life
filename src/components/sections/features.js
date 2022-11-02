@@ -1,93 +1,96 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import { Section, Container } from '../global';
+import { Section } from '../global';
 
-const Features = () => (
-	<Section id="features">
-		<StyledContainer>
-			<Subtitle>Features</Subtitle>
-			<SectionTitle>Experience the Best of both worlds</SectionTitle>
-			<FeaturesGrid>
-				<FeatureItem>
-					<FeatureTitle>Social</FeatureTitle>
-					<FeatureText>Socialize with your friends and followers</FeatureText>
-				</FeatureItem>
-				<FeatureItem>
-					<FeatureTitle>Content</FeatureTitle>
-					<FeatureText>
-						Consume content from your favourite content creators. <br />
-						Stay updated with your favourite brands
-					</FeatureText>
-				</FeatureItem>
-				<FeatureItem>
-					<FeatureTitle>Shopping</FeatureTitle>
-					<FeatureText>Shop easily from marketplace or directly from user's shared posts.</FeatureText>
-				</FeatureItem>
-				<FeatureItem>
-					<FeatureTitle>Affiliate Marketing</FeatureTitle>
-					<FeatureText>Earn without complicated contracts or affiliate systems.</FeatureText>
-				</FeatureItem>
-				<FeatureItem>
-					<FeatureTitle>Brands</FeatureTitle>
-					<FeatureText>Maintain and access social presence as well as e-commerce transactions.</FeatureText>
-				</FeatureItem>
-				<FeatureItem>
-					<FeatureTitle>All in One</FeatureTitle>
-					<FeatureText>One app for all social and commerce activities.</FeatureText>
-				</FeatureItem>
-			</FeaturesGrid>
-		</StyledContainer>
-	</Section>
-);
+const Features = () => {
+	const featureBox = (heading, text1, text2, image, altText, rotate) => {
+		return (
+			<CenterDiv>
+				<SecText>{heading}</SecText>
+				<TernaryText>
+					{text1}
+					<br />
+					{text2}
+				</TernaryText>
+				<img src={image} alt={altText} style={{ maxWidth: '100%', transform: `rotateY(${rotate}deg)` }} />
+			</CenterDiv>
+		);
+	};
 
-export default Features;
+	return (
+		<Section id="features">
+			<CenterDiv>
+				<PrimaryHeading>
+					<HorizontalRule />
+					Features
+					<HorizontalRule />
+				</PrimaryHeading>
+				<ContentWrapper>
+					{featureBox(
+						'Socialize',
+						'Through Image and',
+						'short video sharing',
+						'/socialize.png',
+						'socialize',
+						0,
+					)}
+					{featureBox('Shop', 'Directly from our', 'Marketplace or Posts', '/shop2.png', 'shop-via-app', 0)}
+					{featureBox(
+						'Earn',
+						'Commission for helping your',
+						'community purchase products',
+						'/socialize.png',
+						'socialize',
+						180,
+					)}
+				</ContentWrapper>
+			</CenterDiv>
+		</Section>
+	);
+};
 
-const StyledContainer = styled(Container)``;
-
-const SectionTitle = styled.h3`
-	color: ${(props) => props.theme.color.primary};
-	display: flex;
-	justify-content: center;
-	margin: 0 auto 40px;
-	text-align: center;
-`;
-
-const Subtitle = styled.h5`
-	font-size: 16px;
-	color: ${(props) => props.theme.color.accent};
-	letter-spacing: 0px;
-	margin-bottom: 12px;
-	text-align: center;
-`;
-
-const FeaturesGrid = styled.div`
-	max-width: 670px;
-	display: grid;
-	grid-template-columns: 1fr 1fr;
-	margin: 0px auto;
-	grid-column-gap: 40px;
-	grid-row-gap: 35px;
-	@media (max-width: ${(props) => props.theme.screen.sm}) {
-		grid-template-columns: 1fr;
-		padding: 0 64px;
-	}
-`;
-
-const FeatureItem = styled.div`
+const CenterDiv = styled.div`
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	flex-direction: column;
+	background-color: ${(props) => props.theme.color.background.regular};
 `;
 
-const FeatureTitle = styled.h4`
-	color: ${(props) => props.theme.color.primary};
-	letter-spacing: 0px;
-	line-height: 30px;
-	margin-bottom: 10px;
+const PrimaryHeading = styled.h3`
+	width: 70%;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	gap: 2rem;
+	color: ${(props) => props.theme.color.background.white};
 `;
 
-const FeatureText = styled.p`
-	text-align: center;
+const HorizontalRule = styled.hr`
+	width: 70%;
+	height: 2px;
+	background-color: ${(props) => props.theme.color.background.white};
 `;
+
+const ContentWrapper = styled.div`
+	width: 100%;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	gap: 2rem;
+`;
+
+const SecText = styled.h2`
+	margin: 0;
+	letter-spacing: 0.1rem;
+	color: ${(props) => props.theme.color.background.white};
+`;
+
+const TernaryText = styled.p`
+	font-weight: 400;
+	letter-spacing: 0.4px;
+	color: ${(props) => props.theme.color.background.white};
+`;
+
+export default Features;
