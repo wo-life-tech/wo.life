@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import styled from 'styled-components';
 import AnchorLink from 'react-anchor-link-smooth-scroll';
 import Scrollspy from 'react-scrollspy';
 import { Menu, X } from 'react-feather';
@@ -7,7 +8,7 @@ import { Container } from '../../global';
 import { Nav, NavItem, Brand, StyledContainer, NavListWrapper, MobileMenu, Mobile, ActionsContainer } from './style';
 
 // const NAV_ITEMS = ['Features', 'Product', 'Pricing', ''];
-const NAV_ITEMS = ['Features'];
+const NAV_ITEMS = ['About Us', 'Features', 'FAQs', 'Contact'];
 
 export default class Navigation extends Component {
 	state = {
@@ -70,7 +71,7 @@ export default class Navigation extends Component {
 					<Brand>
 						<Scrollspy offset={-64} item={['top']} currentClassName="active">
 							<AnchorLink href="#top" onClick={this.closeMobileMenu}>
-								wo.life
+								<HeadingText>WO</HeadingText>
 							</AnchorLink>
 						</Scrollspy>
 					</Brand>
@@ -85,9 +86,6 @@ export default class Navigation extends Component {
 					</Mobile>
 
 					<Mobile hide>{this.getNavList({})}</Mobile>
-					<ActionsContainer>
-						<button>Sign up</button>
-					</ActionsContainer>
 				</StyledContainer>
 				<Mobile>
 					{mobileMenuOpen && (
@@ -100,3 +98,10 @@ export default class Navigation extends Component {
 		);
 	}
 }
+
+const HeadingText = styled.h2`
+	font-size: 2rem;
+	font-weight: 700;
+	color: ${(props) => props.theme.color.background.white};
+	margin: 0;
+`;
