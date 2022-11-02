@@ -11,6 +11,9 @@ const Footer = () => (
 				<span>Policy</span>
 				<ul>
 					<li>
+						<FooterLink to="/returns-and-exchange">Returns & Exchange</FooterLink>
+					</li>
+					<li>
 						<FooterLink to="/privacy-policy">Privacy Policy</FooterLink>
 					</li>
 					<li>
