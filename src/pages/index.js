@@ -9,6 +9,8 @@ import Features from '../components/sections/features';
 import Footer from '../components/sections/footer';
 import GetStarted from '../components/sections/getstarted';
 import AboutUs from '../components/sections/about-us';
+import Shop from '../components/sections/shop';
+import Endorse from '../components/sections/endorse';
 
 const IndexPage = () => (
 	<Layout>
@@ -16,6 +18,8 @@ const IndexPage = () => (
 		<Navigation />
 		<Header />
 		<AboutUs />
+		<Shop />
+		<Endorse />
 		<Features />
 		<GetStarted />
 		<Footer />
