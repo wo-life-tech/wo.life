@@ -27,10 +27,10 @@ const theme = {
 		background: {
 			white: '#ffffff',
 			light: '#f8f8f8',
-			regular: '#171717',
+			regular: '#2a2727',
 		},
 		white: {
-			regular: '#ffffff',
+			regular: '#F3F3F3',
 			lessdark: '#faf9f8',
 			dark: '#f6f6f6',
 			darker: '#eeeeee',
