@@ -18,7 +18,7 @@ const Header = () => {
 					</h1>
 					<BottomText>Download Now : </BottomText>
 					<Flex>
-						{displayImage('/google-playstore.png', 'playstore')}
+						{displayImage('/playstore.png', 'playstore')}
 						{displayImage('/app-store.png', 'appstore')}
 					</Flex>
 				</HeaderTextGroup>
