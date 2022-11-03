@@ -2,13 +2,15 @@ import styled from 'styled-components';
 import { Container } from '../../global';
 
 export const Nav = styled.nav`
-	padding: ${(props) => (props.scrolled ? `16px 0` : `24px 0`)};
-	position: fixed;
 	width: 100%;
+	position: fixed;
 	top: 0;
+	padding: 0;
 	z-index: 1000;
-	background: ${(props) => (props.scrolled ? `white` : null)};
+	color: ${(props) => props.theme.color.background.white};
+	background: ${(props) => props.theme.color.background.regular};
 	transition: 0.4s cubic-bezier(0.2, 0.8, 0.2, 1);
+	border: 2px solid green;
 `;
 
 export const StyledContainer = styled(Container)`
@@ -24,6 +26,7 @@ export const NavListWrapper = styled.div`
 		padding: 0;
 		display: flex;
 		flex-direction: row;
+		border: 1px solid red;
 
 		${({ mobile }) =>
 			mobile &&
@@ -42,8 +45,7 @@ export const NavListWrapper = styled.div`
 export const NavItem = styled.li`
 	margin: 0 2em;
 	letter-spacing: 0.5px;
-	font-weight: 600;
-	font-family: ${(props) => props.theme.font.medium};
+	font-size: ${(props) => props.theme.font_size.larger};
 	${(props) => props.theme.font_size.xsmall};
 
 	a {
@@ -67,9 +69,8 @@ export const MobileMenu = styled.div`
 `;
 
 export const Brand = styled.div`
-	font-family: ${(props) => props.theme.font.extrabold};
-	${(props) => props.theme.font_size.regular};
-	color: ${(props) => props.theme.color.black.regular};
+	font-family: ${(props) => props.theme.font.normal};
+	color: ${(props) => props.theme.color.white.regular};
 	text-decoration: none;
 	letter-spacing: 1px;
 	margin: 0;
@@ -77,9 +78,8 @@ export const Brand = styled.div`
 		list-style: none;
 		margin: 0;
 		padding: 0;
-
 		a {
-			color: ${(props) => props.theme.color.black.regular};
+			color: ${(props) => props.theme.color.white.regular};
 			text-decoration: none;
 		}
 	}
@@ -120,10 +120,3 @@ export const Mobile = styled.div`
     }
   `}
 `;
-
-// Background blur info
-// background-color: ${props => props.scrolled && `rgba(245, 245, 250, .8`};
-// box-shadow:  ${props =>
-//   props.scrolled &&
-//   `0 0 0 1px rgba(0,0,50,.02) inset, 0 1px 1px rgba(0,0,50,.05) inset, 0 2px 4px rgba(0,0,50,.04) inset`};
-//   backdrop-filter: ${props => props.scrolled && `blur(15px)`};

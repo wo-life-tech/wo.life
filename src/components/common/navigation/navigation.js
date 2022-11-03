@@ -1,11 +1,10 @@
 import React, { Component } from 'react';
-import styled from 'styled-components';
 import AnchorLink from 'react-anchor-link-smooth-scroll';
 import Scrollspy from 'react-scrollspy';
 import { Menu, X } from 'react-feather';
 
 import { Container } from '../../global';
-import { Nav, NavItem, Brand, StyledContainer, NavListWrapper, MobileMenu, Mobile, ActionsContainer } from './style';
+import { Nav, NavItem, Brand, StyledContainer, NavListWrapper, MobileMenu, Mobile } from './style';
 
 const NAV_ITEMS = ['About Us', 'Features', 'FAQs', 'Contact'];
 export default class Navigation extends Component {
@@ -69,7 +68,12 @@ export default class Navigation extends Component {
 					<Brand>
 						<Scrollspy offset={-64} item={['top']} currentClassName="active">
 							<AnchorLink href="#top" onClick={this.closeMobileMenu}>
-								<HeadingText>WO</HeadingText>
+								<img
+									src="/wo-logo.png"
+									alt="wo-logo"
+									width="120"
+									style={{ margin: 0, padding: 0, border: '2px solid blue' }}
+								/>
 							</AnchorLink>
 						</Scrollspy>
 					</Brand>
@@ -96,10 +100,3 @@ export default class Navigation extends Component {
 		);
 	}
 }
-
-const HeadingText = styled.h2`
-	font-size: 2rem;
-	font-weight: 700;
-	color: ${(props) => props.theme.color.background.white};
-	margin: 0;
-`;
