@@ -60,7 +60,7 @@ const PrimaryHeading = styled.h3`
 
 const HorizontalRule = styled.hr`
 	width: 100%;
-	height: 3px;
+	height: 2px;
 	background-color: ${(props) => props.theme.color.background.white};
 `;
 
