@@ -12,7 +12,22 @@ const AboutUs = () => {
 					<HorizontalRule />
 				</Header>
 				<ContentWrapper>
-					<TextWrapper>Hello World</TextWrapper>
+					<TextWrapper>
+						<HeadingWrapper>
+							<SecondaryHeading>Create and Consume</SecondaryHeading>
+							<SecondaryHeading>Engaging content</SecondaryHeading>
+						</HeadingWrapper>
+						<ParagraphWrapper>
+							<div>
+								<Paragraph>Connect and Socialize with your</Paragraph>
+								<Paragraph>friends and following.</Paragraph>
+							</div>
+							<div>
+								<Paragraph>Get entertained by your favourite</Paragraph>
+								<Paragraph>creators.</Paragraph>
+							</div>
+						</ParagraphWrapper>
+					</TextWrapper>
 					<img src="/about.png" alt="banner" style={{ maxWidth: '45%', border: '2px solid pink' }} />
 				</ContentWrapper>
 			</CenterDiv>
@@ -51,11 +66,11 @@ const HorizontalRule = styled.hr`
 `;
 
 const ContentWrapper = styled.div`
-	width: 90%;
+	width: 95%;
 	display: flex;
 	justify-content: space-between;
 	align-items: flex-start;
-	border: 5px solid brown;
+	border: 1px solid brown;
 `;
 
 const TextWrapper = styled.div`
@@ -66,6 +81,42 @@ const TextWrapper = styled.div`
 	justify-content: space-between;
 	align-items: flex-start;
 	border: 5px solid green;
+`;
+
+const HeadingWrapper = styled.div`
+	margin: 1rem 0;
+	padding: 1rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: flex-start;
+	border: 1px solid red;
+`;
+
+const SecondaryHeading = styled.h4`
+	font-weight: 600;
+	margin: 0;
+	padding: 10px 0;
+	font-size: 3rem;
+	color: ${(props) => props.theme.color.background.white};
+`;
+
+const ParagraphWrapper = styled.div`
+	margin: 1rem;
+	padding: 1rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: flex-start;
+	border: 2px solid grey;
+`;
+
+const Paragraph = styled.p`
+	font-weight: 400;
+	margin: 0;
+	padding: 5px 0;
+	font-size: 1.5rem;
+	color: ${(props) => props.theme.color.background.white};
 `;
 
 export default AboutUs;
