@@ -40,6 +40,7 @@ const CenterDiv = styled.div`
 	justify-content: center;
 	align-items: center;
 	flex-direction: column;
+	color: ${(props) => props.theme.color.background.white};
 	background-color: ${(props) => props.theme.color.background.regular};
 `;
 
@@ -48,15 +49,13 @@ const Header = styled.div`
 	margin: 0 auto;
 	padding: 0;
 	display: flex;
-	align-items: center;
 	gap: 4rem;
-	color: ${(props) => props.theme.color.background.white};
+	align-items: center;
 `;
 
 const PrimaryHeading = styled.h3`
 	font-weight: 600;
 	font-size: 2rem;
-	color: ${(props) => props.theme.color.background.white};
 `;
 
 const HorizontalRule = styled.hr`
@@ -73,8 +72,8 @@ const ContentWrapper = styled.div`
 `;
 
 const TextWrapper = styled.div`
-	margin-top: 2rem;
 	width: 45%;
+	margin-top: 2rem;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
@@ -91,17 +90,17 @@ const HeadingWrapper = styled.div`
 `;
 
 const SecondaryHeading = styled.h4`
-	font-weight: 600;
 	margin: 0;
 	padding: 10px 0;
 	font-size: 3rem;
-	color: ${(props) => props.theme.color.background.white};
+	font-weight: 600;
 `;
 
 const ParagraphWrapper = styled.div`
 	margin: 1rem;
 	padding: 1rem;
 	display: flex;
+	gap: 2rem;
 	flex-direction: column;
 	justify-content: space-between;
 	align-items: flex-start;
@@ -112,7 +111,6 @@ const Paragraph = styled.p`
 	margin: 0;
 	padding: 5px 0;
 	font-size: 1.5rem;
-	color: ${(props) => props.theme.color.background.white};
 `;
 
 export default AboutUs;
