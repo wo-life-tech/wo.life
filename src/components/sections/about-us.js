@@ -92,7 +92,7 @@ const HeadingWrapper = styled.div`
 const SecondaryHeading = styled.h4`
 	margin: 0;
 	padding: 10px 0;
-	font-size: 3rem;
+	font-size: 2.4rem;
 	font-weight: 600;
 `;
 
@@ -107,10 +107,10 @@ const ParagraphWrapper = styled.div`
 `;
 
 const Paragraph = styled.p`
-	font-weight: 400;
 	margin: 0;
 	padding: 5px 0;
 	font-size: 1.5rem;
+	font-weight: 400;
 `;
 
 export default AboutUs;

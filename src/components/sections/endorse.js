@@ -5,14 +5,20 @@ const Endorse = () => {
 	return (
 		<CenterDiv>
 			<TextWrapper>
-				<h1>
+				<HeadingText>
 					Endorse what you love & <br />
 					Earn
-				</h1>
-				<TextContainer>
-					<p>Help people discover products and make easy purchase decisions. </p>
-					<p>You earn a commission for every successful sale. </p>
-				</TextContainer>
+				</HeadingText>
+				<ParagraphWrapper>
+					<div>
+						<Paragraph>Help people discover products and</Paragraph>
+						<Paragraph>make easy purchase decisions.</Paragraph>
+					</div>
+					<div>
+						<Paragraph>You earn a commission for every</Paragraph>
+						<Paragraph>successful sale.</Paragraph>
+					</div>
+				</ParagraphWrapper>
 			</TextWrapper>
 			<ImageWrapper>
 				<img src="/endorse.png" alt="banner" style={{ maxWidth: '100%' }} />
@@ -22,12 +28,12 @@ const Endorse = () => {
 };
 
 const CenterDiv = styled.div`
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
 	padding: 4rem 0;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	color: ${(props) => props.theme.color.background.white};
 	background-color: ${(props) => props.theme.color.background.regular};
-	border: 1px solid red;
 `;
 
 const TextWrapper = styled.div`
@@ -37,25 +43,36 @@ const TextWrapper = styled.div`
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	color: ${(props) => props.theme.color.background.white};
-	h1 {
-		font-size: 2.4rem;
-	}
-	p {
-		font-size: 1.2rem;
-	}
 `;
 
-const TextContainer = styled.div`
+const HeadingText = styled.h1`
+	margin: 0;
+	padding: 10px 0;
+	font-size: 2.4rem;
+	font-weight: 600;
+`;
+
+const Paragraph = styled.p`
+	margin: 0;
+	padding: 5px 0;
+	font-size: 1.5rem;
+	font-weight: 400;
+	line-height: 1;
+`;
+
+const ParagraphWrapper = styled.div`
+	margin: 1rem;
+	padding: 1rem;
 	display: flex;
+	gap: 2rem;
 	flex-direction: column;
 	justify-content: space-between;
+	align-items: flex-start;
 `;
 
 const ImageWrapper = styled.div`
 	width: 50%;
 	padding: 1rem;
-	border: 1px solid blue;
 	display: flex;
 	justify-content: center;
 	align-items: center;
