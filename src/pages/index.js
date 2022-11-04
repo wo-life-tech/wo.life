@@ -11,6 +11,7 @@ import AboutUs from '../components/sections/about-us';
 import Shop from '../components/sections/shop';
 import Endorse from '../components/sections/endorse';
 import Faq from '../components/sections/Faq';
+import ContactForm from '../components/sections/ContactForm';
 
 const IndexPage = () => (
 	<Layout>
@@ -22,6 +23,7 @@ const IndexPage = () => (
 		<Endorse />
 		<Features />
 		<Faq />
+		<ContactForm />
 		<Footer />
 	</Layout>
 );
