@@ -28,7 +28,7 @@ const AboutUs = () => {
 							</div>
 						</ParagraphWrapper>
 					</TextWrapper>
-					<img src="/about.png" alt="banner" style={{ maxWidth: '45%', border: '2px solid pink' }} />
+					<img src="/about.png" alt="banner" style={{ maxWidth: '45%' }} />
 				</ContentWrapper>
 			</CenterDiv>
 		</Section>
@@ -51,11 +51,11 @@ const Header = styled.div`
 	align-items: center;
 	gap: 4rem;
 	color: ${(props) => props.theme.color.background.white};
-	border: 1px solid grey;
 `;
 
 const PrimaryHeading = styled.h3`
 	font-weight: 600;
+	font-size: 2rem;
 	color: ${(props) => props.theme.color.background.white};
 `;
 
@@ -70,7 +70,6 @@ const ContentWrapper = styled.div`
 	display: flex;
 	justify-content: space-between;
 	align-items: flex-start;
-	border: 1px solid brown;
 `;
 
 const TextWrapper = styled.div`
@@ -80,7 +79,6 @@ const TextWrapper = styled.div`
 	flex-direction: column;
 	justify-content: space-between;
 	align-items: flex-start;
-	border: 5px solid green;
 `;
 
 const HeadingWrapper = styled.div`
@@ -90,7 +88,6 @@ const HeadingWrapper = styled.div`
 	flex-direction: column;
 	justify-content: space-between;
 	align-items: flex-start;
-	border: 1px solid red;
 `;
 
 const SecondaryHeading = styled.h4`
@@ -108,7 +105,6 @@ const ParagraphWrapper = styled.div`
 	flex-direction: column;
 	justify-content: space-between;
 	align-items: flex-start;
-	border: 2px solid grey;
 `;
 
 const Paragraph = styled.p`

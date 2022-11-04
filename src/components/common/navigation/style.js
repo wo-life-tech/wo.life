@@ -10,7 +10,6 @@ export const Nav = styled.nav`
 	color: ${(props) => props.theme.color.background.white};
 	background: ${(props) => props.theme.color.background.regular};
 	transition: 0.4s cubic-bezier(0.2, 0.8, 0.2, 1);
-	border: 2px solid green;
 `;
 
 export const StyledContainer = styled(Container)`
@@ -26,7 +25,6 @@ export const NavListWrapper = styled.div`
 		padding: 0;
 		display: flex;
 		flex-direction: row;
-		border: 1px solid red;
 
 		${({ mobile }) =>
 			mobile &&
