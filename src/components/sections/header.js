@@ -50,7 +50,7 @@ const HeaderWrapper = styled.header`
 	position: relative;
 	@media (max-width: ${(props) => props.theme.screen.md}) {
 	}
-	border: 1px solid white;
+	border: 5px solid yellow;
 `;
 
 const BottomText = styled.h1`

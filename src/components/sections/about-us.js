@@ -6,19 +6,14 @@ const AboutUs = () => {
 	return (
 		<Section id="about us">
 			<CenterDiv>
-				<PrimaryHeading>
+				<Header>
 					<HorizontalRule />
-					About Us
+					<PrimaryHeading>About&nbsp;Us</PrimaryHeading>
 					<HorizontalRule />
-				</PrimaryHeading>
+				</Header>
 				<ContentWrapper>
-					<div>
-						<SecText>Create and Consume</SecText>
-						<SecText>Engaging content</SecText>
-						<TernaryText>Connect and Socialize with your friends and following. </TernaryText>
-						<TernaryText>Get entertained by your favourite creators. </TernaryText>
-					</div>
-					<img src="/about.png" alt="banner" style={{ maxWidth: '100%' }} />
+					<TextWrapper>Hello World</TextWrapper>
+					<img src="/about.png" alt="banner" style={{ maxWidth: '45%', border: '2px solid pink' }} />
 				</ContentWrapper>
 			</CenterDiv>
 		</Section>
@@ -33,37 +28,44 @@ const CenterDiv = styled.div`
 	background-color: ${(props) => props.theme.color.background.regular};
 `;
 
-const PrimaryHeading = styled.h3`
+const Header = styled.div`
 	width: 70%;
+	margin: 0 auto;
+	padding: 0;
 	display: flex;
-	justify-content: space-around;
 	align-items: center;
-	gap: 1rem;
+	gap: 4rem;
 	color: ${(props) => props.theme.color.background.white};
+	border: 1px solid grey;
 `;
 
-const SecText = styled.h1`
-	margin: 0;
-	color: ${(props) => props.theme.color.background.white};
-`;
-
-const TernaryText = styled.h2`
-	font-weight: 400;
+const PrimaryHeading = styled.h3`
+	font-weight: 600;
 	color: ${(props) => props.theme.color.background.white};
 `;
 
 const HorizontalRule = styled.hr`
 	width: 100%;
-	height: 1px;
+	height: 3px;
 	background-color: ${(props) => props.theme.color.background.white};
 `;
 
 const ContentWrapper = styled.div`
 	width: 90%;
-	display: grid;
-	grid-template-columns: 1fr 1fr;
-	grid-gap: 40px;
-	align-items: center;
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-start;
+	border: 5px solid brown;
+`;
+
+const TextWrapper = styled.div`
+	margin-top: 2rem;
+	width: 45%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: flex-start;
+	border: 5px solid green;
 `;
 
 export default AboutUs;
