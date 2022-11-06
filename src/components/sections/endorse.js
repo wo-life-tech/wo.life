@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import Image from './Image';
 
 const Endorse = () => {
 	return (
@@ -20,9 +21,7 @@ const Endorse = () => {
 					</div>
 				</ParagraphWrapper>
 			</TextWrapper>
-			<ImageWrapper>
-				<img src="/endorse.png" alt="banner" style={{ maxWidth: '100%' }} />
-			</ImageWrapper>
+			<Image src="/endorse.png" altText="endorse" maxWidth="100%" />
 		</CenterDiv>
 	);
 };
@@ -68,14 +67,6 @@ const ParagraphWrapper = styled.div`
 	flex-direction: column;
 	justify-content: space-between;
 	align-items: flex-start;
-`;
-
-const ImageWrapper = styled.div`
-	width: 50%;
-	padding: 1rem;
-	display: flex;
-	justify-content: center;
-	align-items: center;
 `;
 
 export default Endorse;

@@ -1,7 +1,21 @@
 import React from 'react';
+import styled from 'styled-components';
 
-const Image = () => {
-	return <div>Image</div>;
+const Image = (props) => {
+	const { src, altText, maxWidth } = props;
+	return (
+		<ImageWrapper>
+			<img src={src} alt={altText} style={{ maxWidth: maxWidth }} />
+		</ImageWrapper>
+	);
 };
+
+const ImageWrapper = styled.div`
+	width: 50%;
+	padding: 1rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+`;
 
 export default Image;

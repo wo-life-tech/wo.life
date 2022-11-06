@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Section } from '../global';
+import Image from './Image';
 
 const Faq = () => {
 	const QuestionContainer = (ques1, ques2, ans1, ans2, showHorizontalRule) => {
@@ -26,9 +27,7 @@ const Faq = () => {
 	return (
 		<Section id="faqs">
 			<CenterDiv>
-				<ImageWrapper>
-					<img src="/faq.png" alt="faq" style={{ maxWidth: '100%' }} />
-				</ImageWrapper>
+				<Image src="/faq.png" altText="faq" maxWidth="100%" />
 				<TextWrapper>
 					<PrimaryHeading>FAQs</PrimaryHeading>
 					{QuestionContainer(
@@ -52,14 +51,6 @@ const CenterDiv = styled.div`
 	align-items: center;
 	color: ${(props) => props.theme.color.background.white};
 	background-color: ${(props) => props.theme.color.background.regular};
-`;
-
-const ImageWrapper = styled.div`
-	width: 50%;
-	padding: 1rem;
-	display: flex;
-	justify-content: center;
-	align-items: center;
 `;
 
 const PrimaryHeading = styled.h1`

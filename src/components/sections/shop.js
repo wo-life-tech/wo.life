@@ -1,12 +1,11 @@
 import React from 'react';
 import styled from 'styled-components';
+import Image from './Image';
 
 const Shop = () => {
 	return (
 		<CenterDiv>
-			<ImageWrapper>
-				<img src="/shop.png" alt="banner" style={{ maxWidth: '100%' }} />
-			</ImageWrapper>
+			<Image src="/shop.png" altText="shop" maxWidth="100%" />
 			<TextWrapper>
 				<HeadingText>
 					Shop from your favourite <br /> brands
@@ -62,13 +61,6 @@ const Paragraph = styled.p`
 	font-size: 1.5rem;
 	font-weight: 400;
 	line-height: 1;
-`;
-
-const ImageWrapper = styled.div`
-	width: 50%;
-	display: flex;
-	justify-content: center;
-	align-items: center;
 `;
 
 export default Shop;

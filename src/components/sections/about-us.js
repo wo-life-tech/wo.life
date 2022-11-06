@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { Section } from '../global';
 import Heading from './Heading';
+import Image from './Image';
 
 const AboutUs = () => {
 	return (
@@ -25,7 +26,7 @@ const AboutUs = () => {
 							</div>
 						</ParagraphWrapper>
 					</TextWrapper>
-					<img src="/about.png" alt="banner" style={{ maxWidth: '45%' }} />
+					<Image src="/about.png" altText="about-us" maxWidth="100%" />
 				</ContentWrapper>
 			</CenterDiv>
 		</Section>
