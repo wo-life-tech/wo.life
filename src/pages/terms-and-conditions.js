@@ -420,7 +420,8 @@ const TermsWrapper = styled.div`
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
-	height: 100vh;
+	color: ${(props) => props.theme.color.background.white};
+	background-color: ${(props) => props.theme.color.background.regular};
 `;
 
 const CenterDiv = styled.div`
@@ -437,30 +438,14 @@ const CenterDiv = styled.div`
 	}
 `;
 
-const SubCenterDiv = styled.div`
-	margin: 0 5rem;
-	display: flex;
-	flex-direction: column;
-	justify-content: flex-start;
-	align-items: flex-start;
-`;
-
 const Paragraph = styled.p`
 	margin: 0.3rem 0;
-`;
-
-const ContainerDiv = styled.div`
-	margin: 0,
-	padding: 0,
-	display: flex,
-	justify-content: flex-start,
-	margin-bottom: 1rem,
 `;
 
 const PrimaryHeading = styled.h4`
 	text-align: center;
 	font-weight: 600;
-	margin-bottom: 1rem;
+	margin: 3rem 0 1rem;
 	text-transform: uppercase;
 	@media (max-width: ${(props) => props.theme.screen.xs}) {
 		margin-bottom: 0.3rem;
@@ -474,11 +459,6 @@ const SecondaryHeading = styled.h5`
 	letter-spacing: 0.1px;
 	color: ${(props) => props.theme.color.secondary};
 	margin: 1rem 0 0.5rem 0;
-`;
-
-const SubHeading = styled.h5`
-	display: inline;
-	font-weight: 600;
 `;
 
 const BoldSpan = styled.span`

@@ -1,9 +1,16 @@
 import React from 'react';
 import styled from 'styled-components';
 
+const iconsWidth = '100';
+const woLife = 'https://wo.life/';
+
 const Header = () => {
-	const displayImage = (image, altText) => {
-		return <img src={image} alt={altText} width="100" />;
+	const appDownloadLinks = (image, altText, link) => {
+		return (
+			<a href={link} target="blank">
+				<img src={image} alt={altText} width={iconsWidth} />
+			</a>
+		);
 	};
 
 	return (
@@ -17,8 +24,8 @@ const Header = () => {
 					</h1>
 					<BottomText>Download Now : </BottomText>
 					<Flex>
-						{displayImage('/playstore.png', 'playstore')}
-						{displayImage('/app-store.png', 'appstore')}
+						{appDownloadLinks('/playstore.png', 'playstore', woLife)}
+						{appDownloadLinks('/app-store.png', 'appstore', woLife)}
 					</Flex>
 				</HeaderTextGroup>
 				<ImageWrapper>
