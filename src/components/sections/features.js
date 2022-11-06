@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import { Section } from '../global';
 
 const Features = () => {
-	const Card = (heading, text1, text2, image, altText, rotate) => {
+	const Card = (heading, text1, text2, image, altText) => {
 		return (
 			<CenterDiv>
 				<SecText>{heading}</SecText>
@@ -13,7 +13,7 @@ const Features = () => {
 					<br />
 					{text2}
 				</Paragraph>
-				<img src={image} alt={altText} style={{ maxWidth: '100%', transform: `rotateY(${rotate}deg)` }} />
+				<img src={image} alt={altText} style={{ maxWidth: '100%' }} />
 			</CenterDiv>
 		);
 	};
@@ -27,15 +27,14 @@ const Features = () => {
 					<HorizontalRule />
 				</Header>
 				<ContentWrapper>
-					{Card('Socialize', 'Through Image and', 'short video sharing', '/socialize.png', 'socialize', 0)}
-					{Card('Shop', 'Directly from our', 'Marketplace or Posts', '/shop2.png', 'shop-via-app', 0)}
+					{Card('Socialize', 'Through Image and', 'short video sharing', '/socialize.png', 'socialize')}
+					{Card('Shop', 'Directly from our', 'Marketplace or Posts', '/shop2.png', 'shop-via-app')}
 					{Card(
 						'Earn',
 						'Commission for helping your',
 						'community purchase products',
-						'/socialize.png',
+						'/earn.png',
 						'socialize',
-						180,
 					)}
 				</ContentWrapper>
 			</CenterDiv>

@@ -125,7 +125,6 @@ const SocialLinks = styled.div`
 		display: flex;
 		justify-content: flex-start;
 		align-items: flex-end;
-		border: 1px solid grey;
 	}
 	ul li {
 		list-style: none;
