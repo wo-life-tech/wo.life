@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 import { Section } from '../global';
+import Heading from './Heading';
 
 const Features = () => {
 	const Card = (heading, text1, text2, image, altText) => {
@@ -21,11 +22,7 @@ const Features = () => {
 	return (
 		<Section id="features">
 			<CenterDiv>
-				<Header>
-					<HorizontalRule />
-					<PrimaryHeading>Features</PrimaryHeading>
-					<HorizontalRule />
-				</Header>
+				<Heading heading="Features" />
 				<ContentWrapper>
 					{Card('Socialize', 'Through Image and', 'short video sharing', '/socialize.png', 'socialize')}
 					{Card('Shop', 'Directly from our', 'Marketplace or Posts', '/shop2.png', 'shop-via-app')}
@@ -49,26 +46,6 @@ const CenterDiv = styled.div`
 	flex-direction: column;
 	color: ${(props) => props.theme.color.background.white};
 	background-color: ${(props) => props.theme.color.background.regular};
-`;
-
-const Header = styled.div`
-	width: 70%;
-	margin: 0 auto;
-	padding: 0;
-	display: flex;
-	gap: 4rem;
-	align-items: center;
-`;
-
-const PrimaryHeading = styled.h3`
-	font-weight: 600;
-	font-size: 2rem;
-`;
-
-const HorizontalRule = styled.hr`
-	width: 100%;
-	height: 2px;
-	background-color: ${(props) => props.theme.color.background.white};
 `;
 
 const ContentWrapper = styled.div`

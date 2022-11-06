@@ -1,16 +1,13 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Section } from '../global';
+import Heading from './Heading';
 
 const AboutUs = () => {
 	return (
 		<Section id="about us">
 			<CenterDiv>
-				<Header>
-					<HorizontalRule />
-					<PrimaryHeading>About&nbsp;Us</PrimaryHeading>
-					<HorizontalRule />
-				</Header>
+				<Heading heading="About&nbsp;Us" />
 				<ContentWrapper>
 					<TextWrapper>
 						<HeadingWrapper>
@@ -42,26 +39,6 @@ const CenterDiv = styled.div`
 	flex-direction: column;
 	color: ${(props) => props.theme.color.background.white};
 	background-color: ${(props) => props.theme.color.background.regular};
-`;
-
-const Header = styled.div`
-	width: 70%;
-	margin: 0 auto;
-	padding: 0;
-	display: flex;
-	gap: 4rem;
-	align-items: center;
-`;
-
-const PrimaryHeading = styled.h3`
-	font-weight: 600;
-	font-size: 2rem;
-`;
-
-const HorizontalRule = styled.hr`
-	width: 100%;
-	height: 2px;
-	background-color: ${(props) => props.theme.color.background.white};
 `;
 
 const ContentWrapper = styled.div`
