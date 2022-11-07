@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 import { Section } from '../global';
-import Heading from './Heading';
+import Heading from '../common/layout/Heading';
 
 const Features = () => {
 	const Card = (heading, text1, text2, image, altText) => {

@@ -3,7 +3,7 @@ import { Section } from '../global';
 import { TextWrapper, ParagraphWrapper } from '../common/layout/TextWrapper';
 import { HeadingText, Paragraph } from '../common/layout/Text';
 import CenterDiv from '../common/layout/CenterDiv';
-import Heading from './Heading';
+import Heading from '../common/layout/Heading';
 import Image from './Image';
 
 const AboutUs = () => {

@@ -2,12 +2,12 @@ import React from 'react';
 import styled from 'styled-components';
 
 export const HeadingText = (props) => {
-	const { heading1, heading2 } = props;
+	const { heading1, heading2 = '' } = props;
 	return (
 		<HeadingTextStyled>
 			{heading1}
 			<br />
-			{heading2}
+			{heading2 !== '' ? <span>{heading2}</span> : null}
 		</HeadingTextStyled>
 	);
 };

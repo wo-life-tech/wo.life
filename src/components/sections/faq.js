@@ -1,8 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Section } from '../global';
-import Image from './Image';
 import CenterDiv from '../common/layout/CenterDiv';
+import Image from './Image';
 
 const Faq = () => {
 	const QuestionContainer = (ques1, ques2, ans1, ans2, showHorizontalRule) => {
