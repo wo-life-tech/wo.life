@@ -17,6 +17,8 @@ export const Paragraph = (props) => {
 	return <ParagraphStyled>{text}</ParagraphStyled>;
 };
 
+export const HorizontalRow = () => <HorizontalRowStyled />;
+
 const HeadingTextStyled = styled.h1`
 	margin: 0;
 	padding: 10px 0;
@@ -30,4 +32,11 @@ const ParagraphStyled = styled.p`
 	font-size: 1.5rem;
 	font-weight: 400;
 	line-height: 0.8;
+`;
+
+const HorizontalRowStyled = styled.hr`
+	margin: 0;
+	width: 100%;
+	height: 2px;
+	background-color: ${(props) => props.theme.color.background.white};
 `;

@@ -1,13 +1,14 @@
 import React from 'react';
 import styled from 'styled-components';
+import { HorizontalRow } from './Text';
 
 const Heading = (props) => {
 	const { heading } = props;
 	return (
 		<Header>
-			<HorizontalRule />
+			<HorizontalRow />
 			<PrimaryHeading>{heading}</PrimaryHeading>
-			<HorizontalRule />
+			<HorizontalRow />
 		</Header>
 	);
 };
@@ -20,12 +21,6 @@ const Header = styled.div`
 	gap: 4rem;
 	align-items: center;
 	color: ${(props) => props.theme.color.background.white};
-`;
-
-const HorizontalRule = styled.hr`
-	width: 100%;
-	height: 2px;
-	background-color: ${(props) => props.theme.color.background.white};
 `;
 
 const PrimaryHeading = styled.h3`
