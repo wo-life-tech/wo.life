@@ -1,7 +1,10 @@
 import React, { useState } from 'react';
+import validator from 'validator';
 import styled from 'styled-components';
 import { Section } from '../global';
 import { PrimaryHeading } from '../common/layout/Text';
+import { showToast, ShowWarningToast } from '../common/ShowToast';
+import toast, { Toaster } from 'react-hot-toast';
 
 const ContactForm = () => {
 	const [name, setName] = useState('');
@@ -23,22 +26,60 @@ const ContactForm = () => {
 	};
 
 	const handleFormSubmit = (event) => {
+		toast.dismiss();
 		event.preventDefault();
+		if (name === '') {
+			ShowWarningToast('Please enter your name');
+			return;
+		} else if (!validator.isEmail(email)) {
+			ShowWarningToast('Please enter a valid email address');
+			return;
+		} else if (!validator.isMobilePhone(mobile, 'en-IN')) {
+			ShowWarningToast('Please enter a valid mobile number');
+			return;
+		} else if (message === '') {
+			ShowWarningToast('Please enter your message');
+			return;
+		}
+		showToast('success', 'Your message has been sent successfully');
 		setName('');
 		setEmail('');
 		setMobile('');
 		setMessage('');
+		// api call to send the message
 	};
 
 	return (
 		<Section id="contact">
 			<CenterDiv>
+				<Toaster />
 				<PrimaryHeading heading="Contact Us" isLarger={true} />
 				<FormContainer>
-					<InputField type="text" id="name" value={name} onChange={handleChange} placeholder="Name" />
-					<InputField type="email" id="email" value={email} onChange={handleChange} placeholder="Email" />
-					<InputField type="text" id="mobile" value={mobile} onChange={handleChange} placeholder="Mobile" />
-					<TextArea value={message} id="message" onChange={handleChange} placeholder="Message" />
+					<InputField
+						type="text"
+						id="name"
+						required
+						value={name}
+						onChange={handleChange}
+						placeholder="Name"
+					/>
+					<InputField
+						type="email"
+						id="email"
+						required
+						value={email}
+						onChange={handleChange}
+						placeholder="Email"
+					/>
+					<InputField
+						type="text"
+						id="mobile"
+						required
+						value={mobile}
+						onChange={handleChange}
+						placeholder="Mobile"
+					/>
+					<TextArea value={message} id="message" required onChange={handleChange} placeholder="Message" />
 					<Button onClick={handleFormSubmit} type="submit">
 						Send
 					</Button>
