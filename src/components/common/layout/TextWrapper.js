@@ -1,9 +1,14 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const TextWrapper = (props) => {
+export const TextWrapper = (props) => {
 	const { children } = props;
 	return <TextBox>{children}</TextBox>;
+};
+
+export const ParagraphWrapper = (props) => {
+	const { children } = props;
+	return <ParagraphWrapperStyled>{children}</ParagraphWrapperStyled>;
 };
 
 const TextBox = styled.div`
@@ -15,4 +20,12 @@ const TextBox = styled.div`
 	align-items: center;
 `;
 
-export default TextWrapper;
+const ParagraphWrapperStyled = styled.div`
+	margin: 1rem;
+	padding: 1rem;
+	display: flex;
+	gap: 1rem;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: flex-start;
+`;

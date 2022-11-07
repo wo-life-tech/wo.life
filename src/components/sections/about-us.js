@@ -4,7 +4,7 @@ import { Section } from '../global';
 import Heading from './Heading';
 import CenterDiv from '../common/layout/CenterDiv';
 import Image from './Image';
-import TextWrapper from '../common/layout/TextWrapper';
+import { TextWrapper, ParagraphWrapper } from '../common/layout/TextWrapper';
 import { HeadingText } from '../common/layout/Text';
 
 const AboutUs = () => {
@@ -30,16 +30,6 @@ const AboutUs = () => {
 		</Section>
 	);
 };
-
-const ParagraphWrapper = styled.div`
-	margin: 1rem;
-	padding: 1rem;
-	display: flex;
-	gap: 2rem;
-	flex-direction: column;
-	justify-content: space-between;
-	align-items: flex-start;
-`;
 
 const Paragraph = styled.p`
 	margin: 0;

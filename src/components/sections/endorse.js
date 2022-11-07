@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import CenterDiv from '../common/layout/CenterDiv';
-import TextWrapper from '../common/layout/TextWrapper';
+import { TextWrapper, ParagraphWrapper } from '../common/layout/TextWrapper';
 import { HeadingText } from '../common/layout/Text';
 import Image from './Image';
 
@@ -32,16 +32,6 @@ const Paragraph = styled.p`
 	font-size: 1.5rem;
 	font-weight: 400;
 	line-height: 1;
-`;
-
-const ParagraphWrapper = styled.div`
-	margin: 1rem;
-	padding: 1rem;
-	display: flex;
-	gap: 2rem;
-	flex-direction: column;
-	justify-content: space-between;
-	align-items: flex-start;
 `;
 
 export default Endorse;

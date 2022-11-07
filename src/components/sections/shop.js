@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import CenterDiv from '../common/layout/CenterDiv';
-import TextWrapper from '../common/layout/TextWrapper';
+import { TextWrapper, ParagraphWrapper } from '../common/layout/TextWrapper';
 import Image from './Image';
 import { HeadingText } from '../common/layout/Text';
 
@@ -23,16 +23,6 @@ const Shop = () => {
 		</CenterDiv>
 	);
 };
-
-const ParagraphWrapper = styled.div`
-	margin: 1rem;
-	padding: 1rem;
-	display: flex;
-	gap: 2rem;
-	flex-direction: column;
-	align-items: flex-start;
-	justify-content: space-between;
-`;
 
 const Paragraph = styled.p`
 	margin: 0;
