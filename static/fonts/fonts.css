@@ -1,96 +1,84 @@
-/* nunito-300 - latin */
+/* VisbyCF-300 */
 @font-face {
-	font-family: 'Nunito Light';
+	font-family: 'VisbyCF Light';
 	font-style: normal;
 	font-weight: 300;
-	src: url('../fonts/nunito-v25-latin-300.woff') format('woff'),
-		url('../fonts/nunito-v25-latin-300.woff2') format('woff2');
+	src: url('../fonts/VisbyCF-Light.woff') format('woff');
 }
-/* nunito-regular - latin */
+/* VisbyCF-regular */
 @font-face {
-	font-family: 'Nunito Regular';
+	font-family: 'VisbyCF Regular';
 	font-style: normal;
 	font-weight: 400;
-	src: url('../fonts/nunito-v25-latin-regular.woff') format('woff'),
-		url('../fonts/nunito-v25-latin-regular.woff2') format('woff2');
+	src: url('../fonts/VisbyCF-Regular.woff') format('woff');
 }
-/* nunito-600 - latin */
+/* VisbyCF-600 */
 @font-face {
-	font-family: 'Nunito Medium';
+	font-family: 'VisbyCF Medium';
 	font-style: normal;
 	font-weight: 600;
-	src: url('../fonts/nunito-v25-latin-600.woff') format('woff'),
-		url('../fonts/nunito-v25-latin-600.woff2') format('woff2');
+	src: url('../fonts/VisbyCF-Medium.woff') format('woff');
 }
-/* nunito-700 - latin */
+/* VisbyCF-700 */
 @font-face {
-	font-family: 'Nunito Semi Bold';
+	font-family: 'VisbyCF Semi Bold';
 	font-style: normal;
 	font-weight: 800;
-	src: url('../fonts/nunito-v25-latin-700.woff') format('woff'),
-		url('../fonts/nunito-v25-latin-700.woff2') format('woff2');
+	src: url('../fonts/VisbyCF-DemiBold.woff') format('woff');
 }
-/* nunito-800 - latin */
+/* VisbyCF-800 */
 @font-face {
-	font-family: 'Nunito Bold';
+	font-family: 'VisbyCF Bold';
 	font-style: normal;
 	font-weight: 800;
-	src: url('../fonts/nunito-v25-latin-800.woff') format('woff'),
-		url('../fonts/nunito-v25-latin-800.woff2') format('woff2');
+	src: url('../fonts/VisbyCF-Bold.woff') format('woff');
 }
-/* nunito-900 - latin */
+/* VisbyCF-900 */
 @font-face {
-	font-family: 'Nunito Black';
+	font-family: 'VisbyCF ExtraBold';
 	font-style: normal;
 	font-weight: 900;
-	src: url('../fonts/nunito-v25-latin-900.woff') format('woff'),
-		url('../fonts/nunito-v25-latin-900.woff2') format('woff2');
+	src: url('../fonts/VisbyCF-ExtraBold.woff') format('woff');
 }
-/* nunito-300italic - latin */
+/* VisbyCF-300oblique */
 @font-face {
-	font-family: 'Nunito Light';
-	font-style: italic;
+	font-family: 'VisbyCF Light';
+	font-style: oblique;
 	font-weight: 300;
-	src: url('../fonts/nunito-v25-latin-300italic.woff') format('woff'),
-		url('../fonts/nunito-v25-latin-300italic.woff2') format('woff2');
+	src: url('../fonts/VisbyCF-LightOblique.woff') format('woff');
 }
-/* nunito-italic - latin */
+/* VisbyCF-oblique */
 @font-face {
-	font-family: 'Nunito Regular';
-	font-style: italic;
+	font-family: 'VisbyCF Regular';
+	font-style: oblique;
 	font-weight: 400;
-	src: url('../fonts/nunito-v25-latin-italic.woff') format('woff'),
-		url('../fonts/nunito-v25-latin-italic.woff2') format('woff2');
+	src: url('../fonts/VisbyCF-RegularOblique.woff') format('woff');
 }
-/* nunito-600italic - latin */
+/* VisbyCF-600oblique */
 @font-face {
-	font-family: 'Nunito Medium';
-	font-style: italic;
+	font-family: 'VisbyCF Medium';
+	font-style: oblique;
 	font-weight: 600;
-	src: url('../fonts/nunito-v25-latin-600italic.woff') format('woff'),
-		url('../fonts/nunito-v25-latin-600italic.woff2') format('woff2');
+	src: url('../fonts/VisbyCF-MediumOblique.woff') format('woff');
 }
-/* nunito-700italic - latin */
+/* VisbyCF-700oblique */
 @font-face {
-	font-family: 'Nunito Semi Bold';
-	font-style: italic;
+	font-family: 'VisbyCF Semi Bold';
+	font-style: oblique;
 	font-weight: 700;
-	src: url('../fonts/nunito-v25-latin-700italic.woff') format('woff'),
-		url('../fonts/nunito-v25-latin-700italic.woff2') format('woff2');
+	src: url('../fonts/VisbyCF-DemiBoldOblique.woff') format('woff');
 }
-/* nunito-800italic - latin */
+/* VisbyCF-800oblique */
 @font-face {
-	font-family: 'Nunito Bold';
-	font-style: italic;
+	font-family: 'VisbyCF Bold';
+	font-style: oblique;
 	font-weight: 800;
-	src: url('../fonts/nunito-v25-latin-800italic.woff') format('woff'),
-		url('../fonts/nunito-v25-latin-800italic.woff2') format('woff2');
+	src: url('../fonts/VisbyCF-BoldOblique.woff') format('woff');
 }
-/* nunito-900italic - latin */
+/* VisbyCF-900oblique */
 @font-face {
-	font-family: 'Nunito Black';
-	font-style: italic;
+	font-family: 'VisbyCF ExtraBold';
+	font-style: oblique;
 	font-weight: 900;
-	src: url('../fonts/nunito-v25-latin-900italic.woff') format('woff'),
-		url('../fonts/nunito-v25-latin-900italic.woff2') format('woff2');
+	src: url('../fonts/VisbyCF-ExtraBoldOblique.woff') format('woff');
 }

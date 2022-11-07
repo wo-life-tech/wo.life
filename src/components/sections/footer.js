@@ -4,6 +4,8 @@ import styled from 'styled-components';
 
 import { Container } from '../global';
 
+const socialIconWidth = '30';
+
 const Footer = () => (
 	<FooterWrapper id="footer">
 		<FooterColumnContainer>
@@ -21,17 +23,31 @@ const Footer = () => (
 					</li>
 				</ul>
 			</FooterColumn>
-			<FooterColumn>
+			<SocialLinks>
 				<span>Social</span>
 				<ul>
 					<li>
-						<FooterLink to="https://in.linkedin.com/company/wolife">LinkedIn</FooterLink>
+						<a href="" target="blank">
+							<img src="/facebook.png" alt="facebook" width={socialIconWidth} />
+						</a>
 					</li>
 					<li>
-						<FooterLink to="https://www.instagram.com/wolifeofficial">Instagram</FooterLink>
+						<a href="https://www.instagram.com/wolifeofficial" target="blank">
+							<img src="/instagram.png" alt="instagram" width={socialIconWidth} />
+						</a>
+					</li>
+					<li>
+						<a href="" target="blank">
+							<img src="/twitter.png" alt="twitter" width={socialIconWidth} />
+						</a>
+					</li>
+					<li>
+						<a href="https://in.linkedin.com/company/wolife" target="blank">
+							<img src="/linkedin.png" alt="linkedin" width={socialIconWidth} />
+						</a>
 					</li>
 				</ul>
-			</FooterColumn>
+			</SocialLinks>
 		</FooterColumnContainer>
 		<BrandContainer>
 			<Logo>wo.life</Logo>
@@ -40,15 +56,14 @@ const Footer = () => (
 );
 
 const FooterWrapper = styled.footer`
-	background-color: white;
-	margin: 80px 0 0;
-	padding: 0 0 80px;
+	padding: 48px 0;
+	color: ${(props) => props.theme.color.background.white};
+	background-color: ${(props) => props.theme.color.background.regular};
 `;
 
 const Logo = styled.div`
 	font-family: ${(props) => props.theme.font.extrabold};
 	${(props) => props.theme.font_size.regular};
-	color: ${(props) => props.theme.color.black.regular};
 	text-decoration: none;
 	letter-spacing: 1px;
 	margin: 0;
@@ -71,26 +86,25 @@ const BrandContainer = styled(Container)`
 	}
 `;
 const FooterColumnContainer = styled(Container)`
-	display: grid;
-	grid-template-columns: repeat(4, 1fr);
-	grid-column-gap: 32px;
-	justify-content: start;
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-start;
+	padding-top: 48px;
+	padding-bottom: 48px;
+
 	@media (max-width: ${(props) => props.theme.screen.sm}) {
-		grid-template-columns: 1fr 1fr;
-		grid-gap: 32px;
 	}
 `;
+
 const FooterColumn = styled.div`
 	span {
 		font-size: 16px;
 		font-family: ${(props) => props.theme.font.bold};
-		color: ${(props) => props.theme.color.primary};
 	}
 	ul {
 		list-style: none;
 		margin: 16px 0;
 		padding: 0;
-		color: ${(props) => props.theme.color.black.regular};
 		li {
 			margin-bottom: 12px;
 			font-family: ${(props) => props.theme.font.normal};
@@ -99,11 +113,30 @@ const FooterColumn = styled.div`
 	}
 `;
 
+const SocialLinks = styled.div`
+	color: ${(props) => props.theme.color.background.white};
+	span {
+		font-size: 16px;
+		padding-bottom: 10px;
+		font-family: ${(props) => props.theme.font.bold};
+	}
+	ul {
+		padding: 0.5rem 0;
+		display: flex;
+		justify-content: flex-start;
+		align-items: flex-end;
+	}
+	ul li {
+		list-style: none;
+		margin: 0 15px;
+	}
+`;
+
 const FooterLink = styled(Link)`
-	color: ${(props) => props.theme.color.black.regular};
 	text-decoration: none;
+	color: ${(props) => props.theme.color.background.white};
 	&:hover {
-		color: ${(props) => props.theme.color.primary};
+		color: ${(props) => props.theme.color.background.white};
 	}
 `;
 

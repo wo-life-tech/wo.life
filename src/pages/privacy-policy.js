@@ -186,7 +186,8 @@ const PrivacyPolicyWrapper = styled.div`
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
-	height: 100vh;
+	color: ${(props) => props.theme.color.background.white};
+	background-color: ${(props) => props.theme.color.background.regular};
 `;
 
 const CenterDiv = styled.div`
@@ -228,7 +229,7 @@ const ContainerDiv = styled.div`
 const PrimaryHeading = styled.h4`
 	text-align: center;
 	font-weight: 600;
-	margin-bottom: 2rem;
+	margin: 3rem 0 1rem;
 	text-transform: uppercase;
 	@media (max-width: ${(props) => props.theme.screen.md}) {
 		margin-bottom: 1rem;

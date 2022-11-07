@@ -4,11 +4,9 @@ import Scrollspy from 'react-scrollspy';
 import { Menu, X } from 'react-feather';
 
 import { Container } from '../../global';
-import { Nav, NavItem, Brand, StyledContainer, NavListWrapper, MobileMenu, Mobile, ActionsContainer } from './style';
+import { Nav, NavItem, Brand, StyledContainer, NavListWrapper, MobileMenu, Mobile } from './style';
 
-// const NAV_ITEMS = ['Features', 'Product', 'Pricing', ''];
-const NAV_ITEMS = ['Features'];
-
+const NAV_ITEMS = ['About Us', 'Features', 'FAQs', 'Contact'];
 export default class Navigation extends Component {
 	state = {
 		mobileMenuOpen: false,
@@ -70,12 +68,12 @@ export default class Navigation extends Component {
 					<Brand>
 						<Scrollspy offset={-64} item={['top']} currentClassName="active">
 							<AnchorLink href="#top" onClick={this.closeMobileMenu}>
-								wo.life
+								<img src="/wo-logo.png" alt="wo-logo" width="120" style={{ margin: 0, padding: 0 }} />
 							</AnchorLink>
 						</Scrollspy>
 					</Brand>
 					<Mobile>
-						<button onClick={this.toggleMobileMenu} style={{ color: 'black', background: 'none' }}>
+						<button onClick={this.toggleMobileMenu} style={{ color: 'white', background: 'none' }}>
 							{this.state.mobileMenuOpen ? (
 								<X size={24} alt="close menu" />
 							) : (
@@ -83,11 +81,7 @@ export default class Navigation extends Component {
 							)}
 						</button>
 					</Mobile>
-
 					<Mobile hide>{this.getNavList({})}</Mobile>
-					<ActionsContainer>
-						<button>Sign up</button>
-					</ActionsContainer>
 				</StyledContainer>
 				<Mobile>
 					{mobileMenuOpen && (

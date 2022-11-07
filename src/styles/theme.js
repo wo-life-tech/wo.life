@@ -1,13 +1,13 @@
 const theme = {
 	font: {
-		primary: `'Nunito Regular'`,
-		secondary: `'Nunito Medium'`,
-		light: `'Nunito Light'`,
-		normal: `'Nunito Regular'`,
-		medium: `'Nunito Medium'`,
-		semibold: `'Nunito Semi Bold'`,
-		bold: `'Nunito Bold'`,
-		extrabold: `'Nunito Black'`,
+		primary: `'VisbyCF Regular'`,
+		secondary: `'VisbyCF Medium'`,
+		light: `'VisbyCF Light'`,
+		normal: `'VisbyCF Regular'`,
+		medium: `'VisbyCF Medium'`,
+		semibold: `'VisbyCF Semi Bold'`,
+		bold: `'VisbyCF Bold'`,
+		extrabold: `'VisbyCF ExtraBold'`,
 	},
 	font_size: {
 		xxxsmall: 'font-size: 12px;',
@@ -27,9 +27,10 @@ const theme = {
 		background: {
 			white: '#ffffff',
 			light: '#f8f8f8',
+			regular: '#2a2727',
 		},
 		white: {
-			regular: '#ffffff',
+			regular: '#F3F3F3',
 			lessdark: '#faf9f8',
 			dark: '#f6f6f6',
 			darker: '#eeeeee',

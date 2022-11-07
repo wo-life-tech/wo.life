@@ -1,93 +1,87 @@
 import React from 'react';
 import styled from 'styled-components';
+import { Section } from '../global';
+import { Paragraph } from '../common/layout/Text';
+import Heading from '../common/layout/Heading';
+import ImgWithFallBack from '../common/ImgWithFallBack';
 
-import { Section, Container } from '../global';
+const Features = () => {
+	const Card = (heading, src, fallbackSrc, altText, text1, text2 = '') => {
+		return (
+			<CenterDiv>
+				<SecText>{heading}</SecText>
+				<Paragraph text={text1} />
+				{text2 !== '' && <Paragraph text={text2} />}
+				<ImgWithFallBack
+					src={src}
+					fallbackSrc={fallbackSrc}
+					altText={altText}
+					style={{ maxWidth: '90%', padding: '2.5rem' }}
+				/>
+			</CenterDiv>
+		);
+	};
 
-const Features = () => (
-	<Section id="features">
-		<StyledContainer>
-			<Subtitle>Features</Subtitle>
-			<SectionTitle>Experience the Best of both worlds</SectionTitle>
-			<FeaturesGrid>
-				<FeatureItem>
-					<FeatureTitle>Social</FeatureTitle>
-					<FeatureText>Socialize with your friends and followers</FeatureText>
-				</FeatureItem>
-				<FeatureItem>
-					<FeatureTitle>Content</FeatureTitle>
-					<FeatureText>
-						Consume content from your favourite content creators. <br />
-						Stay updated with your favourite brands
-					</FeatureText>
-				</FeatureItem>
-				<FeatureItem>
-					<FeatureTitle>Shopping</FeatureTitle>
-					<FeatureText>Shop easily from marketplace or directly from user's shared posts.</FeatureText>
-				</FeatureItem>
-				<FeatureItem>
-					<FeatureTitle>Affiliate Marketing</FeatureTitle>
-					<FeatureText>Earn without complicated contracts or affiliate systems.</FeatureText>
-				</FeatureItem>
-				<FeatureItem>
-					<FeatureTitle>Brands</FeatureTitle>
-					<FeatureText>Maintain and access social presence as well as e-commerce transactions.</FeatureText>
-				</FeatureItem>
-				<FeatureItem>
-					<FeatureTitle>All in One</FeatureTitle>
-					<FeatureText>One app for all social and commerce activities.</FeatureText>
-				</FeatureItem>
-			</FeaturesGrid>
-		</StyledContainer>
-	</Section>
-);
+	return (
+		<Section id="features">
+			<CenterDiv>
+				<Heading heading="Features" />
+				<ContentWrapper>
+					{Card(
+						'Socialize',
+						'/socializing.webp',
+						'/socializing.png',
+						'socializing',
+						'Through Image and',
+						'short video sharing',
+					)}
+					{Card(
+						'Shop',
+						'/smartphone-shopping.webp',
+						'/smartphone-shopping.png',
+						'shop-via-app',
+						'Directly from our',
+						'Marketplace or Posts',
+					)}
+					{Card(
+						'Earn',
+						'/influencer-earning.webp',
+						'/influencer-earning.png',
+						'influencer-earning',
+						'Commission for helping your',
+						'community purchase products',
+					)}
+				</ContentWrapper>
+			</CenterDiv>
+		</Section>
+	);
+};
 
-export default Features;
-
-const StyledContainer = styled(Container)``;
-
-const SectionTitle = styled.h3`
-	color: ${(props) => props.theme.color.primary};
-	display: flex;
-	justify-content: center;
-	margin: 0 auto 40px;
-	text-align: center;
-`;
-
-const Subtitle = styled.h5`
-	font-size: 16px;
-	color: ${(props) => props.theme.color.accent};
-	letter-spacing: 0px;
-	margin-bottom: 12px;
-	text-align: center;
-`;
-
-const FeaturesGrid = styled.div`
-	max-width: 670px;
-	display: grid;
-	grid-template-columns: 1fr 1fr;
-	margin: 0px auto;
-	grid-column-gap: 40px;
-	grid-row-gap: 35px;
-	@media (max-width: ${(props) => props.theme.screen.sm}) {
-		grid-template-columns: 1fr;
-		padding: 0 64px;
-	}
-`;
-
-const FeatureItem = styled.div`
+const CenterDiv = styled.div`
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	flex-direction: column;
+	gap: 0.5rem;
+	color: ${(props) => props.theme.color.background.white};
+	background-color: ${(props) => props.theme.color.background.regular};
 `;
 
-const FeatureTitle = styled.h4`
-	color: ${(props) => props.theme.color.primary};
-	letter-spacing: 0px;
-	line-height: 30px;
-	margin-bottom: 10px;
+const ContentWrapper = styled.div`
+	width: 100%;
+	display: flex;
+	gap: 2rem;
+	align-items: center;
+	justify-content: space-around;
+	@media (max-width: ${(props) => props.theme.screen.md}) {
+		flex-direction: column;
+	}
 `;
 
-const FeatureText = styled.p`
-	text-align: center;
+const SecText = styled.h2`
+	margin: 1rem 0;
+	padding: 10px 0;
+	letter-spacing: 0.1rem;
 `;
+
+export default Features;
