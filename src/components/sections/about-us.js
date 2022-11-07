@@ -5,6 +5,7 @@ import Heading from './Heading';
 import CenterDiv from '../common/layout/CenterDiv';
 import Image from './Image';
 import TextWrapper from '../common/layout/TextWrapper';
+import { HeadingText } from '../common/layout/Text';
 
 const AboutUs = () => {
 	return (
@@ -12,10 +13,7 @@ const AboutUs = () => {
 			<Heading heading="About&nbsp;Us" />
 			<CenterDiv isPaddingRequired={false}>
 				<TextWrapper>
-					<HeadingWrapper>
-						<SecondaryHeading>Create and Consume</SecondaryHeading>
-						<SecondaryHeading>Engaging content</SecondaryHeading>
-					</HeadingWrapper>
+					<HeadingText heading1="Create and Consume" heading2="Engaging content" />
 					<ParagraphWrapper>
 						<div>
 							<Paragraph>Connect and Socialize with your</Paragraph>
@@ -32,22 +30,6 @@ const AboutUs = () => {
 		</Section>
 	);
 };
-
-const HeadingWrapper = styled.div`
-	margin: 1rem 0;
-	padding: 1rem;
-	display: flex;
-	flex-direction: column;
-	justify-content: space-between;
-	align-items: flex-start;
-`;
-
-const SecondaryHeading = styled.h4`
-	margin: 0;
-	padding: 10px 0;
-	font-size: 2.4rem;
-	font-weight: 600;
-`;
 
 const ParagraphWrapper = styled.div`
 	margin: 1rem;

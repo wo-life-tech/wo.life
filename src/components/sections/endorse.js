@@ -2,16 +2,14 @@ import React from 'react';
 import styled from 'styled-components';
 import CenterDiv from '../common/layout/CenterDiv';
 import TextWrapper from '../common/layout/TextWrapper';
+import { HeadingText } from '../common/layout/Text';
 import Image from './Image';
 
 const Endorse = () => {
 	return (
 		<CenterDiv isPaddingRequired={true}>
 			<TextWrapper>
-				<HeadingText>
-					Endorse what you love & <br />
-					Earn
-				</HeadingText>
+				<HeadingText heading1="Endorse what you love & " heading2="Earn" />
 				<ParagraphWrapper>
 					<div>
 						<Paragraph>Help people discover products and</Paragraph>
@@ -27,13 +25,6 @@ const Endorse = () => {
 		</CenterDiv>
 	);
 };
-
-const HeadingText = styled.h1`
-	margin: 0;
-	padding: 10px 0;
-	font-size: 2.4rem;
-	font-weight: 600;
-`;
 
 const Paragraph = styled.p`
 	margin: 0;

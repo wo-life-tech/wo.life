@@ -3,15 +3,14 @@ import styled from 'styled-components';
 import CenterDiv from '../common/layout/CenterDiv';
 import TextWrapper from '../common/layout/TextWrapper';
 import Image from './Image';
+import { HeadingText } from '../common/layout/Text';
 
 const Shop = () => {
 	return (
 		<CenterDiv isPaddingRequired={true}>
 			<Image src="/shop.png" altText="shop" maxWidth="100%" />
 			<TextWrapper>
-				<HeadingText>
-					Shop from your favourite <br /> brands
-				</HeadingText>
+				<HeadingText heading1="Shop from your favourite" heading2="brands" />
 				<ParagraphWrapper>
 					<Paragraph>
 						Easy to purchase directly from a <br /> users post or our marketplace.
@@ -33,10 +32,6 @@ const ParagraphWrapper = styled.div`
 	flex-direction: column;
 	align-items: flex-start;
 	justify-content: space-between;
-`;
-
-const HeadingText = styled.h1`
-	font-size: 2.4rem;
 `;
 
 const Paragraph = styled.p`
