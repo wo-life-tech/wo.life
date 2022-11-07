@@ -1,16 +1,17 @@
 import React from 'react';
 import styled from 'styled-components';
 import CenterDiv from '../common/layout/CenterDiv';
+import Image from '../common/image';
 
-const iconsWidth = '100';
+const iconsWidth = '70px';
 const playstoreLink = 'https://play.google.com/store/apps/details?id=com.app.wolife';
 const appstoreLink = 'https://play.google.com/store/apps/details?id=com.app.wolife';
 
 const Header = () => {
-	const appDownloadLinks = (image, altText, link) => {
+	const appDownloadLinks = (src, fallbackSrc, alt, link) => {
 		return (
 			<a href={link} target="blank">
-				<img src={image} alt={altText} width={iconsWidth} />
+				<Image src={src} fallbackSrc={fallbackSrc} altText={alt} style={{ maxWidth: iconsWidth }} />
 			</a>
 		);
 	};
@@ -26,13 +27,16 @@ const Header = () => {
 					</h1>
 					<BottomText>Download Now : </BottomText>
 					<Flex>
-						{appDownloadLinks('/playstore.png', 'playstore', playstoreLink)}
-						{appDownloadLinks('/app-store.png', 'appstore', appstoreLink)}
+						{appDownloadLinks('playstore.webp', '/playstore.png', 'playstore', playstoreLink)}
+						{appDownloadLinks('appstore.webp', '/appstore.png', 'appstore', appstoreLink)}
 					</Flex>
 				</HeaderTextGroup>
-				<ImageWrapper>
-					<img src="/mainscreen.png" alt="banner" style={{ maxWidth: '80%', transform: 'rotate(-90deg)' }} />
-				</ImageWrapper>
+				<Image
+					src="/shopping.webp"
+					fallbackSrc="/shopping.png"
+					altText="shopping"
+					style={{ maxWidth: '80%', transform: 'rotate(-90deg)' }}
+				/>
 			</CenterDiv>
 		</HeaderWrapper>
 	);
@@ -94,16 +98,5 @@ const Flex = styled.div`
 	@media (max-width: ${(props) => props.theme.screen.md}) {
 		width: 55%;
 		padding: 0;
-	}
-`;
-
-const ImageWrapper = styled.div`
-	width: 50%;
-	display: flex;
-	justify-content: flex-end;
-	align-items: flex-end;
-	@media (max-width: ${(props) => props.theme.screen.md}) {
-		width: 100%;
-		justify-self: center;
 	}
 `;

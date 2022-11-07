@@ -2,12 +2,12 @@ import React from 'react';
 import { TextWrapper, ParagraphWrapper } from '../common/layout/TextWrapper';
 import { HeadingText, Paragraph } from '../common/layout/Text';
 import CenterDiv from '../common/layout/CenterDiv';
-import Image from './Image';
+import Image from '../common/image';
 
 const Shop = () => {
 	return (
 		<CenterDiv isPaddingRequired={true}>
-			<Image src="/shop.png" altText="shop" maxWidth="100%" />
+			<Image src="/phone-shop.webp" fallbackSrc="/phone-shop.png" altText="shop" style={{ maxWidth: '100%' }} />
 			<TextWrapper>
 				<HeadingText heading1="Shop from your favourite" heading2="brands" />
 				<ParagraphWrapper>

@@ -4,7 +4,7 @@ import { TextWrapper, ParagraphWrapper } from '../common/layout/TextWrapper';
 import { HeadingText, Paragraph } from '../common/layout/Text';
 import CenterDiv from '../common/layout/CenterDiv';
 import Heading from '../common/layout/Heading';
-import Image from './Image';
+import Image from '../common/image';
 
 const AboutUs = () => {
 	return (
@@ -24,7 +24,12 @@ const AboutUs = () => {
 						</div>
 					</ParagraphWrapper>
 				</TextWrapper>
-				<Image src="/about.png" altText="about-us" maxWidth="90%" />
+				<Image
+					src="/create-and-consume.webp"
+					fallbackSrc="/create-and-consume.png"
+					altText="about-us"
+					style={{ maxWidth: '60%' }}
+				/>
 			</CenterDiv>
 		</Section>
 	);

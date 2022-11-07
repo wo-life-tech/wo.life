@@ -3,15 +3,16 @@ import styled from 'styled-components';
 import { Section } from '../global';
 import { Paragraph } from '../common/layout/Text';
 import Heading from '../common/layout/Heading';
+import ImgWithFallBack from '../common/ImgWithFallBack';
 
 const Features = () => {
-	const Card = (heading, image, altText, text1, text2 = '') => {
+	const Card = (heading, src, fallbackSrc, altText, text1, text2 = '') => {
 		return (
 			<CenterDiv>
 				<SecText>{heading}</SecText>
 				<Paragraph text={text1} />
 				{text2 !== '' && <Paragraph text={text2} />}
-				<img src={image} alt={altText} style={{ maxWidth: '100%' }} />
+				<ImgWithFallBack src={src} fallbackSrc={fallbackSrc} altText={altText} style={{ maxWidth: '100%' }} />
 			</CenterDiv>
 		);
 	};
@@ -21,12 +22,27 @@ const Features = () => {
 			<CenterDiv>
 				<Heading heading="Features" />
 				<ContentWrapper>
-					{Card('Socialize', '/socialize.png', 'socialize', 'Through Image and', 'short video sharing')}
-					{Card('Shop', '/shop2.png', 'shop-via-app', 'Directly from our', 'Marketplace or Posts')}
+					{Card(
+						'Socialize',
+						'/socializing.webp',
+						'/socializing.png',
+						'socializing',
+						'Through Image and',
+						'short video sharing',
+					)}
+					{Card(
+						'Shop',
+						'/smartphone-shopping.webp',
+						'/smartphone-shopping.png',
+						'shop-via-app',
+						'Directly from our',
+						'Marketplace or Posts',
+					)}
 					{Card(
 						'Earn',
-						'/earn.png',
-						'socialize',
+						'/influencer-earning.webp',
+						'/influencer-earning.png',
+						'influencer-earning',
 						'Commission for helping your',
 						'community purchase products',
 					)}

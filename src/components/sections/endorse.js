@@ -2,7 +2,7 @@ import React from 'react';
 import { TextWrapper, ParagraphWrapper } from '../common/layout/TextWrapper';
 import { HeadingText, Paragraph } from '../common/layout/Text';
 import CenterDiv from '../common/layout/CenterDiv';
-import Image from './Image';
+import Image from '../common/image';
 
 const Endorse = () => {
 	return (
@@ -20,7 +20,12 @@ const Endorse = () => {
 					</div>
 				</ParagraphWrapper>
 			</TextWrapper>
-			<Image src="/endorse.png" altText="endorse" maxWidth="100%" />
+			<Image
+				src="/boy-influencer.webp"
+				fallbackSrc="/boy-influencer.png"
+				altText="endorse"
+				style={{ maxWidth: '100%' }}
+			/>
 		</CenterDiv>
 	);
 };

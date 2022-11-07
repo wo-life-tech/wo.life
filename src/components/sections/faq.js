@@ -3,8 +3,8 @@ import styled from 'styled-components';
 import { Section } from '../global';
 import CenterDiv from '../common/layout/CenterDiv';
 import { HorizontalRow, PrimaryHeading } from '../common/layout/Text';
-import Image from './Image';
 import { TextWrapper } from '../common/layout/TextWrapper';
+import Image from '../common/image';
 
 const Faq = () => {
 	const QuestionContainer = (ques1, ques2, ans1, ans2, showHorizontalRow) => {
@@ -30,7 +30,7 @@ const Faq = () => {
 	return (
 		<Section id="faqs">
 			<CenterDiv isPaddingRequired={false}>
-				<Image src="/faq.png" altText="faq" maxWidth="100%" />
+				<Image src="/faq.webp" fallbackSrc="/faq.png" altText="faq" style={{ maxWidth: '100%' }} />
 				<TextWrapper>
 					<PrimaryHeading heading="FAQs" isLarger={true} />
 					{QuestionContainer(
