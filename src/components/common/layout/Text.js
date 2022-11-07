@@ -19,6 +19,11 @@ export const Paragraph = (props) => {
 
 export const HorizontalRow = () => <HorizontalRowStyled />;
 
+export const PrimaryHeading = (props) => {
+	const { heading } = props;
+	return <PrimaryHeadingStyled>{heading}</PrimaryHeadingStyled>;
+};
+
 const HeadingTextStyled = styled.h1`
 	margin: 0;
 	padding: 10px 0;
@@ -39,4 +44,9 @@ const HorizontalRowStyled = styled.hr`
 	width: 100%;
 	height: 2px;
 	background-color: ${(props) => props.theme.color.background.white};
+`;
+
+const PrimaryHeadingStyled = styled.h3`
+	font-weight: 600;
+	font-size: 2rem;
 `;

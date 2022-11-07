@@ -3,17 +3,15 @@ import styled from 'styled-components';
 
 import { Section } from '../global';
 import Heading from '../common/layout/Heading';
+import { Paragraph } from '../common/layout/Text';
 
 const Features = () => {
-	const Card = (heading, text1, text2, image, altText) => {
+	const Card = (heading, image, altText, text1, text2 = '') => {
 		return (
 			<CenterDiv>
 				<SecText>{heading}</SecText>
-				<Paragraph>
-					{text1}
-					<br />
-					{text2}
-				</Paragraph>
+				<Paragraph text={text1} />
+				{text2 !== '' && <Paragraph text={text2} />}
 				<img src={image} alt={altText} style={{ maxWidth: '100%' }} />
 			</CenterDiv>
 		);
@@ -24,14 +22,14 @@ const Features = () => {
 			<CenterDiv>
 				<Heading heading="Features" />
 				<ContentWrapper>
-					{Card('Socialize', 'Through Image and', 'short video sharing', '/socialize.png', 'socialize')}
-					{Card('Shop', 'Directly from our', 'Marketplace or Posts', '/shop2.png', 'shop-via-app')}
+					{Card('Socialize', '/socialize.png', 'socialize', 'Through Image and', 'short video sharing')}
+					{Card('Shop', '/shop2.png', 'shop-via-app', 'Directly from our', 'Marketplace or Posts')}
 					{Card(
 						'Earn',
-						'Commission for helping your',
-						'community purchase products',
 						'/earn.png',
 						'socialize',
+						'Commission for helping your',
+						'community purchase products',
 					)}
 				</ContentWrapper>
 			</CenterDiv>
@@ -60,15 +58,6 @@ const SecText = styled.h2`
 	margin: 1rem 0;
 	padding: 10px 0;
 	letter-spacing: 0.1rem;
-`;
-
-const Paragraph = styled.p`
-	margin: 0;
-	padding: 5px 0;
-	font-size: 1.5rem;
-	font-weight: 400;
-	letter-spacing: 0.4px;
-	line-height: 1.2;
 `;
 
 export default Features;
