@@ -1,11 +1,10 @@
 import React from 'react';
-import styled from 'styled-components';
 import { Section } from '../global';
-import Heading from './Heading';
-import CenterDiv from '../common/layout/CenterDiv';
-import Image from './Image';
 import { TextWrapper, ParagraphWrapper } from '../common/layout/TextWrapper';
-import { HeadingText } from '../common/layout/Text';
+import { HeadingText, Paragraph } from '../common/layout/Text';
+import CenterDiv from '../common/layout/CenterDiv';
+import Heading from './Heading';
+import Image from './Image';
 
 const AboutUs = () => {
 	return (
@@ -16,12 +15,12 @@ const AboutUs = () => {
 					<HeadingText heading1="Create and Consume" heading2="Engaging content" />
 					<ParagraphWrapper>
 						<div>
-							<Paragraph>Connect and Socialize with your</Paragraph>
-							<Paragraph>friends and following.</Paragraph>
+							<Paragraph text="Connect and Socialize with your" />
+							<Paragraph text="friends and following." />
 						</div>
 						<div>
-							<Paragraph>Get entertained by your favourite</Paragraph>
-							<Paragraph>creators.</Paragraph>
+							<Paragraph text="Get entertained by your favourite" />
+							<Paragraph text="creators." />
 						</div>
 					</ParagraphWrapper>
 				</TextWrapper>
@@ -30,12 +29,5 @@ const AboutUs = () => {
 		</Section>
 	);
 };
-
-const Paragraph = styled.p`
-	margin: 0;
-	padding: 5px 0;
-	font-size: 1.5rem;
-	font-weight: 400;
-`;
 
 export default AboutUs;

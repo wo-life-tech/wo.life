@@ -1,8 +1,7 @@
 import React from 'react';
-import styled from 'styled-components';
-import CenterDiv from '../common/layout/CenterDiv';
 import { TextWrapper, ParagraphWrapper } from '../common/layout/TextWrapper';
-import { HeadingText } from '../common/layout/Text';
+import { HeadingText, Paragraph } from '../common/layout/Text';
+import CenterDiv from '../common/layout/CenterDiv';
 import Image from './Image';
 
 const Endorse = () => {
@@ -12,12 +11,12 @@ const Endorse = () => {
 				<HeadingText heading1="Endorse what you love & " heading2="Earn" />
 				<ParagraphWrapper>
 					<div>
-						<Paragraph>Help people discover products and</Paragraph>
-						<Paragraph>make easy purchase decisions.</Paragraph>
+						<Paragraph text="Help people discover products and" />
+						<Paragraph text="make easy purchase decisions." />
 					</div>
 					<div>
-						<Paragraph>You earn a commission for every</Paragraph>
-						<Paragraph>successful sale.</Paragraph>
+						<Paragraph text="You earn a commission for every" />
+						<Paragraph text="successful sale." />
 					</div>
 				</ParagraphWrapper>
 			</TextWrapper>
@@ -25,13 +24,5 @@ const Endorse = () => {
 		</CenterDiv>
 	);
 };
-
-const Paragraph = styled.p`
-	margin: 0;
-	padding: 5px 0;
-	font-size: 1.5rem;
-	font-weight: 400;
-	line-height: 1;
-`;
 
 export default Endorse;
