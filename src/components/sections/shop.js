@@ -5,7 +5,7 @@ import Image from './Image';
 
 const Shop = () => {
 	return (
-		<CenterDiv>
+		<CenterDiv isPaddingRequired={true}>
 			<Image src="/shop.png" altText="shop" maxWidth="100%" />
 			<TextWrapper>
 				<HeadingText>

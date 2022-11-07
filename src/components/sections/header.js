@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import CenterDiv from '../common/layout/CenterDiv';
 
 const iconsWidth = '100';
 const woLife = 'https://wo.life/';
@@ -15,7 +16,7 @@ const Header = () => {
 
 	return (
 		<HeaderWrapper id="top">
-			<CenterDiv>
+			<CenterDiv isPaddingRequired={false}>
 				<HeaderTextGroup>
 					<h1>
 						A seamless social
@@ -37,13 +38,6 @@ const Header = () => {
 };
 
 export default Header;
-
-const CenterDiv = styled.div`
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	background-color: ${(props) => props.theme.color.background.regular};
-`;
 
 const HeaderWrapper = styled.header`
 	background-color: ${(props) => props.theme.color.background.regular};

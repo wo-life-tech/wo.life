@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { Section } from '../global';
 import Image from './Image';
+import CenterDiv from '../common/layout/CenterDiv';
 
 const Faq = () => {
 	const QuestionContainer = (ques1, ques2, ans1, ans2, showHorizontalRule) => {
@@ -26,7 +27,7 @@ const Faq = () => {
 
 	return (
 		<Section id="faqs">
-			<CenterDiv>
+			<CenterDiv isPaddingRequired={false}>
 				<Image src="/faq.png" altText="faq" maxWidth="100%" />
 				<TextWrapper>
 					<PrimaryHeading>FAQs</PrimaryHeading>
@@ -44,14 +45,6 @@ const Faq = () => {
 		</Section>
 	);
 };
-
-const CenterDiv = styled.div`
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	color: ${(props) => props.theme.color.background.white};
-	background-color: ${(props) => props.theme.color.background.regular};
-`;
 
 const PrimaryHeading = styled.h1`
 	font-size: 4rem;

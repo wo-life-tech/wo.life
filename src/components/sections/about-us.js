@@ -2,13 +2,14 @@ import React from 'react';
 import styled from 'styled-components';
 import { Section } from '../global';
 import Heading from './Heading';
+import CenterDiv from '../common/layout/CenterDiv';
 import Image from './Image';
 
 const AboutUs = () => {
 	return (
 		<Section id="about us">
 			<Heading heading="About&nbsp;Us" />
-			<CenterDiv>
+			<CenterDiv isPaddingRequired={false}>
 				<TextWrapper>
 					<HeadingWrapper>
 						<SecondaryHeading>Create and Consume</SecondaryHeading>
@@ -30,15 +31,6 @@ const AboutUs = () => {
 		</Section>
 	);
 };
-
-const CenterDiv = styled.div`
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	color: ${(props) => props.theme.color.background.white};
-	background-color: ${(props) => props.theme.color.background.regular};
-	border: 1px solid red;
-`;
 
 const ContentWrapper = styled.div`
 	width: 100%;

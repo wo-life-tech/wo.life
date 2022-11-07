@@ -5,7 +5,7 @@ import Image from './Image';
 
 const Endorse = () => {
 	return (
-		<CenterDiv>
+		<CenterDiv isPaddingRequired={true}>
 			<TextWrapper>
 				<HeadingText>
 					Endorse what you love & <br />

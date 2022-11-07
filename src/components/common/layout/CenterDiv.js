@@ -1,12 +1,13 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const CenterDiv = ({ children }) => {
-	return <FlexBox>{children}</FlexBox>;
+const CenterDiv = (props) => {
+	const { children, isPaddingRequired = true } = props;
+	return <FlexBox isPaddingRequired={isPaddingRequired}>{children}</FlexBox>;
 };
 
 const FlexBox = styled.div`
-	padding: 4rem 0;
+	padding: ${(props) => (props.isPaddingRequired ? '4rem 0' : '0')};
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
