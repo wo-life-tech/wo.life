@@ -1,9 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
-
 import { Section } from '../global';
-import Heading from '../common/layout/Heading';
 import { Paragraph } from '../common/layout/Text';
+import Heading from '../common/layout/Heading';
 
 const Features = () => {
 	const Card = (heading, image, altText, text1, text2 = '') => {

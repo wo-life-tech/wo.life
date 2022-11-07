@@ -3,7 +3,8 @@ import styled from 'styled-components';
 import CenterDiv from '../common/layout/CenterDiv';
 
 const iconsWidth = '100';
-const woLife = 'https://wo.life/';
+const playstoreLink = 'https://play.google.com/store/apps/details?id=com.app.wolife';
+const appstoreLink = 'https://play.google.com/store/apps/details?id=com.app.wolife';
 
 const Header = () => {
 	const appDownloadLinks = (image, altText, link) => {
@@ -25,8 +26,8 @@ const Header = () => {
 					</h1>
 					<BottomText>Download Now : </BottomText>
 					<Flex>
-						{appDownloadLinks('/playstore.png', 'playstore', woLife)}
-						{appDownloadLinks('/app-store.png', 'appstore', woLife)}
+						{appDownloadLinks('/playstore.png', 'playstore', playstoreLink)}
+						{appDownloadLinks('/app-store.png', 'appstore', appstoreLink)}
 					</Flex>
 				</HeaderTextGroup>
 				<ImageWrapper>
@@ -42,10 +43,8 @@ export default Header;
 const HeaderWrapper = styled.header`
 	background-color: ${(props) => props.theme.color.background.regular};
 	padding: 160px 0 80px 0;
-	position: relative;
 	@media (max-width: ${(props) => props.theme.screen.md}) {
-		background-color: red;
-		padding: 80px 0 0;
+		padding: 100px 0 40px 0;
 	}
 `;
 
@@ -62,15 +61,26 @@ const HeaderTextGroup = styled.div`
 	width: 50%;
 	margin: 0 2rem;
 	padding: 1rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: flex-start;
 	h1 {
 		color: ${(props) => props.theme.color.background.white};
 	}
 	@media (max-width: ${(props) => props.theme.screen.md}) {
 		width: 100%;
 		margin: 0;
+		align-items: center;
 		h1 {
-			font-size: 2rem;
+			font-size: 2.2rem;
 			line-height: 2.5rem;
+		}
+	}
+	@media (max-width: ${(props) => props.theme.screen.sm}) {
+		h1 {
+			font-size: 1.8rem;
+			line-height: 2.2rem;
 		}
 	}
 `;
@@ -82,8 +92,8 @@ const Flex = styled.div`
 	align-content: center;
 	grid-template-columns: 1fr 1fr;
 	@media (max-width: ${(props) => props.theme.screen.md}) {
-		grid-template-columns: 1fr;
-		grid-gap: 64px;
+		width: 55%;
+		padding: 0;
 	}
 `;
 
