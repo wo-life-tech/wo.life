@@ -12,10 +12,11 @@ const Image = (props) => {
 
 const ImageWrapper = styled.div`
 	width: 50%;
-	padding: 1rem;
+	padding: 0;
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	border: 3px solid white;
 `;
 
 export default Image;

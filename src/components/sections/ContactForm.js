@@ -33,12 +33,14 @@ const ContactForm = () => {
 		<Section id="contact">
 			<CenterDiv>
 				<PrimaryHeading>Contact Us</PrimaryHeading>
-				<FormContainer onSubmit={handleFormSubmit}>
+				<FormContainer>
 					<InputField type="text" id="name" value={name} onChange={handleChange} placeholder="Name" />
 					<InputField type="email" id="email" value={email} onChange={handleChange} placeholder="Email" />
 					<InputField type="text" id="mobile" value={mobile} onChange={handleChange} placeholder="Mobile" />
 					<TextArea value={message} id="message" onChange={handleChange} placeholder="Message" />
-					<Button type="submit">Send</Button>
+					<Button onClick={handleFormSubmit} type="submit">
+						Send
+					</Button>
 				</FormContainer>
 			</CenterDiv>
 		</Section>

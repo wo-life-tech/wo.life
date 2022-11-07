@@ -19,6 +19,7 @@ const Header = styled.div`
 	display: flex;
 	gap: 4rem;
 	align-items: center;
+	color: ${(props) => props.theme.color.background.white};
 `;
 
 const HorizontalRule = styled.hr`

@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import CenterDiv from '../common/layout/CenterDiv';
 import Image from './Image';
 
 const Shop = () => {
@@ -22,15 +23,6 @@ const Shop = () => {
 		</CenterDiv>
 	);
 };
-
-const CenterDiv = styled.div`
-	padding: 4rem 0;
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
-	color: ${(props) => props.theme.color.background.white};
-	background-color: ${(props) => props.theme.color.background.regular};
-`;
 
 const TextWrapper = styled.div`
 	width: 50%;
