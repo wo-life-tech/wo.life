@@ -20,8 +20,8 @@ export const Paragraph = (props) => {
 export const HorizontalRow = () => <HorizontalRowStyled />;
 
 export const PrimaryHeading = (props) => {
-	const { heading } = props;
-	return <PrimaryHeadingStyled>{heading}</PrimaryHeadingStyled>;
+	const { heading, isLarger = false } = props;
+	return <PrimaryHeadingStyled isLarger={isLarger}>{heading}</PrimaryHeadingStyled>;
 };
 
 const HeadingTextStyled = styled.h1`
@@ -48,5 +48,5 @@ const HorizontalRowStyled = styled.hr`
 
 const PrimaryHeadingStyled = styled.h3`
 	font-weight: 600;
-	font-size: 2rem;
+	font-size: ${(props) => (props.isLarger ? '3rem' : '2rem')};
 `;

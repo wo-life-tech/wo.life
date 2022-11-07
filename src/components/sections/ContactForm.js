@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
 import { Section } from '../global';
+import { PrimaryHeading } from '../common/layout/Text';
 
 const ContactForm = () => {
 	const [name, setName] = useState('');
@@ -32,7 +33,7 @@ const ContactForm = () => {
 	return (
 		<Section id="contact">
 			<CenterDiv>
-				<PrimaryHeading>Contact Us</PrimaryHeading>
+				<PrimaryHeading heading="Contact Us" isLarger={true} />
 				<FormContainer>
 					<InputField type="text" id="name" value={name} onChange={handleChange} placeholder="Name" />
 					<InputField type="email" id="email" value={email} onChange={handleChange} placeholder="Email" />
@@ -54,11 +55,6 @@ const CenterDiv = styled.div`
 	flex-direction: column;
 	color: ${(props) => props.theme.color.background.white};
 	background-color: ${(props) => props.theme.color.background.regular};
-`;
-
-const PrimaryHeading = styled.h3`
-	font-size: 3rem;
-	font-weight: 600;
 `;
 
 const FormContainer = styled.div`
