@@ -3,82 +3,82 @@
 	font-family: 'VisbyCF Light';
 	font-style: normal;
 	font-weight: 300;
-	src: url('../fonts/VisbyCF-Light.woff') format('woff');
+	src: url('/fonts/VisbyCF-Light.woff') format('woff');
 }
 /* VisbyCF-regular */
 @font-face {
 	font-family: 'VisbyCF Regular';
 	font-style: normal;
 	font-weight: 400;
-	src: url('../fonts/VisbyCF-Regular.woff') format('woff');
+	src: url('/fonts/VisbyCF-Regular.woff') format('woff');
 }
 /* VisbyCF-600 */
 @font-face {
 	font-family: 'VisbyCF Medium';
 	font-style: normal;
 	font-weight: 600;
-	src: url('../fonts/VisbyCF-Medium.woff') format('woff');
+	src: url('/fonts/VisbyCF-Medium.woff') format('woff');
 }
 /* VisbyCF-700 */
 @font-face {
 	font-family: 'VisbyCF Semi Bold';
 	font-style: normal;
 	font-weight: 800;
-	src: url('../fonts/VisbyCF-DemiBold.woff') format('woff');
+	src: url('/fonts/VisbyCF-DemiBold.woff') format('woff');
 }
 /* VisbyCF-800 */
 @font-face {
 	font-family: 'VisbyCF Bold';
 	font-style: normal;
 	font-weight: 800;
-	src: url('../fonts/VisbyCF-Bold.woff') format('woff');
+	src: url('/fonts/VisbyCF-Bold.woff') format('woff');
 }
 /* VisbyCF-900 */
 @font-face {
 	font-family: 'VisbyCF ExtraBold';
 	font-style: normal;
 	font-weight: 900;
-	src: url('../fonts/VisbyCF-ExtraBold.woff') format('woff');
+	src: url('/fonts/VisbyCF-ExtraBold.woff') format('woff');
 }
 /* VisbyCF-300oblique */
 @font-face {
 	font-family: 'VisbyCF Light';
 	font-style: oblique;
 	font-weight: 300;
-	src: url('../fonts/VisbyCF-LightOblique.woff') format('woff');
+	src: url('/fonts/VisbyCF-LightOblique.woff') format('woff');
 }
 /* VisbyCF-oblique */
 @font-face {
 	font-family: 'VisbyCF Regular';
 	font-style: oblique;
 	font-weight: 400;
-	src: url('../fonts/VisbyCF-RegularOblique.woff') format('woff');
+	src: url('/fonts/VisbyCF-RegularOblique.woff') format('woff');
 }
 /* VisbyCF-600oblique */
 @font-face {
 	font-family: 'VisbyCF Medium';
 	font-style: oblique;
 	font-weight: 600;
-	src: url('../fonts/VisbyCF-MediumOblique.woff') format('woff');
+	src: url('/fonts/VisbyCF-MediumOblique.woff') format('woff');
 }
 /* VisbyCF-700oblique */
 @font-face {
 	font-family: 'VisbyCF Semi Bold';
 	font-style: oblique;
 	font-weight: 700;
-	src: url('../fonts/VisbyCF-DemiBoldOblique.woff') format('woff');
+	src: url('/fonts/VisbyCF-DemiBoldOblique.woff') format('woff');
 }
 /* VisbyCF-800oblique */
 @font-face {
 	font-family: 'VisbyCF Bold';
 	font-style: oblique;
 	font-weight: 800;
-	src: url('../fonts/VisbyCF-BoldOblique.woff') format('woff');
+	src: url('/fonts/VisbyCF-BoldOblique.woff') format('woff');
 }
 /* VisbyCF-900oblique */
 @font-face {
 	font-family: 'VisbyCF ExtraBold';
 	font-style: oblique;
 	font-weight: 900;
-	src: url('../fonts/VisbyCF-ExtraBoldOblique.woff') format('woff');
+	src: url('/fonts/VisbyCF-ExtraBoldOblique.woff') format('woff');
 }
