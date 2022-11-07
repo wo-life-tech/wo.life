@@ -158,7 +158,6 @@ const Button = styled.button`
 	font-size: 1.5rem;
 	font-weight: 600;
 	text-align: center;
-	letter-spacing: 0.2rem;
 	background-color: #3498db;
 	border: 2px solid #3498db;
 	border-radius: 0.5rem;

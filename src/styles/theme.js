@@ -1,13 +1,13 @@
 const theme = {
 	font: {
-		primary: `'Nunito Regular'`,
-		secondary: `'Nunito Medium'`,
-		light: `'Nunito Light'`,
-		normal: `'Nunito Regular'`,
-		medium: `'Nunito Medium'`,
-		semibold: `'Nunito Semi Bold'`,
-		bold: `'Nunito Bold'`,
-		extrabold: `'Nunito Black'`,
+		primary: `'VisbyCF Regular'`,
+		secondary: `'VisbyCF Medium'`,
+		light: `'VisbyCF Light'`,
+		normal: `'VisbyCF Regular'`,
+		medium: `'VisbyCF Medium'`,
+		semibold: `'VisbyCF Semi Bold'`,
+		bold: `'VisbyCF Bold'`,
+		extrabold: `'VisbyCF ExtraBold'`,
 	},
 	font_size: {
 		xxxsmall: 'font-size: 12px;',
