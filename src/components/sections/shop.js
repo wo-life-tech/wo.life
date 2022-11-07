@@ -7,7 +7,7 @@ import Image from '../common/image';
 const Shop = () => {
 	return (
 		<CenterDiv isPaddingRequired={true}>
-			<Image src="/phone-shop.webp" fallbackSrc="/phone-shop.png" altText="shop" style={{ maxWidth: '100%' }} />
+			<Image src="/phone-shop.webp" fallbackSrc="/phone-shop.png" altText="shop" style={{ maxWidth: '90%' }} />
 			<TextWrapper>
 				<HeadingText heading1="Shop from your favourite" heading2="brands" />
 				<ParagraphWrapper>

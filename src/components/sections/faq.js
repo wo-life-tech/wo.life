@@ -30,7 +30,12 @@ const Faq = () => {
 	return (
 		<Section id="faqs">
 			<CenterDiv isPaddingRequired={false}>
-				<Image src="/faq.webp" fallbackSrc="/faq.png" altText="faq" style={{ maxWidth: '100%' }} />
+				<Image
+					src="/faq.webp"
+					fallbackSrc="/faq.png"
+					altText="faq"
+					style={{ maxWidth: '80%', padding: '1rem' }}
+				/>
 				<TextWrapper>
 					<PrimaryHeading heading="FAQs" isLarger={true} />
 					{QuestionContainer(

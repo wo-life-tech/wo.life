@@ -17,7 +17,6 @@ const ImageWrapper = styled.div`
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	border: 2px solid white;
 	@media (max-width: ${(props) => props.theme.screen.md}) {
 		width: 100%;
 	}

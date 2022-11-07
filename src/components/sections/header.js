@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import CenterDiv from '../common/layout/CenterDiv';
 import Image from '../common/image';
+import ImgWithFallBack from '../common/ImgWithFallBack';
 
 const iconsWidth = '70px';
 const playstoreLink = 'https://play.google.com/store/apps/details?id=com.app.wolife';
@@ -11,7 +12,7 @@ const Header = () => {
 	const appDownloadLinks = (src, fallbackSrc, alt, link) => {
 		return (
 			<a href={link} target="blank">
-				<Image src={src} fallbackSrc={fallbackSrc} altText={alt} style={{ maxWidth: iconsWidth }} />
+				<ImgWithFallBack src={src} fallbackSrc={fallbackSrc} altText={alt} style={{ width: iconsWidth }} />
 			</a>
 		);
 	};
@@ -31,12 +32,14 @@ const Header = () => {
 						{appDownloadLinks('appstore.webp', '/appstore.png', 'appstore', appstoreLink)}
 					</Flex>
 				</HeaderTextGroup>
-				<Image
-					src="/shopping.webp"
-					fallbackSrc="/shopping.png"
-					altText="shopping"
-					style={{ maxWidth: '80%', transform: 'rotate(-90deg)' }}
-				/>
+				<ImageWrapper>
+					<ImgWithFallBack
+						src="/shopping.webp"
+						fallbackSrc="/shopping.png"
+						altText="shopping"
+						style={{ maxWidth: '90%', transform: 'rotate(-90deg)' }}
+					/>
+				</ImageWrapper>
 			</CenterDiv>
 		</HeaderWrapper>
 	);
@@ -46,7 +49,7 @@ export default Header;
 
 const HeaderWrapper = styled.header`
 	background-color: ${(props) => props.theme.color.background.regular};
-	padding: 160px 0 80px 0;
+	padding: 160px 0 80px 120px;
 	@media (max-width: ${(props) => props.theme.screen.md}) {
 		padding: 100px 0 40px 0;
 	}
@@ -98,5 +101,17 @@ const Flex = styled.div`
 	@media (max-width: ${(props) => props.theme.screen.md}) {
 		width: 55%;
 		padding: 0;
+	}
+`;
+
+const ImageWrapper = styled.div`
+	width: 50%;
+	display: flex;
+	justify-content: flex-end;
+	flex-direction: column;
+	align-items: flex-end;
+	@media (max-width: ${(props) => props.theme.screen.md}) {
+		width: 100%;
+		justify-self: center;
 	}
 `;

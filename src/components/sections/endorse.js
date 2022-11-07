@@ -24,7 +24,7 @@ const Endorse = () => {
 				src="/boy-influencer.webp"
 				fallbackSrc="/boy-influencer.png"
 				altText="endorse"
-				style={{ maxWidth: '100%' }}
+				style={{ maxWidth: '80%' }}
 			/>
 		</CenterDiv>
 	);

@@ -12,7 +12,12 @@ const Features = () => {
 				<SecText>{heading}</SecText>
 				<Paragraph text={text1} />
 				{text2 !== '' && <Paragraph text={text2} />}
-				<ImgWithFallBack src={src} fallbackSrc={fallbackSrc} altText={altText} style={{ maxWidth: '100%' }} />
+				<ImgWithFallBack
+					src={src}
+					fallbackSrc={fallbackSrc}
+					altText={altText}
+					style={{ maxWidth: '90%', padding: '2.5rem' }}
+				/>
 			</CenterDiv>
 		);
 	};
@@ -57,6 +62,7 @@ const CenterDiv = styled.div`
 	justify-content: center;
 	align-items: center;
 	flex-direction: column;
+	gap: 0.5rem;
 	color: ${(props) => props.theme.color.background.white};
 	background-color: ${(props) => props.theme.color.background.regular};
 `;
