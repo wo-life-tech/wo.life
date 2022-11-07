@@ -30,7 +30,7 @@ const HeadingTextStyled = styled.h1`
 	font-size: 2.4rem;
 	font-weight: 600;
 	@media (max-width: ${(props) => props.theme.screen.md}) {
-		font-size: 2rem;
+		font-size: 1.8rem;
 	}
 `;
 

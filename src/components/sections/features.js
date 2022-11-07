@@ -52,6 +52,9 @@ const ContentWrapper = styled.div`
 	gap: 2rem;
 	align-items: center;
 	justify-content: space-around;
+	@media (max-width: ${(props) => props.theme.screen.md}) {
+		flex-direction: column;
+	}
 `;
 
 const SecText = styled.h2`

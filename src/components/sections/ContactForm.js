@@ -66,6 +66,9 @@ const FormContainer = styled.div`
 	justify-content: center;
 	align-items: center;
 	gap: 0.1rem;
+	@media (max-width: ${(props) => props.theme.screen.md}) {
+		width: 100%;
+	}
 `;
 
 const InputField = styled.input`
@@ -82,6 +85,9 @@ const InputField = styled.input`
 	border-bottom: 2px solid lightgrey;
 	background-color: transparent;
 	color: ${(props) => props.theme.color.background.white};
+	@media (max-width: ${(props) => props.theme.screen.md}) {
+		width: 80%;
+	}
 `;
 
 const TextArea = styled.textarea`
