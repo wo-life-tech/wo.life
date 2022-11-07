@@ -10,7 +10,7 @@ import Footer from '../components/sections/footer';
 import AboutUs from '../components/sections/about-us';
 import Shop from '../components/sections/shop';
 import Endorse from '../components/sections/endorse';
-import Faq from '../components/sections/Faq';
+import Faq from '../components/sections/faq';
 import ContactForm from '../components/sections/ContactForm';
 
 const IndexPage = () => (
