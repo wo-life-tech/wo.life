@@ -29,6 +29,9 @@ const HeadingTextStyled = styled.h1`
 	padding: 10px 0;
 	font-size: 2.4rem;
 	font-weight: 600;
+	@media (max-width: ${(props) => props.theme.screen.md}) {
+		font-size: 2rem;
+	}
 `;
 
 const ParagraphStyled = styled.p`
@@ -37,6 +40,9 @@ const ParagraphStyled = styled.p`
 	font-size: 1.5rem;
 	font-weight: 400;
 	line-height: 0.8;
+	@media (max-width: ${(props) => props.theme.screen.md}) {
+		font-size: 1.2rem;
+	}
 `;
 
 const HorizontalRowStyled = styled.hr`
@@ -49,4 +55,7 @@ const HorizontalRowStyled = styled.hr`
 const PrimaryHeadingStyled = styled.h3`
 	font-weight: 600;
 	font-size: ${(props) => (props.isLarger ? '3rem' : '2rem')};
+	@media (max-width: ${(props) => props.theme.screen.md}) {
+		font-size: ${(props) => (props.isLarger ? '2.4rem' : '1.7rem')};
+	}
 `;

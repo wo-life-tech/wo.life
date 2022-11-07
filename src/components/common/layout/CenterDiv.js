@@ -13,6 +13,9 @@ const FlexBox = styled.div`
 	justify-content: space-between;
 	color: ${(props) => props.theme.color.background.white};
 	background-color: ${(props) => props.theme.color.background.regular};
+	@media (max-width: ${(props) => props.theme.screen.md}) {
+		flex-direction: column;
+	}
 `;
 
 export default CenterDiv;

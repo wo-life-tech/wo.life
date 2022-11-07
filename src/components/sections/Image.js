@@ -16,6 +16,9 @@ const ImageWrapper = styled.div`
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	@media (max-width: ${(props) => props.theme.screen.md}) {
+		width: 100%;
+	}
 `;
 
 export default Image;

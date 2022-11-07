@@ -44,6 +44,7 @@ const HeaderWrapper = styled.header`
 	padding: 160px 0 80px 0;
 	position: relative;
 	@media (max-width: ${(props) => props.theme.screen.md}) {
+		background-color: red;
 	}
 `;
 
