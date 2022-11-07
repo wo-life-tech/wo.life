@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import CenterDiv from '../common/layout/CenterDiv';
+import TextWrapper from '../common/layout/TextWrapper';
 import Image from './Image';
 
 const Shop = () => {
@@ -23,15 +24,6 @@ const Shop = () => {
 		</CenterDiv>
 	);
 };
-
-const TextWrapper = styled.div`
-	width: 50%;
-	padding: 1rem;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-`;
 
 const ParagraphWrapper = styled.div`
 	margin: 1rem;

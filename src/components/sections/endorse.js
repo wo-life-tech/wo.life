@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import CenterDiv from '../common/layout/CenterDiv';
+import TextWrapper from '../common/layout/TextWrapper';
 import Image from './Image';
 
 const Endorse = () => {
@@ -26,15 +27,6 @@ const Endorse = () => {
 		</CenterDiv>
 	);
 };
-
-const TextWrapper = styled.div`
-	width: 50%;
-	padding: 1rem;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-`;
 
 const HeadingText = styled.h1`
 	margin: 0;

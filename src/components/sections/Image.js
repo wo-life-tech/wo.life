@@ -16,7 +16,6 @@ const ImageWrapper = styled.div`
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	border: 3px solid white;
 `;
 
 export default Image;

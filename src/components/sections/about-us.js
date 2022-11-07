@@ -4,6 +4,7 @@ import { Section } from '../global';
 import Heading from './Heading';
 import CenterDiv from '../common/layout/CenterDiv';
 import Image from './Image';
+import TextWrapper from '../common/layout/TextWrapper';
 
 const AboutUs = () => {
 	return (
@@ -31,25 +32,6 @@ const AboutUs = () => {
 		</Section>
 	);
 };
-
-const ContentWrapper = styled.div`
-	width: 100%;
-	margin: 0;
-	padding: 0;
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-`;
-
-const TextWrapper = styled.div`
-	width: 50%;
-	padding: 1rem;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	border: 1px solid blue;
-`;
 
 const HeadingWrapper = styled.div`
 	margin: 1rem 0;
