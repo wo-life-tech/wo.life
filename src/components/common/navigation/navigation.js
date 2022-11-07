@@ -73,7 +73,7 @@ export default class Navigation extends Component {
 						</Scrollspy>
 					</Brand>
 					<Mobile>
-						<button onClick={this.toggleMobileMenu} style={{ color: 'black', background: 'none' }}>
+						<button onClick={this.toggleMobileMenu} style={{ color: 'white', background: 'none' }}>
 							{this.state.mobileMenuOpen ? (
 								<X size={24} alt="close menu" />
 							) : (
@@ -81,7 +81,6 @@ export default class Navigation extends Component {
 							)}
 						</button>
 					</Mobile>
-
 					<Mobile hide>{this.getNavList({})}</Mobile>
 				</StyledContainer>
 				<Mobile>

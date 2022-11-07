@@ -30,6 +30,7 @@ export const NavListWrapper = styled.div`
 			mobile &&
 			`
         flex-direction: column;
+		align-items: center;
         margin-top: 1em;
 
         > ${NavItem} {
