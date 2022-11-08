@@ -3,16 +3,21 @@ import styled from 'styled-components';
 import CenterDiv from '../common/layout/CenterDiv';
 import ImgWithFallBack from '../common/ImgWithFallBack';
 
-const iconsWidth = '100%';
+const mediaType = 'image/webp';
 const playstoreLink = 'https://play.google.com/store/apps/details?id=com.app.wolife';
 const appstoreLink = 'https://play.google.com/store/apps/details?id=com.app.wolife';
 
 const Header = () => {
 	const appDownloadLinks = (src, fallbackSrc, alt, link) => {
 		return (
-			<a href={link} target="blank">
-				<ImgWithFallBack src={src} fallbackSrc={fallbackSrc} altText={alt} style={{ width: iconsWidth }} />
-			</a>
+			<FlexBox>
+				<a href={link} target="blank">
+					<picture>
+						<source srcSet={src} type={mediaType} />
+						<IconsImage src={fallbackSrc} alt={alt} />
+					</picture>
+				</a>
+			</FlexBox>
 		);
 	};
 
@@ -27,8 +32,13 @@ const Header = () => {
 					</h1>
 					<BottomText>Download Now: </BottomText>
 					<Flex>
-						{appDownloadLinks('google-play-badge.webp', '/google-play-badge.png', 'playstore', playstoreLink)}
-						{appDownloadLinks('app-store-badge.webp', '/app-store-badge.png', 'appstore', appstoreLink)}
+						{appDownloadLinks(
+							'/google-play-badge.webp',
+							'/google-play-badge.png',
+							'playstore',
+							playstoreLink,
+						)}
+						{appDownloadLinks('/app-store-badge.webp', '/app-store-badge.png', 'appstore', appstoreLink)}
 					</Flex>
 				</HeaderTextGroup>
 				<ImageWrapper>
@@ -80,7 +90,7 @@ const HeaderTextGroup = styled.div`
 	@media (max-width: ${(props) => props.theme.screen.md}) {
 		width: 100%;
 		margin: 0;
-		align-items: flex-start;
+		align-items: center;
 		h1 {
 			font-size: 2.2rem;
 			line-height: 2.5rem;
@@ -100,8 +110,25 @@ const Flex = styled.div`
 	justify-content: flex-start;
 	align-content: flex-start;
 	@media (max-width: ${(props) => props.theme.screen.md}) {
-		width: 100%;
+		width: 50%;
 		padding: 0;
+	}
+`;
+
+const FlexBox = styled.div`
+	width: 70%;
+	@media (max-width: ${(props) => props.theme.screen.md}) {
+		width: 100%;
+		display: flex;
+		justify-content: center;
+		align-content: center;
+	}
+`;
+
+const IconsImage = styled.img`
+	width: 70%;
+	@media (max-width: ${(props) => props.theme.screen.md}) {
+		width: 90%;
 	}
 `;
 
