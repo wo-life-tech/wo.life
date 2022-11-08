@@ -10,9 +10,9 @@ const AboutUs = () => {
 	return (
 		<Section id="about us">
 			<Heading heading="About&nbsp;Us" />
-			<CenterDiv isPaddingRequired={false}>
+			<CenterDiv isPaddingRequired={true}>
 				<TextWrapper>
-					<HeadingText heading1="Create and Consume" heading2="Engaging content" />
+					<HeadingText heading1="Create and Consume Engaging content"/>
 					<ParagraphWrapper>
 						<div>
 							<Paragraph text="Connect and Socialize with your" />

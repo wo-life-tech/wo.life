@@ -2,8 +2,8 @@ import React from 'react';
 import styled from 'styled-components';
 
 const CenterDiv = (props) => {
-	const { children, isPaddingRequired = true } = props;
-	return <FlexBox isPaddingRequired={isPaddingRequired}>{children}</FlexBox>;
+	const { children, isPaddingRequired = false, isflexDirectionReverse = false } = props;
+	return <FlexBox isPaddingRequired={isPaddingRequired} isflexDirectionReverse={isflexDirectionReverse}>{children}</FlexBox>;
 };
 
 const FlexBox = styled.div`
@@ -14,7 +14,8 @@ const FlexBox = styled.div`
 	color: ${(props) => props.theme.color.background.white};
 	background-color: ${(props) => props.theme.color.background.regular};
 	@media (max-width: ${(props) => props.theme.screen.md}) {
-		flex-direction: column;
+		flex-direction: ${(props) => (props.isflexDirectionReverse ? 'column-reverse' : 'column')};
+		padding: ${(props) => (props.isPaddingRequired ? '4rem 0' : '0')};
 	}
 `;
 

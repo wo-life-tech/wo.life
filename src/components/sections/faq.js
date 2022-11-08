@@ -7,19 +7,15 @@ import { TextWrapper } from '../common/layout/TextWrapper';
 import Image from '../common/image';
 
 const Faq = () => {
-	const QuestionContainer = (ques1, ques2, ans1, ans2, showHorizontalRow) => {
+	const QuestionContainer = (question, answer, showHorizontalRow) => {
 		return (
 			<div>
 				<Question>
-					{ques1}
-					<br />
-					{ques2}
+					{question}
 				</Question>
-				{ans1 !== '' && (
+				{answer !== '' && (
 					<Answer>
-						{ans1}
-						<br />
-						{ans2}
+						{answer}
 					</Answer>
 				)}
 				{showHorizontalRow && <HorizontalRow />}
@@ -29,7 +25,7 @@ const Faq = () => {
 
 	return (
 		<Section id="faqs">
-			<CenterDiv isPaddingRequired={false}>
+			<CenterDiv isPaddingRequired={true} isflexDirectionReverse={true}>
 				<Image
 					src="/faq.webp"
 					fallbackSrc="/faq.png"
@@ -39,30 +35,27 @@ const Faq = () => {
 				<TextWrapper>
 					<PrimaryHeading heading="FAQs" isLarger={true} />
 					{QuestionContainer(
-						'Does my Earning depend on the number of',
-						'followers I have?',
-						'No, You can earn irrespective of the number of',
-						'followers you have.',
+						'Does my Earning depend on the number of followers I have?',
+						'No, You can earn irrespective of the number of followers you have.',
 						true,
 					)}
-					{QuestionContainer('Does my Earning depend on the number of', 'followers I have?', '', '', true)}
-					{QuestionContainer('Does my Earning depend on the number of', 'followers I have?', '', '', false)}
+					{QuestionContainer('Does my Earning depend on the number of followers I have?', 'No', true)}
+					{QuestionContainer('Does my Earning depend on the number of followers I have?', 'No', false)}
 				</TextWrapper>
 			</CenterDiv>
 		</Section>
 	);
 };
 
-const Question = styled.h2`
-	font-size: 2rem;
+const Question = styled.h4`
 	letter-spacing: 0.1px;
-	line-height: 1.5;
+	line-height: 1.15;
 `;
 
 const Answer = styled.p`
 	padding: 1rem 0;
-	font-size: 1.5rem;
 	letter-spacing: 0.1px;
+	line-height: 1.15;
 `;
 
 export default Faq;

@@ -1,10 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
 import CenterDiv from '../common/layout/CenterDiv';
-import Image from '../common/image';
 import ImgWithFallBack from '../common/ImgWithFallBack';
 
-const iconsWidth = '70px';
+const iconsWidth = '100%';
 const playstoreLink = 'https://play.google.com/store/apps/details?id=com.app.wolife';
 const appstoreLink = 'https://play.google.com/store/apps/details?id=com.app.wolife';
 
@@ -19,17 +18,17 @@ const Header = () => {
 
 	return (
 		<HeaderWrapper id="top">
-			<CenterDiv isPaddingRequired={false}>
+			<CenterDiv isPaddingRequired={true}>
 				<HeaderTextGroup>
 					<h1>
 						A seamless social
 						<br />
 						commerce experience
 					</h1>
-					<BottomText>Download Now : </BottomText>
+					<BottomText>Download Now: </BottomText>
 					<Flex>
-						{appDownloadLinks('playstore.webp', '/playstore.png', 'playstore', playstoreLink)}
-						{appDownloadLinks('appstore.webp', '/appstore.png', 'appstore', appstoreLink)}
+						{appDownloadLinks('google-play-badge.webp', '/google-play-badge.png', 'playstore', playstoreLink)}
+						{appDownloadLinks('app-store-badge.webp', '/app-store-badge.png', 'appstore', appstoreLink)}
 					</Flex>
 				</HeaderTextGroup>
 				<ImageWrapper>
@@ -37,7 +36,7 @@ const Header = () => {
 						src="/shopping.webp"
 						fallbackSrc="/shopping.png"
 						altText="shopping"
-						style={{ maxWidth: '90%', transform: 'rotate(-90deg)' }}
+						style={{ maxWidth: '90%' }}
 					/>
 				</ImageWrapper>
 			</CenterDiv>
@@ -48,6 +47,9 @@ const Header = () => {
 export default Header;
 
 const HeaderWrapper = styled.header`
+	display: flex;
+	justify-content: flex-start;
+	align-items: flex-start;
 	background-color: ${(props) => props.theme.color.background.regular};
 	padding: 160px 0 80px 120px;
 	@media (max-width: ${(props) => props.theme.screen.md}) {
@@ -55,7 +57,7 @@ const HeaderWrapper = styled.header`
 	}
 `;
 
-const BottomText = styled.h1`
+const BottomText = styled.h2`
 	color: ${(props) => props.theme.color.white.regular};
 	letter-spacing: 1px;
 	margin-top: 200px;
@@ -66,11 +68,11 @@ const BottomText = styled.h1`
 
 const HeaderTextGroup = styled.div`
 	width: 50%;
-	margin: 0 2rem;
-	padding: 1rem;
+	margin: 0;
+	padding: 0;
 	display: flex;
 	flex-direction: column;
-	justify-content: center;
+	justify-content: flex-start;
 	align-items: flex-start;
 	h1 {
 		color: ${(props) => props.theme.color.background.white};
@@ -78,7 +80,7 @@ const HeaderTextGroup = styled.div`
 	@media (max-width: ${(props) => props.theme.screen.md}) {
 		width: 100%;
 		margin: 0;
-		align-items: center;
+		align-items: flex-start;
 		h1 {
 			font-size: 2.2rem;
 			line-height: 2.5rem;
@@ -93,13 +95,12 @@ const HeaderTextGroup = styled.div`
 `;
 
 const Flex = styled.div`
-	width: 60%;
+	width: 50%;
 	display: flex;
-	justify-content: space-around;
-	align-content: center;
-	grid-template-columns: 1fr 1fr;
+	justify-content: flex-start;
+	align-content: flex-start;
 	@media (max-width: ${(props) => props.theme.screen.md}) {
-		width: 55%;
+		width: 100%;
 		padding: 0;
 	}
 `;

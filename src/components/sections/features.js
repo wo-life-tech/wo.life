@@ -16,7 +16,7 @@ const Features = () => {
 					src={src}
 					fallbackSrc={fallbackSrc}
 					altText={altText}
-					style={{ maxWidth: '90%', padding: '2.5rem' }}
+					style={{ maxWidth: '90%', paddingTop: '2.5rem' }}
 				/>
 			</CenterDiv>
 		);
@@ -65,6 +65,8 @@ const CenterDiv = styled.div`
 	gap: 0.5rem;
 	color: ${(props) => props.theme.color.background.white};
 	background-color: ${(props) => props.theme.color.background.regular};
+	margin: 0;
+	padding: 0;
 `;
 
 const ContentWrapper = styled.div`

@@ -18,6 +18,7 @@ const TextBox = styled.div`
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
+	line-height: 1.15;
 	@media (max-width: ${(props) => props.theme.screen.md}) {
 		width: 100%;
 	}

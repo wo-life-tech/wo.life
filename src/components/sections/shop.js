@@ -6,19 +6,13 @@ import Image from '../common/image';
 
 const Shop = () => {
 	return (
-		<CenterDiv isPaddingRequired={true}>
+		<CenterDiv isPaddingRequired={true} isflexDirectionReverse={true}>
 			<Image src="/phone-shop.webp" fallbackSrc="/phone-shop.png" altText="shop" style={{ maxWidth: '90%' }} />
 			<TextWrapper>
-				<HeadingText heading1="Shop from your favourite" heading2="brands" />
+				<HeadingText heading1="Shop from your favourite brands" />
 				<ParagraphWrapper>
-					<div>
-						<Paragraph text="Easy to purchase directly from a" />
-						<Paragraph text="users post or our marketplace." />
-					</div>
-					<div>
-						<Paragraph text="Shop from a catalog of verified" />
-						<Paragraph text="direct to consumer brands" />
-					</div>
+					<Paragraph text="Easy to purchase directly from a users post or our marketplace." />
+					<Paragraph text="Shop from a catalog of verified direct to consumer brands" />
 				</ParagraphWrapper>
 			</TextWrapper>
 		</CenterDiv>

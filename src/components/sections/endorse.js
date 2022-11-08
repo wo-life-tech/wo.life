@@ -8,16 +8,10 @@ const Endorse = () => {
 	return (
 		<CenterDiv isPaddingRequired={true}>
 			<TextWrapper>
-				<HeadingText heading1="Endorse what you love & " heading2="Earn" />
+				<HeadingText heading1="Endorse what you love & Earn"/>
 				<ParagraphWrapper>
-					<div>
-						<Paragraph text="Help people discover products and" />
-						<Paragraph text="make easy purchase decisions." />
-					</div>
-					<div>
-						<Paragraph text="You earn a commission for every" />
-						<Paragraph text="successful sale." />
-					</div>
+					<Paragraph text="Help people discover products and make easy purchase decisions." />					
+					<Paragraph text="You earn a commission for every successful sale." />
 				</ParagraphWrapper>
 			</TextWrapper>
 			<Image
