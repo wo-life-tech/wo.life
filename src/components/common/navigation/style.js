@@ -8,7 +8,6 @@ export const Nav = styled.nav`
 	margin: 0;
 	padding: 0;
 	z-index: 1000;
-	border: 1px solid grey;
 	color: ${(props) => props.theme.color.background.white};
 	background: ${(props) => props.theme.color.background.regular};
 	transition: 0.4s cubic-bezier(0.2, 0.8, 0.2, 1);
@@ -18,7 +17,14 @@ export const StyledContainer = styled(Container)`
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	border: 1px solid red;
+	padding: 0 7rem;
+	min-width: 100%;
+	@media (max-width: ${(props) => props.theme.screen.md}) {
+		padding: 0 4rem;
+	}
+	@media (max-width: ${(props) => props.theme.screen.sm}) {
+		padding: 0 2rem;
+	}
 `;
 
 export const NavListWrapper = styled.div`
