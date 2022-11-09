@@ -7,6 +7,12 @@ const normalize = `
 const GlobalStyles = createGlobalStyle`
   ${normalize};
 
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
   html {
     ${'' /* change this if implementing light/dark mode functionality */}
     color: ${(props) => props.theme.color.primary};
@@ -14,6 +20,8 @@ const GlobalStyles = createGlobalStyle`
   }
   
   body {
+    width: 100%;
+    overflow-x: hidden;
     font-family: ${(props) => props.theme.font.primary};
   }
 

@@ -5,8 +5,10 @@ export const Nav = styled.nav`
 	width: 100%;
 	position: fixed;
 	top: 0;
+	margin: 0;
 	padding: 0;
 	z-index: 1000;
+	border: 1px solid grey;
 	color: ${(props) => props.theme.color.background.white};
 	background: ${(props) => props.theme.color.background.regular};
 	transition: 0.4s cubic-bezier(0.2, 0.8, 0.2, 1);
@@ -16,6 +18,7 @@ export const StyledContainer = styled(Container)`
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
+	border: 1px solid red;
 `;
 
 export const NavListWrapper = styled.div`
@@ -105,7 +108,7 @@ export const ActionsContainer = styled.div`
 export const Mobile = styled.div`
 	display: none;
 
-	@media (max-width: ${(props) => props.theme.screen.xs}) {
+	@media (max-width: ${(props) => props.theme.screen.sm}) {
 		display: block;
 	}
 
@@ -114,7 +117,7 @@ export const Mobile = styled.div`
 		`
     display: block;
 
-    @media (max-width: ${props.theme.screen.xs}) {
+    @media (max-width: ${props.theme.screen.sm}) {
       display: none;
     }
   `}
