@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import CenterDiv from '../common/layout/CenterDiv';
 import ImgWithFallBack from '../common/ImgWithFallBack';
+import { BlueText, YellowText } from '../common/layout/Text';
 
 const mediaType = 'image/webp';
 const playstoreLink = 'https://play.google.com/store/apps/details?id=com.app.wolife';
@@ -26,11 +27,10 @@ const Header = () => {
 			<CenterDiv isPaddingRequired={true}>
 				<HeaderTextGroup>
 					<h1>
-						A seamless social
-						<br />
-						commerce experience
+						Use your social influence to become a <BlueText text="Sociopreneur" /> &{' '}
+						<YellowText text="Earn" />
 					</h1>
-					<BottomText>Download Now: </BottomText>
+					<BottomText>We’re currently invite only</BottomText>
 					<Flex>
 						{appDownloadLinks(
 							'/google-play-badge.webp',

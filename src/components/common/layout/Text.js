@@ -24,6 +24,16 @@ export const PrimaryHeading = (props) => {
 	return <PrimaryHeadingStyled isLarger={isLarger}>{heading}</PrimaryHeadingStyled>;
 };
 
+export const BlueText = (props) => {
+	const { text } = props;
+	return <BlueStyledText>{text}</BlueStyledText>;
+};
+
+export const YellowText = (props) => {
+	const { text } = props;
+	return <YellowStyledText>{text}</YellowStyledText>;
+};
+
 const HeadingTextStyled = styled.h1`
 	margin: 0;
 	padding: 10px 0;
@@ -59,4 +69,12 @@ const PrimaryHeadingStyled = styled.h3`
 	@media (max-width: ${(props) => props.theme.screen.md}) {
 		font-size: ${(props) => (props.isLarger ? '2.4rem' : '1.7rem')};
 	}
+`;
+
+const BlueStyledText = styled.span`
+	color: #74ffff;
+`;
+
+const YellowStyledText = styled.span`
+	color: #ffff6e;
 `;

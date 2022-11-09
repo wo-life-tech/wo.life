@@ -53,7 +53,8 @@ const ContactForm = () => {
 		<Section id="contact">
 			<CenterDiv>
 				<Toaster />
-				<PrimaryHeading heading="Contact Us" isLarger={true} />
+				<SecText>Have any questions? </SecText>
+				<SecText>We'd be happy to respond :)</SecText>
 				<FormContainer>
 					<InputField
 						type="text"
@@ -168,6 +169,12 @@ const Button = styled.button`
 	&:hover {
 		box-shadow: 0 0 10px 0 #3498db inset, 0 0 10px 4px #3498db;
 	}
+`;
+
+const SecText = styled.h2`
+	margin: 1rem 0;
+	padding: 10px 0;
+	letter-spacing: 0.1rem;
 `;
 
 export default ContactForm;

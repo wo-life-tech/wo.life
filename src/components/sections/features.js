@@ -6,12 +6,11 @@ import Heading from '../common/layout/Heading';
 import ImgWithFallBack from '../common/ImgWithFallBack';
 
 const Features = () => {
-	const Card = (heading, src, fallbackSrc, altText, text1, text2 = '') => {
+	const Card = (heading, src, fallbackSrc, altText, text1) => {
 		return (
 			<CenterDiv>
 				<SecText>{heading}</SecText>
 				<Paragraph text={text1} />
-				{text2 !== '' && <Paragraph text={text2} />}
 				<ImgWithFallBack
 					src={src}
 					fallbackSrc={fallbackSrc}
@@ -28,28 +27,25 @@ const Features = () => {
 				<Heading heading="Features" />
 				<ContentWrapper>
 					{Card(
-						'Socialize',
+						'Socializing',
 						'/socializing.webp',
 						'/socializing.png',
 						'socializing',
-						'Through Image and',
-						'short video sharing',
+						'Engage and get entertained through Posts and short videos',
 					)}
 					{Card(
-						'Shop',
+						'Shopping',
 						'/smartphone-shopping.webp',
 						'/smartphone-shopping.png',
 						'shop-via-app',
-						'Directly from our',
-						'Marketplace or Posts',
+						'Shop from your favourite brands through shoppable content & marketplace ',
 					)}
 					{Card(
-						'Earn',
+						'Earning',
 						'/influencer-earning.webp',
 						'/influencer-earning.png',
 						'influencer-earning',
-						'Commission for helping your',
-						'community purchase products',
+						'Track all your earnings in the    wallet. Earn from a highly robust affiliate',
 					)}
 				</ContentWrapper>
 			</CenterDiv>

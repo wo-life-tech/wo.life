@@ -8,10 +8,10 @@ const Endorse = () => {
 	return (
 		<CenterDiv isPaddingRequired={true}>
 			<TextWrapper>
-				<HeadingText heading1="Endorse what you love & Earn"/>
+				<HeadingText heading1="Endorse through your Social channels & Earn" />
 				<ParagraphWrapper>
-					<Paragraph text="Help people discover products and make easy purchase decisions." />					
-					<Paragraph text="You earn a commission for every successful sale." />
+					<Paragraph text="Help people discover products and make easy purchase decisions." />
+					<Paragraph text="You earn real money after every successful sale through our robust affiliate marketing system." />
 				</ParagraphWrapper>
 			</TextWrapper>
 			<Image

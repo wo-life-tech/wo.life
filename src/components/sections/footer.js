@@ -1,16 +1,14 @@
-import { Link } from 'gatsby';
 import React from 'react';
 import styled from 'styled-components';
-
+import { Link } from 'gatsby';
 import { Container } from '../global';
 
-const socialIconWidth = '30';
+const socialIconWidth = '25';
 
 const Footer = () => (
 	<FooterWrapper id="footer">
 		<FooterColumnContainer>
 			<FooterColumn>
-				<span>Policy</span>
 				<ul>
 					<li>
 						<FooterLink to="/returns-and-exchange">Returns & Exchange</FooterLink>
@@ -24,27 +22,31 @@ const Footer = () => (
 				</ul>
 			</FooterColumn>
 			<SocialLinks>
-				<span>Social</span>
 				<ul>
 					<li>
-						<a href="" target="blank">
+						<AnchorFlex href="https://www.instagram.com/wolifeofficial" target="blank">
 							<img src="/facebook.png" alt="facebook" width={socialIconWidth} />
-						</a>
+							<SocialText>Facebook</SocialText>
+						</AnchorFlex>
 					</li>
 					<li>
-						<a href="https://www.instagram.com/wolifeofficial" target="blank">
+						<AnchorFlex href="https://www.instagram.com/wolifeofficial" target="blank">
 							<img src="/instagram.png" alt="instagram" width={socialIconWidth} />
-						</a>
+							<SocialText>Instagram</SocialText>
+						</AnchorFlex>
 					</li>
 					<li>
-						<a href="" target="blank">
+						<AnchorFlex href="https://www.instagram.com/wolifeofficial" target="blank">
 							<img src="/twitter.png" alt="twitter" width={socialIconWidth} />
-						</a>
+							<SocialText>Twitter</SocialText>
+						</AnchorFlex>
 					</li>
 					<li>
-						<a href="https://in.linkedin.com/company/wolife" target="blank">
+						<AnchorFlex href="https://in.linkedin.com/company/wolife" target="blank">
 							<img src="/linkedin.png" alt="linkedin" width={socialIconWidth} />
-						</a>
+
+							<SocialText>Linkedin</SocialText>
+						</AnchorFlex>
 					</li>
 				</ul>
 			</SocialLinks>
@@ -72,7 +74,6 @@ const Logo = styled.div`
 	align-items: center;
 	position: relative;
 	z-index: 9;
-	text-decoration: none;
 	outline: 0px;
 `;
 
@@ -121,10 +122,10 @@ const SocialLinks = styled.div`
 		font-family: ${(props) => props.theme.font.bold};
 	}
 	ul {
-		padding: 0.5rem 0;
 		display: flex;
-		justify-content: flex-start;
-		align-items: flex-end;
+		flex-direction: column;
+		justify-content: center;
+		align-items: space-between;
 	}
 	ul li {
 		list-style: none;
@@ -138,6 +139,23 @@ const FooterLink = styled(Link)`
 	&:hover {
 		color: ${(props) => props.theme.color.background.white};
 	}
+`;
+
+const AnchorFlex = styled.a`
+	color: inherit;
+	text-decoration: none;
+	padding-bottom: 0.3rem;
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	gap: 1rem;
+`;
+
+const SocialText = styled.p`
+	text-decoration: none;
+	margin: 0;
+	padding: 0;
+	font-size: 14px;
 `;
 
 export default Footer;

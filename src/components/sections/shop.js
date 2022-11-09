@@ -11,8 +11,8 @@ const Shop = () => {
 			<TextWrapper>
 				<HeadingText heading1="Shop from your favourite brands" />
 				<ParagraphWrapper>
-					<Paragraph text="Easy to purchase directly from a users post or our marketplace." />
-					<Paragraph text="Shop from a catalog of verified direct to consumer brands" />
+					<Paragraph text="Easy to purchase directly from a users post , marketplace or shared links." />
+					<Paragraph text="Shop from a catalog of verified direct to consumer brands & curated products from your favourite creators." />
 				</ParagraphWrapper>
 			</TextWrapper>
 		</CenterDiv>

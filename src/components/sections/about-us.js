@@ -12,16 +12,10 @@ const AboutUs = () => {
 			<Heading heading="About&nbsp;Us" />
 			<CenterDiv isPaddingRequired={true}>
 				<TextWrapper>
-					<HeadingText heading1="Create and Consume Engaging content"/>
+					<HeadingText heading1="Create and Consume Engaging content" />
 					<ParagraphWrapper>
-						<div>
-							<Paragraph text="Connect and Socialize with your" />
-							<Paragraph text="friends and following." />
-						</div>
-						<div>
-							<Paragraph text="Get entertained by your favourite" />
-							<Paragraph text="creators." />
-						</div>
+						<Paragraph text="Connect and Socialize with your friends and following." />
+						<Paragraph text="Get entertained by your favourite creators." />
 					</ParagraphWrapper>
 				</TextWrapper>
 				<Image
