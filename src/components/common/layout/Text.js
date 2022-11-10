@@ -54,6 +54,7 @@ const ParagraphStyled = styled.p`
 	line-height: 2.5rem;
 	@media (max-width: ${(props) => props.theme.screen.md}) {
 		font-size: 1.2rem;
+		line-height: 1.5rem;
 	}
 `;
 
