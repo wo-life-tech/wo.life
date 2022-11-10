@@ -59,7 +59,7 @@ export default Header;
 
 const HeaderWrapper = styled.header`
 	margin: 0;
-	padding: 100px 0 60px 110px;
+	padding: 100px 0 60px;
 	display: flex;
 	justify-content: center;
 	align-items: center;
