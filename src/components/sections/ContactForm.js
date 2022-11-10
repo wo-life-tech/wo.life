@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import validator from 'validator';
 import styled from 'styled-components';
 import { Section } from '../global';
-import { PrimaryHeading } from '../common/layout/Text';
 import { showToast, ShowWarningToast } from '../common/ShowToast';
 import toast, { Toaster } from 'react-hot-toast';
 

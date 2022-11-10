@@ -13,7 +13,7 @@ const Header = () => {
 	const appDownloadLinks = (src, fallbackSrc, alt, link) => {
 		return (
 			<FlexBox>
-				<a href={link} target="blank">
+				<a style={{ width: '100%', border: '1px solid orange' }} href={link} target="blank">
 					<picture style={flexCenter}>
 						<source srcSet={src} type={mediaType} />
 						<IconsImage src={fallbackSrc} alt={alt} />
@@ -27,10 +27,10 @@ const Header = () => {
 		<HeaderWrapper id="top">
 			<CenterDiv isPaddingRequired={true}>
 				<HeaderTextGroup>
-					<h2>
+					<MainText>
 						Use your social influence to become a <BlueText text="Sociopreneur" /> &{' '}
 						<YellowText text="Earn" />
-					</h2>
+					</MainText>
 					<InviteText>We’re currently invite only</InviteText>
 					<Flex>
 						{appDownloadLinks(
@@ -58,12 +58,12 @@ const Header = () => {
 export default Header;
 
 const HeaderWrapper = styled.header`
+	margin: 0;
+	padding: 100px 0 60px 110px;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	background-color: ${(props) => props.theme.color.background.regular};
-	padding: 100px 0 60px 102px;
-	margin: 0;
 	@media (max-width: ${(props) => props.theme.screen.md}) {
 		padding: 100px 0 40px 0;
 	}
@@ -74,27 +74,28 @@ const HeaderTextGroup = styled.div`
 	margin: 0;
 	padding: 0;
 	line-height: 2.5rem;
+	letter-spacing: 0.5px;
 	display: flex;
 	flex-direction: column;
 	align-items: flex-start;
 	justify-content: space-between;
-	letter-spacing: 0.5px;
-	font-weight: ${(props) => props.theme.font.semibold};
 	color: ${(props) => props.theme.color.background.white};
 	@media (max-width: ${(props) => props.theme.screen.md}) {
 		width: 100%;
 		padding: 0 2rem;
 		align-items: center;
-		h2 {
-			font-size: 2.2rem;
-			font-weight: 900;
-		}
+	}
+`;
+
+const MainText = styled.h1`
+	font-size: 2.4rem;
+	font-weight: 900;
+	@media (max-width: ${(props) => props.theme.screen.md}) {
+		font-size: 2.2rem;
 	}
 	@media (max-width: ${(props) => props.theme.screen.sm}) {
-		h2 {
-			font-size: 1.8rem;
-			line-height: 2.2rem;
-		}
+		font-size: 1.8rem;
+		line-height: 2.2rem;
 	}
 `;
 
@@ -105,9 +106,7 @@ const InviteText = styled.h2`
 const Flex = styled.div`
 	width: 60%;
 	display: flex;
-	justify-content: space-around;
 	align-items: center;
-	align-content: center;
 	border: 1px solid red;
 	@media (max-width: ${(props) => props.theme.screen.md}) {
 		width: 70%;
@@ -119,15 +118,13 @@ const Flex = styled.div`
 `;
 
 const FlexBox = styled.div`
-	width: 70%;
+	width: 50%;
 	display: flex;
 	justify-content: center;
-	align-content: center;
+	align-items: center;
+	border: 1px solid green;
 	@media (max-width: ${(props) => props.theme.screen.md}) {
 		width: 75%;
-		display: flex;
-		justify-content: center;
-		align-content: center;
 	}
 
 	@media (max-width: ${(props) => props.theme.screen.sm}) {
