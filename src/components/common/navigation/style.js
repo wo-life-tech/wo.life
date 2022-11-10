@@ -128,3 +128,12 @@ export const Mobile = styled.div`
     }
   `}
 `;
+
+export const LogoWrapper = styled.div`
+	width: 35%;
+	margin: 0;
+	padding: 0;
+	@media (max-width: ${(props) => props.theme.screen.md}) {
+		height: 10%;
+	}
+`;

@@ -4,7 +4,7 @@ import Scrollspy from 'react-scrollspy';
 import { Menu, X } from 'react-feather';
 
 import { Container } from '../../global';
-import { Nav, NavItem, Brand, StyledContainer, NavListWrapper, MobileMenu, Mobile } from './style';
+import { Nav, NavItem, Brand, StyledContainer, NavListWrapper, MobileMenu, Mobile, LogoWrapper } from './style';
 
 const NAV_ITEMS = ['About Us', 'Features', 'FAQs', 'Contact'];
 export default class Navigation extends Component {
@@ -68,7 +68,14 @@ export default class Navigation extends Component {
 					<Brand>
 						<Scrollspy offset={-64} item={['top']} currentClassName="active">
 							<AnchorLink href="#top" onClick={this.closeMobileMenu}>
-								<img src="/wo-logo.svg" alt="wo-logo" width="120" style={{ margin: 0, padding: 0 }} />
+								<LogoWrapper>
+									<img
+										src="/wo-logo.svg"
+										alt="wo-logo"
+										width={'100%'}
+										style={{ margin: 0, padding: 0 }}
+									/>
+								</LogoWrapper>
 							</AnchorLink>
 						</Scrollspy>
 					</Brand>
