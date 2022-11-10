@@ -2,20 +2,33 @@ import React from 'react';
 import styled from 'styled-components';
 import { Section } from '../global';
 import Heading from '../common/layout/Heading';
-import ImgWithFallBack from '../common/ImgWithFallBack';
+
+const flexCenter = {
+	margin: 0,
+	padding: 0,
+	display: 'flex',
+	justifyContent: 'flex-start',
+	alignItems: 'center',
+};
+
+const lastElement = {
+	margin: 0,
+	padding: 0,
+	display: 'flex',
+	justifyContent: 'flex-end',
+	alignItems: 'center',
+};
 
 const Features = () => {
-	const Card = (heading, src, fallbackSrc, altText, text) => {
+	const Card = (heading, src, fallbackSrc, altText, text, isLastElement) => {
 		return (
 			<CardContainer>
 				<CardHeading>{heading}</CardHeading>
 				<CardText>{text}</CardText>
-				<ImgWithFallBack
-					src={src}
-					fallbackSrc={fallbackSrc}
-					altText={altText}
-					style={{ maxWidth: '90%', paddingTop: '2.5rem' }}
-				/>
+				<picture style={isLastElement ? lastElement : flexCenter}>
+					<source srcSet={src} type={'image/webp'} />
+					<img src={fallbackSrc} alt={altText} style={{ maxWidth: '90%', paddingTop: '2.5rem' }} />
+				</picture>
 			</CardContainer>
 		);
 	};
@@ -30,6 +43,7 @@ const Features = () => {
 					'/socializing.png',
 					'socializing',
 					'Engage and get entertained through Posts and short videos',
+					false,
 				)}
 				{Card(
 					'Shopping',
@@ -37,6 +51,7 @@ const Features = () => {
 					'/smartphone-shopping.png',
 					'shop-via-app',
 					'Shop from your favourite brands through shoppable content & marketplace',
+					false,
 				)}
 				{Card(
 					'Earning',
@@ -44,6 +59,7 @@ const Features = () => {
 					'/influencer-earning.png',
 					'influencer-earning',
 					'Track all your earnings in the wallet. Earn from a highly robust affiliate',
+					true,
 				)}
 			</Container>
 		</Section>
@@ -52,11 +68,10 @@ const Features = () => {
 
 const Container = styled.div`
 	margin: 0;
-	padding: 0 3rem;
+	padding: 0 3.2rem;
 	display: flex;
 	justify-content: space-between;
 	align-items: space-between;
-	border: 2px solid grey;
 	color: ${(props) => props.theme.color.background.white};
 	background-color: ${(props) => props.theme.color.background.regular};
 	@media (max-width: ${(props) => props.theme.screen.md}) {
@@ -72,7 +87,6 @@ const CardContainer = styled.div`
 	flex-direction: column;
 	justify-content: space-between;
 	align-items: center;
-	border: 1px solid white;
 	@media (max-width: ${(props) => props.theme.screen.md}) {
 		padding: 1rem;
 	}
@@ -82,14 +96,22 @@ const CardHeading = styled.h2`
 	margin: 1rem 0;
 	padding: 10px 0;
 	letter-spacing: 0.1rem;
-	border: 1px solid blue;
+	@media (max-width: ${(props) => props.theme.screen.md}) {
+		padding: 1rem 0 0;
+	}
 `;
 
 const CardText = styled.p`
-	padding: 0 1rem;
+	padding: 0 5rem;
 	font-size: 1.5rem;
 	line-height: 2rem;
-	border: 1px solid yellow;
+	border: 1px solid #ccc;
+	@media (max-width: ${(props) => props.theme.screen.md}) {
+		padding: 0 1rem;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
 `;
 
 export default Features;
