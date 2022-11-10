@@ -26,8 +26,8 @@ const TextBox = styled.div`
 `;
 
 const ParagraphWrapperStyled = styled.div`
-	margin: 1rem;
-	padding: 1rem;
+	margin: 1rem 0;
+	width: 80%;
 	display: flex;
 	gap: 1rem;
 	flex-direction: column;
@@ -35,5 +35,7 @@ const ParagraphWrapperStyled = styled.div`
 	align-items: flex-start;
 	@media (max-width: ${(props) => props.theme.screen.md}) {
 		flex-direction: column;
+		width: 100%;
+		padding: 0 4rem;
 	}
 `;

@@ -88,7 +88,7 @@ const CardContainer = styled.div`
 	justify-content: space-between;
 	align-items: center;
 	@media (max-width: ${(props) => props.theme.screen.md}) {
-		padding: 1rem;
+		padding: 2rem 1rem;
 	}
 `;
 
@@ -105,12 +105,12 @@ const CardText = styled.p`
 	padding: 0 5rem;
 	font-size: 1.5rem;
 	line-height: 2rem;
-	border: 1px solid #ccc;
 	@media (max-width: ${(props) => props.theme.screen.md}) {
 		padding: 0 1rem;
 		display: flex;
 		justify-content: center;
 		align-items: center;
+		${'' /* text-align: center; */}
 	}
 `;
 

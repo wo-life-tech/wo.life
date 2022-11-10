@@ -42,7 +42,8 @@ const HeadingTextStyled = styled.h1`
 	line-height: 1.15;
 	@media (max-width: ${(props) => props.theme.screen.md}) {
 		font-size: 1.8rem;
-		padding: 0 10%;
+		width: 100%;
+		padding: 0 4rem;
 	}
 `;
 
