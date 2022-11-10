@@ -6,7 +6,7 @@ import Image from '../common/image';
 
 const Endorse = () => {
 	return (
-		<CenterDiv isPaddingRequired={false}>
+		<CenterDiv isPaddingRequired={true}>
 			<TextWrapper>
 				<HeadingText heading1="Endorse through your Social channels & Earn" />
 				<ParagraphWrapper>

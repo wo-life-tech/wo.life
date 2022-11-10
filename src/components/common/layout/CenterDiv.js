@@ -11,7 +11,7 @@ const CenterDiv = (props) => {
 };
 
 const FlexBox = styled.div`
-	padding: ${(props) => (props.isPaddingRequired ? '4rem 0' : '0 7rem')};
+	padding: ${(props) => (props.isPaddingRequired ? '2rem 7rem' : '0 7rem')};
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
