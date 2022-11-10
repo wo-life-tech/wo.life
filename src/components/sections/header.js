@@ -26,11 +26,11 @@ const Header = () => {
 		<HeaderWrapper id="top">
 			<CenterDiv isPaddingRequired={true}>
 				<HeaderTextGroup>
-					<h1>
+					<h2>
 						Use your social influence to become a <BlueText text="Sociopreneur" /> &{' '}
 						<YellowText text="Earn" />
-					</h1>
-					<BottomText>We’re currently invite only</BottomText>
+					</h2>
+					<InviteText>We’re currently invite only</InviteText>
 					<Flex>
 						{appDownloadLinks(
 							'/google-play-badge.webp',
@@ -58,21 +58,14 @@ export default Header;
 
 const HeaderWrapper = styled.header`
 	display: flex;
-	justify-content: flex-start;
-	align-items: flex-start;
+	justify-content: center;
+	align-items: center;
 	background-color: ${(props) => props.theme.color.background.regular};
-	padding: 160px 0 80px 120px;
+	padding: 100px 0 60px 102px;
+	margin: 0;
+	border: 2px solid grey;
 	@media (max-width: ${(props) => props.theme.screen.md}) {
 		padding: 100px 0 40px 0;
-	}
-`;
-
-const BottomText = styled.h2`
-	color: ${(props) => props.theme.color.white.regular};
-	letter-spacing: 1px;
-	margin-top: 200px;
-	@media (max-width: ${(props) => props.theme.screen.md}) {
-		margin-top: 80px;
 	}
 `;
 
@@ -80,28 +73,33 @@ const HeaderTextGroup = styled.div`
 	width: 50%;
 	margin: 0;
 	padding: 0;
+	line-height: 2.5rem;
 	display: flex;
 	flex-direction: column;
-	justify-content: flex-start;
 	align-items: flex-start;
-	h1 {
-		color: ${(props) => props.theme.color.background.white};
-	}
+	justify-content: space-between;
+	letter-spacing: 0.5px;
+	font-weight: ${(props) => props.theme.font.semibold};
+	color: ${(props) => props.theme.color.background.white};
+	border: 1px solid lightgreen;
 	@media (max-width: ${(props) => props.theme.screen.md}) {
 		width: 100%;
 		margin: 0;
 		align-items: center;
-		h1 {
+		h2 {
 			font-size: 2.2rem;
-			line-height: 2.5rem;
 		}
 	}
 	@media (max-width: ${(props) => props.theme.screen.sm}) {
-		h1 {
+		h2 {
 			font-size: 1.8rem;
 			line-height: 2.2rem;
 		}
 	}
+`;
+
+const InviteText = styled.h2`
+	padding: 80px 0 50px;
 `;
 
 const Flex = styled.div`
@@ -138,6 +136,7 @@ const ImageWrapper = styled.div`
 	justify-content: flex-end;
 	flex-direction: column;
 	align-items: flex-end;
+	border: 1px solid lightblue;
 	@media (max-width: ${(props) => props.theme.screen.md}) {
 		width: 100%;
 		justify-self: center;
