@@ -84,7 +84,7 @@ const HeaderTextGroup = styled.div`
 	border: 1px solid lightgreen;
 	@media (max-width: ${(props) => props.theme.screen.md}) {
 		width: 100%;
-		margin: 0;
+		padding: 0 2rem;
 		align-items: center;
 		h2 {
 			font-size: 2.2rem;
@@ -103,23 +103,30 @@ const InviteText = styled.h2`
 `;
 
 const Flex = styled.div`
-	width: 50%;
+	width: 60%;
 	display: flex;
 	justify-content: flex-start;
 	align-content: flex-start;
 	@media (max-width: ${(props) => props.theme.screen.md}) {
-		width: 50%;
+		width: 70%;
 		padding: 0;
+	}
+	@media (max-width: ${(props) => props.theme.screen.xs}) {
+		width: 90%;
 	}
 `;
 
 const FlexBox = styled.div`
 	width: 70%;
 	@media (max-width: ${(props) => props.theme.screen.md}) {
-		width: 100%;
+		width: 75%;
 		display: flex;
 		justify-content: center;
 		align-content: center;
+	}
+
+	@media (max-width: ${(props) => props.theme.screen.sm}) {
+		width: 100%;
 	}
 `;
 
