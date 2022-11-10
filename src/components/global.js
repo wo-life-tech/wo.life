@@ -30,7 +30,7 @@ export const Container = styled.div`
 `;
 
 export const Section = styled.section`
-	padding: 80px 0;
+	padding: 140px 0 80px;
 	overflow: hidden;
 	background-color: ${(props) => props.theme.color.background.regular};
 

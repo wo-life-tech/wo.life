@@ -63,7 +63,6 @@ const HeaderWrapper = styled.header`
 	background-color: ${(props) => props.theme.color.background.regular};
 	padding: 100px 0 60px 102px;
 	margin: 0;
-	border: 2px solid grey;
 	@media (max-width: ${(props) => props.theme.screen.md}) {
 		padding: 100px 0 40px 0;
 	}
@@ -81,13 +80,13 @@ const HeaderTextGroup = styled.div`
 	letter-spacing: 0.5px;
 	font-weight: ${(props) => props.theme.font.semibold};
 	color: ${(props) => props.theme.color.background.white};
-	border: 1px solid lightgreen;
 	@media (max-width: ${(props) => props.theme.screen.md}) {
 		width: 100%;
 		padding: 0 2rem;
 		align-items: center;
 		h2 {
 			font-size: 2.2rem;
+			font-weight: 900;
 		}
 	}
 	@media (max-width: ${(props) => props.theme.screen.sm}) {
@@ -105,8 +104,10 @@ const InviteText = styled.h2`
 const Flex = styled.div`
 	width: 60%;
 	display: flex;
-	justify-content: flex-start;
-	align-content: flex-start;
+	justify-content: space-around;
+	align-items: center;
+	align-content: center;
+	border: 1px solid red;
 	@media (max-width: ${(props) => props.theme.screen.md}) {
 		width: 70%;
 		padding: 0;
@@ -118,6 +119,9 @@ const Flex = styled.div`
 
 const FlexBox = styled.div`
 	width: 70%;
+	display: flex;
+	justify-content: center;
+	align-content: center;
 	@media (max-width: ${(props) => props.theme.screen.md}) {
 		width: 75%;
 		display: flex;
@@ -131,7 +135,8 @@ const FlexBox = styled.div`
 `;
 
 const IconsImage = styled.img`
-	width: 70%;
+	width: 80%;
+	font-weight: 600;
 	@media (max-width: ${(props) => props.theme.screen.md}) {
 		width: 90%;
 	}
@@ -143,7 +148,6 @@ const ImageWrapper = styled.div`
 	justify-content: flex-end;
 	flex-direction: column;
 	align-items: flex-end;
-	border: 1px solid lightblue;
 	@media (max-width: ${(props) => props.theme.screen.md}) {
 		width: 100%;
 		justify-self: center;

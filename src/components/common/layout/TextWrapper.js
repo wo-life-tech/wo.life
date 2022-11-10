@@ -13,12 +13,14 @@ export const ParagraphWrapper = (props) => {
 
 const TextBox = styled.div`
 	width: 50%;
-	padding: 1rem;
+	padding: 0;
+	margin: 0;
 	display: flex;
 	flex-direction: column;
-	justify-content: center;
-	align-items: center;
+	justify-content: flex-start;
+	align-items: flex-start;
 	line-height: 1.15;
+	border: 1px solid red;
 	@media (max-width: ${(props) => props.theme.screen.md}) {
 		width: 100%;
 	}

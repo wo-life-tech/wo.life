@@ -130,10 +130,11 @@ export const Mobile = styled.div`
 `;
 
 export const LogoWrapper = styled.div`
-	width: 35%;
+	width: 45%;
 	margin: 0;
 	padding: 0;
+	border: 1px solid white;
 	@media (max-width: ${(props) => props.theme.screen.md}) {
-		height: 10%;
+		height: 5%;
 	}
 `;

@@ -1,16 +1,15 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Section } from '../global';
-import { Paragraph } from '../common/layout/Text';
 import Heading from '../common/layout/Heading';
 import ImgWithFallBack from '../common/ImgWithFallBack';
 
 const Features = () => {
-	const Card = (heading, src, fallbackSrc, altText, text1) => {
+	const Card = (heading, src, fallbackSrc, altText, text) => {
 		return (
 			<CenterDiv>
 				<SecText>{heading}</SecText>
-				<Paragraph text={text1} />
+				<Text>{text}</Text>
 				<ImgWithFallBack
 					src={src}
 					fallbackSrc={fallbackSrc}
@@ -55,10 +54,11 @@ const Features = () => {
 
 const CenterDiv = styled.div`
 	display: flex;
-	justify-content: center;
+	justify-content: flex-start;
 	align-items: center;
 	flex-direction: column;
 	gap: 0.5rem;
+	border: 1px solid red;
 	color: ${(props) => props.theme.color.background.white};
 	background-color: ${(props) => props.theme.color.background.regular};
 	margin: 0;
@@ -80,6 +80,12 @@ const SecText = styled.h2`
 	margin: 1rem 0;
 	padding: 10px 0;
 	letter-spacing: 0.1rem;
+`;
+
+const Text = styled.p`
+	padding: 0 1rem;
+	font-size: 1.5rem;
+	line-height: 2rem;
 `;
 
 export default Features;

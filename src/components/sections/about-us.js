@@ -10,9 +10,9 @@ const AboutUs = () => {
 	return (
 		<Section id="about us">
 			<Heading heading="About&nbsp;Us" />
-			<CenterDiv isPaddingRequired={true}>
+			<CenterDiv isPaddingRequired={false}>
 				<TextWrapper>
-					<HeadingText heading1="Create and Consume Engaging content" />
+					<HeadingText heading1="Create & Consume Content" />
 					<ParagraphWrapper>
 						<Paragraph text="Connect and Socialize with your friends and following." />
 						<Paragraph text="Get entertained by your favourite creators." />
@@ -22,7 +22,7 @@ const AboutUs = () => {
 					src="/create-and-consume.webp"
 					fallbackSrc="/create-and-consume.png"
 					altText="about-us"
-					style={{ maxWidth: '70%' }}
+					style={{ maxWidth: '70%', border: '1px solid green' }}
 				/>
 			</CenterDiv>
 		</Section>
