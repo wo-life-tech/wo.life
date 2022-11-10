@@ -20,7 +20,6 @@ const TextBox = styled.div`
 	justify-content: flex-start;
 	align-items: flex-start;
 	line-height: 1.15;
-	border: 1px solid red;
 	@media (max-width: ${(props) => props.theme.screen.md}) {
 		width: 100%;
 	}

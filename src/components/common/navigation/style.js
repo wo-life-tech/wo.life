@@ -133,7 +133,6 @@ export const LogoWrapper = styled.div`
 	width: 45%;
 	margin: 0;
 	padding: 0;
-	border: 1px solid white;
 	@media (max-width: ${(props) => props.theme.screen.md}) {
 		height: 5%;
 	}

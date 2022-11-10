@@ -17,7 +17,6 @@ const FlexBox = styled.div`
 	justify-content: space-between;
 	color: ${(props) => props.theme.color.background.white};
 	background-color: ${(props) => props.theme.color.background.regular};
-	border: 2px solid white;
 	@media (max-width: ${(props) => props.theme.screen.md}) {
 		flex-direction: ${(props) => (props.isflexDirectionReverse ? 'column-reverse' : 'column')};
 		padding: ${(props) => (props.isPaddingRequired ? '4rem 0' : '0')};

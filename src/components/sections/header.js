@@ -13,7 +13,7 @@ const Header = () => {
 	const appDownloadLinks = (src, fallbackSrc, alt, link) => {
 		return (
 			<FlexBox>
-				<a style={{ width: '100%', border: '1px solid orange' }} href={link} target="blank">
+				<a style={{ width: '100%' }} href={link} target="blank">
 					<picture style={flexCenter}>
 						<source srcSet={src} type={mediaType} />
 						<IconsImage src={fallbackSrc} alt={alt} />
@@ -107,7 +107,6 @@ const Flex = styled.div`
 	width: 60%;
 	display: flex;
 	align-items: center;
-	border: 1px solid red;
 	@media (max-width: ${(props) => props.theme.screen.md}) {
 		width: 70%;
 		padding: 0;
@@ -122,7 +121,6 @@ const FlexBox = styled.div`
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	border: 1px solid green;
 	@media (max-width: ${(props) => props.theme.screen.md}) {
 		width: 75%;
 	}

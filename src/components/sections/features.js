@@ -58,7 +58,6 @@ const CenterDiv = styled.div`
 	align-items: center;
 	flex-direction: column;
 	gap: 0.5rem;
-	border: 1px solid red;
 	color: ${(props) => props.theme.color.background.white};
 	background-color: ${(props) => props.theme.color.background.regular};
 	margin: 0;

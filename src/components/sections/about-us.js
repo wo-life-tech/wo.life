@@ -22,7 +22,7 @@ const AboutUs = () => {
 					src="/create-and-consume.webp"
 					fallbackSrc="/create-and-consume.png"
 					altText="about-us"
-					style={{ maxWidth: '70%', border: '1px solid green' }}
+					style={{ maxWidth: '70%' }}
 				/>
 			</CenterDiv>
 		</Section>
