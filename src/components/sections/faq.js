@@ -10,14 +10,8 @@ const Faq = () => {
 	const QuestionContainer = (question, answer, showHorizontalRow) => {
 		return (
 			<div>
-				<Question>
-					{question}
-				</Question>
-				{answer !== '' && (
-					<Answer>
-						{answer}
-					</Answer>
-				)}
+				<Question>{question}</Question>
+				{answer !== '' && <Answer>{answer}</Answer>}
 				{showHorizontalRow && <HorizontalRow />}
 			</div>
 		);
@@ -32,20 +26,17 @@ const Faq = () => {
 					altText="faq"
 					style={{ maxWidth: '80%', padding: '1rem' }}
 				/>
-				<TextWrapper>
-					<PrimaryHeading heading="FAQs" isLarger={true} />
-					{QuestionContainer(
-						'Does my Earning depend on the number of followers I have?',
-						'No, You can earn irrespective of the number of followers you have.',
-						true,
-					)}
-					{QuestionContainer('Does my Earning depend on the number of followers I have?', 'No', true)}
-					{QuestionContainer('Does my Earning depend on the number of followers I have?', 'No', false)}
-				</TextWrapper>
+				<FAQsContainer></FAQsContainer>
 			</CenterDiv>
 		</Section>
 	);
 };
+
+const FAQsContainer = styled.div`
+	margin: 0;
+	padding: 0;
+	border: 1px solid blue;
+`;
 
 const Question = styled.h4`
 	letter-spacing: 0.1px;
