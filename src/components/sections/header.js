@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import CenterDiv from '../common/layout/CenterDiv';
 import ImgWithFallBack from '../common/ImgWithFallBack';
 import { BlueText, YellowText } from '../common/layout/Text';
+import { flexCenter } from '../global';
 
 const mediaType = 'image/webp';
 const playstoreLink = 'https://play.google.com/store/apps/details?id=com.app.wolife';
@@ -13,7 +14,7 @@ const Header = () => {
 		return (
 			<FlexBox>
 				<a href={link} target="blank">
-					<picture>
+					<picture style={flexCenter}>
 						<source srcSet={src} type={mediaType} />
 						<IconsImage src={fallbackSrc} alt={alt} />
 					</picture>
