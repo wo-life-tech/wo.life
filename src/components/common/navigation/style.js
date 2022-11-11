@@ -6,7 +6,7 @@ export const Nav = styled.nav`
 	position: fixed;
 	top: 0;
 	margin: 0;
-	padding: 0;
+	padding: 0.5rem 0;
 	z-index: 1000;
 	color: ${(props) => props.theme.color.background.white};
 	background: ${(props) => props.theme.color.background.regular};
@@ -130,10 +130,10 @@ export const Mobile = styled.div`
 `;
 
 export const LogoWrapper = styled.div`
-	width: 45%;
+	width: 100%;
 	margin: 0;
 	padding: 0;
 	@media (max-width: ${(props) => props.theme.screen.md}) {
-		height: 5%;
+		width: 60%;
 	}
 `;

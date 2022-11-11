@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import styled from 'styled-components';
 import { Section } from '../global';
 import { HeadingText } from '../common/layout/Text';
@@ -9,7 +9,7 @@ import FaqData from '../FaqData';
 import SingleQuestion from './SingleQuestion';
 
 const Faq = () => {
-	const [questions, setQuestions] = useState(FaqData);
+	const questions = FaqData;
 
 	return (
 		<Section id="faqs">

@@ -88,8 +88,7 @@ const CardContainer = styled.div`
 	justify-content: space-between;
 	align-items: center;
 	@media (max-width: ${(props) => props.theme.screen.md}) {
-		padding: 1rem 1rem 3rem !important;
-		border: 1px solid grey;
+		padding: 1rem 0 3rem !important;
 	}
 `;
 
