@@ -4,7 +4,6 @@ import { Section } from '../global';
 import { HeadingText } from '../common/layout/Text';
 import CenterDiv from '../common/layout/CenterDiv';
 import Image from '../common/image';
-import './faq.css';
 import FaqData from '../FaqData';
 import SingleQuestion from './SingleQuestion';
 
@@ -25,11 +24,9 @@ const Faq = () => {
 						<HeadingText heading1="FAQs" />
 					</HeaderBox>
 					<FaqContainer>
-						<section className="info">
-							{questions.map((question) => (
-								<SingleQuestion key={question.id} {...question} />
-							))}
-						</section>
+						{questions.map((question) => (
+							<SingleQuestion key={question.id} {...question} />
+						))}
 					</FaqContainer>
 				</TextWrapper>
 			</CenterDiv>
@@ -51,7 +48,6 @@ const TextWrapper = styled.div`
 const FaqContainer = styled.div`
 	background: 0 5px 15px rgba(0, 0, 0, 0.1);
 	padding: 2rem 1.7rem;
-	border: 1px solid yellow;
 	h3 {
 		line-height: 1.2;
 		font-weight: 500;
