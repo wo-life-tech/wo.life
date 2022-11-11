@@ -13,11 +13,12 @@ export const ParagraphWrapper = (props) => {
 
 const TextBox = styled.div`
 	width: 50%;
-	padding: 1rem;
+	padding: 0;
+	margin: 0;
 	display: flex;
 	flex-direction: column;
-	justify-content: center;
-	align-items: center;
+	justify-content: flex-start;
+	align-items: flex-start;
 	line-height: 1.15;
 	@media (max-width: ${(props) => props.theme.screen.md}) {
 		width: 100%;
@@ -25,8 +26,8 @@ const TextBox = styled.div`
 `;
 
 const ParagraphWrapperStyled = styled.div`
-	margin: 1rem;
-	padding: 1rem;
+	margin: 1rem 0;
+	width: 80%;
 	display: flex;
 	gap: 1rem;
 	flex-direction: column;
@@ -34,5 +35,7 @@ const ParagraphWrapperStyled = styled.div`
 	align-items: flex-start;
 	@media (max-width: ${(props) => props.theme.screen.md}) {
 		flex-direction: column;
+		width: 100%;
+		padding: 0 4rem;
 	}
 `;

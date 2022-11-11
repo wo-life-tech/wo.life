@@ -5,7 +5,8 @@ export const Nav = styled.nav`
 	width: 100%;
 	position: fixed;
 	top: 0;
-	padding: 0;
+	margin: 0;
+	padding: 0.5rem 0;
 	z-index: 1000;
 	color: ${(props) => props.theme.color.background.white};
 	background: ${(props) => props.theme.color.background.regular};
@@ -16,6 +17,14 @@ export const StyledContainer = styled(Container)`
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
+	padding: 0 7rem;
+	min-width: 100%;
+	@media (max-width: ${(props) => props.theme.screen.md}) {
+		padding: 0 4rem;
+	}
+	@media (max-width: ${(props) => props.theme.screen.sm}) {
+		padding: 0 2rem;
+	}
 `;
 
 export const NavListWrapper = styled.div`
@@ -105,7 +114,7 @@ export const ActionsContainer = styled.div`
 export const Mobile = styled.div`
 	display: none;
 
-	@media (max-width: ${(props) => props.theme.screen.xs}) {
+	@media (max-width: ${(props) => props.theme.screen.sm}) {
 		display: block;
 	}
 
@@ -114,8 +123,17 @@ export const Mobile = styled.div`
 		`
     display: block;
 
-    @media (max-width: ${props.theme.screen.xs}) {
+    @media (max-width: ${props.theme.screen.sm}) {
       display: none;
     }
   `}
+`;
+
+export const LogoWrapper = styled.div`
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	@media (max-width: ${(props) => props.theme.screen.md}) {
+		width: 60%;
+	}
 `;

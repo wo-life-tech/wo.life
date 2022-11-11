@@ -36,22 +36,26 @@ export const YellowText = (props) => {
 
 const HeadingTextStyled = styled.h1`
 	margin: 0;
-	padding: 10px 0;
-	font-size: 2.4rem;
-	font-weight: 600;
+	padding: 0;
+	font-size: 3.4rem;
+	font-weight: 900;
 	line-height: 1.15;
 	@media (max-width: ${(props) => props.theme.screen.md}) {
 		font-size: 1.8rem;
+		width: 100%;
+		padding: 0 4rem;
 	}
 `;
 
 const ParagraphStyled = styled.p`
 	margin: 0;
 	padding: 5px 0;
-	font-size: 1.5rem;
-	font-weight: 400;
+	font-size: 2rem;
+	font-weight: 500;
+	line-height: 2.5rem;
 	@media (max-width: ${(props) => props.theme.screen.md}) {
 		font-size: 1.2rem;
+		line-height: 1.5rem;
 	}
 `;
 

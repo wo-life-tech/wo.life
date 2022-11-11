@@ -4,7 +4,7 @@ require('dotenv').config({
 
 module.exports = {
 	siteMetadata: {
-		title: `wo.life landing page`,
+		title: `Socialising Commerce`,
 		description: `Building India's most seamless social commerce platform | wo.life`,
 		author: `wo.life`,
 	},
@@ -26,8 +26,8 @@ module.exports = {
 		{
 			resolve: `gatsby-source-filesystem`,
 			options: {
-				name: `product`,
-				path: `${__dirname}/src/images/product`,
+				name: `logo`,
+				path: `${__dirname}/src/images`,
 			},
 		},
 		`gatsby-transformer-sharp`,
@@ -41,7 +41,7 @@ module.exports = {
 				background_color: `#f8f8f8`,
 				theme_color: `#f8f8f8`,
 				display: `minimal-ui`,
-				icon: `src/images/gatsby-icon.png`,
+				icon: `src/images/wo-favicon.png`,
 			},
 		},
 		// this (optional) plugin enables Progressive Web App + Offline functionality

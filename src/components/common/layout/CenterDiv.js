@@ -3,11 +3,15 @@ import styled from 'styled-components';
 
 const CenterDiv = (props) => {
 	const { children, isPaddingRequired = false, isflexDirectionReverse = false } = props;
-	return <FlexBox isPaddingRequired={isPaddingRequired} isflexDirectionReverse={isflexDirectionReverse}>{children}</FlexBox>;
+	return (
+		<FlexBox isPaddingRequired={isPaddingRequired} isflexDirectionReverse={isflexDirectionReverse}>
+			{children}
+		</FlexBox>
+	);
 };
 
 const FlexBox = styled.div`
-	padding: ${(props) => (props.isPaddingRequired ? '4rem 0' : '0')};
+	padding: ${(props) => (props.isPaddingRequired ? '2rem 7rem' : '0 7rem')};
 	display: flex;
 	align-items: center;
 	justify-content: space-between;

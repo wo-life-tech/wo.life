@@ -1,5 +1,11 @@
 import styled from 'styled-components';
 
+export const flexCenter = {
+	display: 'flex',
+	justifyContent: 'center',
+	alignItems: 'center',
+};
+
 export const Container = styled.div`
 	max-width: 1200px;
 	width: 100%;
@@ -30,7 +36,7 @@ export const Container = styled.div`
 `;
 
 export const Section = styled.section`
-	padding: 80px 0;
+	padding: 140px 0 80px;
 	overflow: hidden;
 	background-color: ${(props) => props.theme.color.background.regular};
 

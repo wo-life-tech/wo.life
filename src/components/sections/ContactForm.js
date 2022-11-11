@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import validator from 'validator';
 import styled from 'styled-components';
 import { Section } from '../global';
-import { PrimaryHeading } from '../common/layout/Text';
 import { showToast, ShowWarningToast } from '../common/ShowToast';
 import toast, { Toaster } from 'react-hot-toast';
 
@@ -95,8 +94,12 @@ const CenterDiv = styled.div`
 	justify-content: center;
 	align-items: center;
 	flex-direction: column;
+	padding: 2rem 0;
 	color: ${(props) => props.theme.color.background.white};
 	background-color: ${(props) => props.theme.color.background.regular};
+	@media (max-width: ${(props) => props.theme.screen.md}) {
+		padding-top: 3rem;
+	}
 `;
 
 const FormContainer = styled.div`
@@ -117,8 +120,8 @@ const InputField = styled.input`
 	width: 60%;
 	display: block;
 	height: 1rem;
-	margin: 2rem 0;
-	padding: 1rem 0 2rem 0;
+	margin: 1.5rem 0;
+	padding: 1rem 0 1.5rem 0;
 	font-size: 1.5rem;
 	font-weight: 600;
 	outline: none;
@@ -129,6 +132,10 @@ const InputField = styled.input`
 	color: ${(props) => props.theme.color.background.white};
 	@media (max-width: ${(props) => props.theme.screen.md}) {
 		width: 80%;
+		font-size: 1rem;
+		font-weight: 400;
+		margin: 1rem 0;
+		padding: 1rem 0;
 	}
 `;
 
@@ -146,19 +153,25 @@ const TextArea = styled.textarea`
 	background-color: transparent;
 	letter-spacing: 0.1rem;
 	color: ${(props) => props.theme.color.background.white};
+	@media (max-width: ${(props) => props.theme.screen.md}) {
+		height: 2.5rem;
+		font-size: 1rem;
+		width: 80%;
+	}
 `;
 
 const Button = styled.button`
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	height: 2rem;
-	padding: 2rem;
+	height: 1.5rem;
+	padding: 1.5rem;
 	margin: 2rem;
 	color: #fff;
 	font-size: 1.5rem;
 	font-weight: 600;
 	text-align: center;
+	letter-spacing: 0.2px;
 	background-color: #3498db;
 	border: 2px solid #3498db;
 	border-radius: 0.5rem;
@@ -169,12 +182,25 @@ const Button = styled.button`
 	&:hover {
 		box-shadow: 0 0 10px 0 #3498db inset, 0 0 10px 4px #3498db;
 	}
+	@media (max-width: ${(props) => props.theme.screen.md}) {
+		height: 1rem;
+		padding: 1rem;
+		margin: 1rem;
+		font-size: 1rem;
+		font-weight: 600;
+	}
 `;
 
 const SecText = styled.h2`
-	margin: 1rem 0;
-	padding: 10px 0;
+	margin: 0.3rem 0;
+	padding: 5px 0;
 	letter-spacing: 0.1rem;
+	font-size: 1.5rem;
+	@media (max-width: ${(props) => props.theme.screen.md}) {
+		font-size: 1rem;
+		margin: 0.2rem 0;
+		padding: 5px 0;
+	}
 `;
 
 export default ContactForm;
