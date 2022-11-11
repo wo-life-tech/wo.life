@@ -36,6 +36,6 @@ const ParagraphWrapperStyled = styled.div`
 	@media (max-width: ${(props) => props.theme.screen.md}) {
 		flex-direction: column;
 		width: 100%;
-		padding: 0 4rem;
+		padding: 0 3rem;
 	}
 `;
