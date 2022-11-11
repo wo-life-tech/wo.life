@@ -1,32 +1,37 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
 import { Section } from '../global';
+import { HeadingText } from '../common/layout/Text';
 import CenterDiv from '../common/layout/CenterDiv';
-import { HorizontalRow, PrimaryHeading } from '../common/layout/Text';
-import { TextWrapper } from '../common/layout/TextWrapper';
 import Image from '../common/image';
+import './faq.css';
+import FaqData from '../FaqData';
+import SingleQuestion from './SingleQuestion';
 
 const Faq = () => {
-	const QuestionContainer = (question, answer, showHorizontalRow) => {
-		return (
-			<div>
-				<Question>{question}</Question>
-				{answer !== '' && <Answer>{answer}</Answer>}
-				{showHorizontalRow && <HorizontalRow />}
-			</div>
-		);
-	};
+	const [questions, setQuestions] = useState(FaqData);
 
 	return (
 		<Section id="faqs">
-			<CenterDiv isPaddingRequired={true} isflexDirectionReverse={true}>
+			<CenterDiv isPaddingRequired={false} isflexDirectionReverse={true}>
 				<Image
 					src="/faq.webp"
 					fallbackSrc="/faq.png"
 					altText="faq"
 					style={{ maxWidth: '80%', padding: '1rem' }}
 				/>
-				<FAQsContainer></FAQsContainer>
+				<FAQsContainer>
+					<HeaderBox>
+						<HeadingText heading1="FAQs" />
+					</HeaderBox>
+					<div className="container">
+						<section className="info">
+							{questions.map((question) => (
+								<SingleQuestion key={question.id} {...question} />
+							))}
+						</section>
+					</div>
+				</FAQsContainer>
 			</CenterDiv>
 		</Section>
 	);
@@ -35,18 +40,21 @@ const Faq = () => {
 const FAQsContainer = styled.div`
 	margin: 0;
 	padding: 0;
-	border: 1px solid blue;
+	width: 50%;
+	color: ${(props) => props.theme.color.background.white};
+	background-color: ${(props) => props.theme.color.background.regular};
+	@media (max-width: ${(props) => props.theme.screen.md}) {
+		width: 100%;
+	}
 `;
 
-const Question = styled.h4`
-	letter-spacing: 0.1px;
-	line-height: 1.15;
-`;
-
-const Answer = styled.p`
-	padding: 1rem 0;
-	letter-spacing: 0.1px;
-	line-height: 1.15;
+const HeaderBox = styled.div`
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	@media (max-width: ${(props) => props.theme.screen.md}) {
+		padding-left: 5rem;
+	}
 `;
 
 export default Faq;
