@@ -94,8 +94,12 @@ const CenterDiv = styled.div`
 	justify-content: center;
 	align-items: center;
 	flex-direction: column;
+	padding: 2rem 0;
 	color: ${(props) => props.theme.color.background.white};
 	background-color: ${(props) => props.theme.color.background.regular};
+	@media (max-width: ${(props) => props.theme.screen.md}) {
+		padding-top: 3rem;
+	}
 `;
 
 const FormContainer = styled.div`
