@@ -56,20 +56,6 @@ p {
   					Global classes
   =============================================
 */
-.container {
-	background: 0 5px 15px rgba(0, 0, 0, 0.1);
-	padding: 2.5rem 2rem;
-}
-.container h3 {
-	line-height: 1.2;
-	font-weight: 500;
-}
-@media screen and (min-width: 992px) {
-	.container {
-		width: 100%;
-		padding: 1rem;
-	}
-}
 .question {
 	padding: 1rem 1.5rem;
 	border: 2px solid #eae6eb;
