@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import Navigation from '../components/common/navigation/navigation';
 import Footer from '../components/sections/footer';
 import Layout from '../components/common/layout/layout';
-import SEO from '../components/common/layout/seo';
+import Seo from '../components/common/layout/seo';
 
 const ReturnsAndExchange = () => {
 	const TextBox = (heading, text) => {
@@ -25,7 +25,7 @@ const ReturnsAndExchange = () => {
 
 	return (
 		<Layout>
-			<SEO title="Returns & Exchange" />
+			<Seo title="Returns & Exchange" />
 			<Navigation />
 			<ReturnsAndExchangeWrapper>
 				<CenterDiv>

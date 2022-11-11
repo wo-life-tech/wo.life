@@ -4,7 +4,7 @@ require('dotenv').config({
 
 module.exports = {
 	siteMetadata: {
-		title: `Socialising Commerce`,
+		title: ``,
 		description: `Building India's most seamless social commerce platform | wo.life`,
 		author: `wo.life`,
 	},
@@ -41,7 +41,7 @@ module.exports = {
 				background_color: `#f8f8f8`,
 				theme_color: `#f8f8f8`,
 				display: `minimal-ui`,
-				icon: `src/images/wo-favicon.png`,
+				icon: `src/images/wo-favicon.svg`,
 			},
 		},
 		// this (optional) plugin enables Progressive Web App + Offline functionality
