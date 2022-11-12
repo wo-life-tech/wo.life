@@ -73,8 +73,7 @@ export default class Navigation extends Component {
 									<img
 										src="/wo-logo.svg"
 										alt="wo-logo"
-										width={'300%'}
-										height="300%"
+										width={'225%'}
 										style={{ margin: 0, padding: 0 }}
 									/>
 								</LogoWrapper>

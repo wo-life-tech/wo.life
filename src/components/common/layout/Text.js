@@ -50,9 +50,9 @@ const HeadingTextStyled = styled.h1`
 const ParagraphStyled = styled.p`
 	margin: 0;
 	padding: 5px 0;
-	font-size: 2rem;
+	font-size: 1.8rem;
 	font-weight: 500;
-	line-height: 2.5rem;
+	line-height: 2.2rem;
 	@media (max-width: ${(props) => props.theme.screen.md}) {
 		font-size: 1.2rem;
 		line-height: 1.5rem;
