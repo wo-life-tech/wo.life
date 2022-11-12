@@ -20,10 +20,10 @@ const lastElement = {
 };
 
 const Features = () => {
-	const Card = (heading, src, fallbackSrc, altText, text, isLastElement) => {
+	const Card = (heading, src, fallbackSrc, altText, text, isLastElement, className) => {
 		return (
 			<CardContainer>
-				<CardHeading>{heading}</CardHeading>
+				<CardHeading className={className}>{heading}</CardHeading>
 				<CardText>{text}</CardText>
 				<picture style={isLastElement ? lastElement : flexCenter}>
 					<source srcSet={src} type={'image/webp'} />
@@ -44,6 +44,7 @@ const Features = () => {
 					'socializing',
 					'Engage and get entertained through Posts and short videos',
 					false,
+					'first',
 				)}
 				{Card(
 					'Shopping',
@@ -52,6 +53,7 @@ const Features = () => {
 					'shop-via-app',
 					'Shop from your favourite brands through shoppable content & marketplace',
 					false,
+					'second',
 				)}
 				{Card(
 					'Earning',
@@ -60,6 +62,7 @@ const Features = () => {
 					'influencer-earning',
 					'Track all your earnings in the wallet. Earn from a highly robust affiliate',
 					true,
+					'third',
 				)}
 			</Container>
 		</Section>
@@ -96,8 +99,21 @@ const CardHeading = styled.h2`
 	margin: 1rem 0;
 	padding: 10px 0;
 	letter-spacing: 0.1rem;
+	&.first {
+		padding-left: 20%;
+	}
+	&.second {
+		padding-right: 10%;
+	}
+	&.third {
+		padding-right: 25%;
+	}
 	@media (max-width: ${(props) => props.theme.screen.md}) {
-		padding: 1rem 0 0;
+		&.first,
+		&.second,
+		&.third {
+			padding: 1rem 0 0;
+		}
 	}
 `;
 
