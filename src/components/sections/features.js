@@ -119,8 +119,8 @@ const CardHeading = styled.h2`
 
 const CardText = styled.p`
 	padding: 0 5rem;
-	font-size: 1.5rem;
-	line-height: 2rem;
+	font-size: 1.3rem;
+	line-height: 1.8rem;
 	&.first {
 		padding-left: 30%;
 		padding-right: 3%;
