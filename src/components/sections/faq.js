@@ -4,7 +4,6 @@ import { Section } from '../global';
 import { HeadingText } from '../common/layout/Text';
 import CenterDiv from '../common/layout/CenterDiv';
 import Image from '../common/image';
-import './faq.css';
 import FaqData from '../FaqData';
 import SingleQuestion from './SingleQuestion';
 
@@ -20,24 +19,22 @@ const Faq = () => {
 					altText="faq"
 					style={{ maxWidth: '80%', padding: '1rem' }}
 				/>
-				<FAQsContainer>
+				<TextWrapper>
 					<HeaderBox>
 						<HeadingText heading1="FAQs" />
 					</HeaderBox>
-					<div className="container">
-						<section className="info">
-							{questions.map((question) => (
-								<SingleQuestion key={question.id} {...question} />
-							))}
-						</section>
-					</div>
-				</FAQsContainer>
+					<FaqContainer>
+						{questions.map((question) => (
+							<SingleQuestion key={question.id} {...question} />
+						))}
+					</FaqContainer>
+				</TextWrapper>
 			</CenterDiv>
 		</Section>
 	);
 };
 
-const FAQsContainer = styled.div`
+const TextWrapper = styled.div`
 	margin: 0;
 	padding: 0;
 	width: 50%;
@@ -45,6 +42,19 @@ const FAQsContainer = styled.div`
 	background-color: ${(props) => props.theme.color.background.regular};
 	@media (max-width: ${(props) => props.theme.screen.md}) {
 		width: 100%;
+	}
+`;
+
+const FaqContainer = styled.div`
+	background: 0 5px 15px rgba(0, 0, 0, 0.1);
+	padding: 2rem 1.7rem;
+	h3 {
+		line-height: 1.2;
+		font-weight: 500;
+	}
+	@media (max-width: ${(props) => props.theme.screen.md}) {
+		width: 100%;
+		padding: 1rem;
 	}
 `;
 

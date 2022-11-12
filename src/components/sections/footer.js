@@ -5,60 +5,68 @@ import { Container } from '../global';
 
 const socialIconWidth = '25';
 
-const Footer = () => (
-	<FooterWrapper id="footer">
-		<FooterColumnContainer>
-			<FooterColumn>
-				<ul>
-					<li>
-						<FooterLink to="/returns-and-exchange">Returns & Exchange</FooterLink>
-					</li>
-					<li>
-						<FooterLink to="/privacy-policy">Privacy Policy</FooterLink>
-					</li>
-					<li>
-						<FooterLink to="/terms-and-conditions">Terms & Conditions</FooterLink>
-					</li>
-				</ul>
-			</FooterColumn>
-			<SocialLinks>
-				<ul>
-					<li>
-						<AnchorFlex href="https://www.instagram.com/wolifeofficial" target="blank">
-							<img src="/facebook.png" alt="facebook" width={socialIconWidth} />
-							<SocialText>Facebook</SocialText>
-						</AnchorFlex>
-					</li>
-					<li>
-						<AnchorFlex href="https://www.instagram.com/wolifeofficial" target="blank">
-							<img src="/instagram.png" alt="instagram" width={socialIconWidth} />
-							<SocialText>Instagram</SocialText>
-						</AnchorFlex>
-					</li>
-					<li>
-						<AnchorFlex href="https://www.instagram.com/wolifeofficial" target="blank">
-							<img src="/twitter.png" alt="twitter" width={socialIconWidth} />
-							<SocialText>Twitter</SocialText>
-						</AnchorFlex>
-					</li>
-					<li>
-						<AnchorFlex href="https://in.linkedin.com/company/wolife" target="blank">
-							<img src="/linkedin.png" alt="linkedin" width={socialIconWidth} />
+const Footer = () => {
+	const date = new Date();
+	const year = date.getFullYear();
 
-							<SocialText>Linkedin</SocialText>
-						</AnchorFlex>
-					</li>
-				</ul>
-			</SocialLinks>
-		</FooterColumnContainer>
-		<BrandContainer>
-			<Logo>wo.life</Logo>
-		</BrandContainer>
-	</FooterWrapper>
-);
+	return (
+		<FooterWrapper id="footer">
+			<FooterColumnContainer>
+				<FooterColumn>
+					<ul>
+						<li>
+							<FooterLink to="/returns-and-exchange">Returns & Exchange</FooterLink>
+						</li>
+						<li>
+							<FooterLink to="/privacy-policy">Privacy Policy</FooterLink>
+						</li>
+						<li>
+							<FooterLink to="/terms-and-conditions">Terms & Conditions</FooterLink>
+						</li>
+					</ul>
+				</FooterColumn>
+				<SocialLinks>
+					<ul>
+						<li>
+							<AnchorFlex href="https://www.instagram.com/wolifeofficial" target="blank">
+								<img src="/facebook.png" alt="facebook" width={socialIconWidth} />
+								<SocialText>Facebook</SocialText>
+							</AnchorFlex>
+						</li>
+						<li>
+							<AnchorFlex href="https://www.instagram.com/wolifeofficial" target="blank">
+								<img src="/instagram.png" alt="instagram" width={socialIconWidth} />
+								<SocialText>Instagram</SocialText>
+							</AnchorFlex>
+						</li>
+						<li>
+							<AnchorFlex href="https://www.instagram.com/wolifeofficial" target="blank">
+								<img src="/twitter.png" alt="twitter" width={socialIconWidth} />
+								<SocialText>Twitter</SocialText>
+							</AnchorFlex>
+						</li>
+						<li>
+							<AnchorFlex href="https://in.linkedin.com/company/wolife" target="blank">
+								<img src="/linkedin.png" alt="linkedin" width={socialIconWidth} />
+
+								<SocialText>Linkedin</SocialText>
+							</AnchorFlex>
+						</li>
+					</ul>
+				</SocialLinks>
+			</FooterColumnContainer>
+			<BrandContainer>
+				<Logo>wo.life</Logo>
+			</BrandContainer>
+			<CopyRightWrapper>
+				<p>Copyright © {year}, All Right Reserved</p>
+			</CopyRightWrapper>
+		</FooterWrapper>
+	);
+};
 
 const FooterWrapper = styled.footer`
-	padding: 48px 0;
+	padding: 48px 0 0;
 	color: ${(props) => props.theme.color.background.white};
 	background-color: ${(props) => props.theme.color.background.regular};
 `;
@@ -156,6 +164,19 @@ const SocialText = styled.p`
 	margin: 0;
 	padding: 0;
 	font-size: 14px;
+`;
+
+const CopyRightWrapper = styled.div`
+	margin: 0;
+	padding: 20px 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-top: 1px solid ${(props) => props.theme.color.background.white};
+	letter-spacing: 0.5px;
+	p {
+		font-size: 12px;
+	}
 `;
 
 export default Footer;

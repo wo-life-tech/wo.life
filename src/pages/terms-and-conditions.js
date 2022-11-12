@@ -3,7 +3,7 @@ import Navigation from '../components/common/navigation/navigation';
 import Footer from '../components/sections/footer';
 import styled from 'styled-components';
 import Layout from '../components/common/layout/layout';
-import SEO from '../components/common/layout/seo';
+import Seo from '../components/common/layout/seo';
 
 const Termsandconditions = () => {
 	const ListItem = (text) => {
@@ -16,7 +16,7 @@ const Termsandconditions = () => {
 
 	return (
 		<Layout>
-			<SEO title="faqs" />
+			<Seo title="faqs" />
 			<Navigation />
 			<TermsWrapper>
 				<CenterDiv>
