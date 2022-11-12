@@ -1,6 +1,5 @@
 import React from 'react';
 import styled from 'styled-components';
-import CenterDiv from '../common/layout/CenterDiv';
 import ImgWithFallBack from '../common/ImgWithFallBack';
 import { BlueText, YellowText } from '../common/layout/Text';
 import { flexCenter } from '../global';
@@ -25,7 +24,13 @@ const Header = () => {
 
 	return (
 		<HeaderWrapper id="top">
-			<CenterDiv isPaddingRequired={true}>
+			<HeaderContainer>
+				<ImageWrapper>
+					<picture style={{ display: 'flex', alignItems: 'center' }}>
+						<source srcSet={'/shopping.webp'} type={'image/webp'} />
+						<img src={'/shopping.png'} alt={'shopping'} style={{ maxWidth: '90%' }} />
+					</picture>
+				</ImageWrapper>
 				<HeaderTextGroup>
 					<MainText>
 						Use your social influence to become a <BlueText text="Sociopreneur" /> &{' '}
@@ -42,15 +47,7 @@ const Header = () => {
 						{appDownloadLinks('/app-store-badge.webp', '/app-store-badge.png', 'appstore', appstoreLink)}
 					</Flex>
 				</HeaderTextGroup>
-				<ImageWrapper>
-					<ImgWithFallBack
-						src="/shopping.webp"
-						fallbackSrc="/shopping.png"
-						altText="shopping"
-						style={{ maxWidth: '90%' }}
-					/>
-				</ImageWrapper>
-			</CenterDiv>
+			</HeaderContainer>
 		</HeaderWrapper>
 	);
 };
@@ -66,6 +63,19 @@ const HeaderWrapper = styled.header`
 	background-color: ${(props) => props.theme.color.background.regular};
 	@media (max-width: ${(props) => props.theme.screen.md}) {
 		padding: 100px 0 40px 0;
+	}
+`;
+
+const HeaderContainer = styled.div`
+	padding: 2rem 7rem 2rem 0;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	color: ${(props) => props.theme.color.background.white};
+	background-color: ${(props) => props.theme.color.background.regular};
+	@media (max-width: ${(props) => props.theme.screen.md}) {
+		flex-direction: column-reverse;
+		padding: 4rem 0;
 	}
 `;
 
@@ -141,9 +151,8 @@ const IconsImage = styled.img`
 const ImageWrapper = styled.div`
 	width: 50%;
 	display: flex;
-	justify-content: flex-end;
-	flex-direction: column;
-	align-items: flex-end;
+	justify-content: flex-start;
+	align-items: center;
 	@media (max-width: ${(props) => props.theme.screen.md}) {
 		width: 100%;
 		justify-self: center;
