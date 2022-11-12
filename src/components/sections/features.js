@@ -24,7 +24,7 @@ const Features = () => {
 		return (
 			<CardContainer>
 				<CardHeading className={className}>{heading}</CardHeading>
-				<CardText>{text}</CardText>
+				<CardText className={className}>{text}</CardText>
 				<picture style={isLastElement ? lastElement : flexCenter}>
 					<source srcSet={src} type={'image/webp'} />
 					<img src={fallbackSrc} alt={altText} style={{ maxWidth: '90%', paddingTop: '2.5rem' }} />
@@ -121,12 +121,23 @@ const CardText = styled.p`
 	padding: 0 5rem;
 	font-size: 1.5rem;
 	line-height: 2rem;
+	&.first {
+		padding-left: 30%;
+		padding-right: 3%;
+	}
+	&.third {
+		padding-left: 10%;
+	}
+
 	@media (max-width: ${(props) => props.theme.screen.md}) {
-		padding: 0 1rem;
+		&.first,
+		&.second,
+		&.third {
+			padding: 0 1rem;
+		}
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		${'' /* text-align: center; */}
 	}
 `;
 
