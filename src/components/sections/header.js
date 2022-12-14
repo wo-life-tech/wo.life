@@ -1,6 +1,5 @@
 import React from 'react';
 import styled from 'styled-components';
-import ImgWithFallBack from '../common/ImgWithFallBack';
 import { BlueText, YellowText } from '../common/layout/Text';
 import { flexCenter } from '../global';
 

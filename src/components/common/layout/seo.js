@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
 import { useStaticQuery, graphql } from 'gatsby';
+import woImage from '../../../images/wo-favicon.png';
 
 const Seo = ({ description, lang, meta, title }) => {
 	const { site } = useStaticQuery(
@@ -59,6 +60,10 @@ const Seo = ({ description, lang, meta, title }) => {
 				{
 					name: `twitter:description`,
 					content: metaDescription,
+				},
+				{
+					property: `og:image`,
+					content: `https://wo.life/${woImage}`,
 				},
 			].concat(meta)}
 		/>
