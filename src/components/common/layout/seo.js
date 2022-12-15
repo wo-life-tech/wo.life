@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
 import { useStaticQuery, graphql } from 'gatsby';
-import woImage from '../../../../public/wo-logo.png';
+import woImage from '../../../../public/og-image.png';
 
 const Seo = ({ description, lang, meta, title }) => {
 	const { site } = useStaticQuery(
