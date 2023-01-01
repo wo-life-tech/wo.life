@@ -28,7 +28,7 @@ const Footer = () => {
 				<SocialLinks>
 					<ul>
 						<li>
-							<AnchorFlex href="https://www.instagram.com/wolifeofficial" target="blank">
+							<AnchorFlex href="https://www.facebook.com/wolifeglobal" target="blank">
 								<img src="/facebook.png" alt="facebook" width={socialIconWidth} />
 								<SocialText>Facebook</SocialText>
 							</AnchorFlex>
@@ -40,13 +40,13 @@ const Footer = () => {
 							</AnchorFlex>
 						</li>
 						<li>
-							<AnchorFlex href="https://www.instagram.com/wolifeofficial" target="blank">
+							<AnchorFlex href="https://twitter.com/wolifeofficial" target="blank">
 								<img src="/twitter.png" alt="twitter" width={socialIconWidth} />
 								<SocialText>Twitter</SocialText>
 							</AnchorFlex>
 						</li>
 						<li>
-							<AnchorFlex href="https://in.linkedin.com/company/wolife" target="blank">
+							<AnchorFlex href="https://www.linkedin.com/company/wolife" target="blank">
 								<img src="/linkedin.png" alt="linkedin" width={socialIconWidth} />
 
 								<SocialText>Linkedin</SocialText>
