@@ -5,7 +5,7 @@ import { flexCenter } from '../global';
 
 const mediaType = 'image/webp';
 const playstoreLink = 'https://play.google.com/store/apps/details?id=com.app.wolife';
-const appstoreLink = 'https://play.google.com/store/apps/details?id=com.app.wolife';
+const appstoreLink = 'https://apps.apple.com/us/app/wo-life/id1604831375';
 
 const Header = () => {
 	const appDownloadLinks = (src, fallbackSrc, alt, link) => {
