@@ -9,7 +9,7 @@ module.exports = {
 		author: `wo.life`,
 	},
 	plugins: [
-		`gatsby-plugin-sitemap`,
+		`gatsby-plugin-advanced-sitemap`,
 		`gatsby-plugin-react-helmet`,
 		`gatsby-plugin-styled-components`,
 		{
