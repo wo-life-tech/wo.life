@@ -6,6 +6,7 @@ import { flexCenter } from '../global';
 const mediaType = 'image/webp';
 const playstoreLink = 'https://play.google.com/store/apps/details?id=com.app.wolife';
 const appstoreLink = 'https://apps.apple.com/us/app/wo-life/id1604831375';
+const creatorAccess = 'https://forms.gle/H6uXptRUwWvv37ze9';
 
 const Header = () => {
 	const appDownloadLinks = (src, fallbackSrc, alt, link) => {
@@ -35,7 +36,6 @@ const Header = () => {
 						Use your social influence to become a <BlueText text="Sociopreneur" /> &{' '}
 						<YellowText text="Earn" />
 					</MainText>
-					<InviteText>We’re currently invite only</InviteText>
 					<Flex>
 						{appDownloadLinks(
 							'/google-play-badge.webp',
@@ -45,6 +45,12 @@ const Header = () => {
 						)}
 						{appDownloadLinks('/app-store-badge.webp', '/app-store-badge.png', 'appstore', appstoreLink)}
 					</Flex>
+					<InviteButtonWrapper>
+						<InviteText>Request Creator Access</InviteText>
+						<RequestAccessButton href={creatorAccess} target="_blank">
+							Get Access
+						</RequestAccessButton>
+					</InviteButtonWrapper>
 				</HeaderTextGroup>
 			</HeaderContainer>
 		</HeaderWrapper>
@@ -109,19 +115,25 @@ const MainText = styled.h1`
 `;
 
 const InviteText = styled.h2`
-	padding: 80px 0 50px;
+	padding: 10px 0;
+	@media (max-width: ${(props) => props.theme.screen.sm}) {
+		font-size: 1.7rem;
+	}
+	@media (max-width: ${(props) => props.theme.screen.sm}) {
+		font-size: 1.6rem;
+	}
 `;
 
 const Flex = styled.div`
 	width: 60%;
+	padding: 20px 0;
 	display: flex;
 	align-items: center;
 	@media (max-width: ${(props) => props.theme.screen.md}) {
-		width: 70%;
-		padding: 0;
+		width: 80%;
 	}
 	@media (max-width: ${(props) => props.theme.screen.xs}) {
-		width: 90%;
+		width: 95%;
 	}
 `;
 
@@ -155,5 +167,36 @@ const ImageWrapper = styled.div`
 	@media (max-width: ${(props) => props.theme.screen.md}) {
 		width: 100%;
 		justify-self: center;
+	}
+`;
+
+const InviteButtonWrapper = styled.div`
+	display: flex;
+	align-items: center;
+	gap: 2.5rem;
+	justify-content: center;
+	${'' /* border: 1px solid grey; */}
+	margin-top: 3.5rem;
+	@media (max-width: ${(props) => props.theme.screen.sm}) {
+		flex-direction: column;
+		width: 100%;
+		gap: 0.5rem;
+		margin-top: 1rem;
+		margin-bottom: 3rem;
+	}
+`;
+
+const RequestAccessButton = styled.a`
+	display: inline-block;
+	background-color: #ececec;
+	color: #000000;
+	text-align: center;
+	padding: 10px 20px;
+	border-radius: 5px;
+	text-decoration: none;
+	font-weight: bold;
+	letter-spacing: 1.5px;
+	@media (max-width: ${(props) => props.theme.screen.md}) {
+		padding: 5px 10px;
 	}
 `;
